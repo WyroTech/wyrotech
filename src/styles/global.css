@@ -143,7 +143,7 @@ p {
 }
 
 .button-container {
-	@apply inline-flex cursor-pointer w-min;
+	@apply inline-flex cursor-pointer w-min rounded-full;
 	.border-button {
 		@apply relative p-px rounded-full overflow-hidden cursor-pointer;
 
@@ -155,11 +155,6 @@ p {
 		button {
 			@apply relative inline-flex gap-2 items-center justify-center h-11 px-6 rounded-xl;
 			@apply font-mono text-primary tracking-tight cursor-pointer whitespace-nowrap;
-			background: radial-gradient(
-				100% 100% at 45.2174% 0%,
-				rgb(15, 14, 56) 8.01213%,
-				rgb(20, 20, 39) 100%
-			);
 
 			span {
 				@apply whitespace-nowrap;
