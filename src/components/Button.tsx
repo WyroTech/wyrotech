@@ -37,6 +37,7 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 				/>
 				<button type="button">
 					<span>{text}</span>
+					{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 					<DynamicIcon name={icon as any} size={16} />
 				</button>
 			</div>
