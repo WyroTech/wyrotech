@@ -1,5 +1,7 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import Footer from "./footer.astro";
+import Nav from "./nav.astro";
 ---
 
 <html lang="en">
@@ -10,6 +12,8 @@ import '../styles/global.css';
     <title>WyroTech by Andreas Wyrobek</title>
 </head>
 <body>
+<Nav/>
 <slot/>
+<Footer/>
 </body>
 </html>

@@ -1,0 +1,29 @@
+---
+const { text, href } = Astro.props;
+---
+
+<a href={href} class="flex flex-col overflow-y-hidden h-6 w-min">
+    <span class="h-6 transition-all cube text-gradiant">{text}</span>
+    <span class="h-6 transition-all cube">{text}</span>
+</a>
+
+<style>
+    a span {
+        transform: translateY(-100%);
+    }
+    a:hover span {
+        transform: translateY(0);
+    }
+
+    a span:first-child {
+        opacity: 0;
+    }
+
+    a:hover span:first-child {
+        opacity: 1;
+    }
+
+    a:hover span:last-child {
+        opacity: 0;
+    }
+</style>
