@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
+import { Navigation } from "./Navigation.tsx";
 import Footer from "./footer.astro";
-import Nav from "./nav.astro";
 ---
 
 <html lang="en">
@@ -12,8 +12,10 @@ import Nav from "./nav.astro";
     <title>WyroTech by Andreas Wyrobek</title>
 </head>
 <body>
-<Nav/>
-<slot/>
+<Navigation client:only="react"/>
+<div class="pt-24">
+    <slot/>
+</div>
 <Footer/>
 </body>
 </html>

@@ -1,7 +1,29 @@
 ---
-import Link from "@/components/link.astro";
+import { AnimatedLink } from "@/components/AnimatedLink";
+import IconLink from "../components/IconLink.astro";
 ---
 
-<footer>
-    <Link text="Development" href="#"/>
+<footer class=" w-full flex flex-col justify-between items-center py-16 px-8 gap-16 md:justify-start">
+    <div class="w-full flex flex-col gap-16 justify-center items-center md:flex-row md:justify-start md:items-start">
+        <div class="w-full flex flex-col gap-8 items-center md:grid md:grid-cols-2 md:w-2xs md:gap-y-4 md:gap-x-12 md:items-start">
+            <AnimatedLink client:only="react" text="Home" href="#"/>
+            <AnimatedLink client:only="react" text="Development" href="#"/>
+            <AnimatedLink client:only="react" text="My Work" href="#"/>
+            <AnimatedLink client:only="react" text="Contact me" href="#"/>
+            <AnimatedLink client:only="react" text="About us" href="#"/>
+        </div>
+        <div class="flex gap-8 md:w-full md:justify-end">
+            <IconLink iconName="lucide:facebook" href="#"/>
+            <IconLink iconName="lucide:youtube" href="#"/>
+            <IconLink iconName="lucide:linkedin" href="#"/>
+            <IconLink iconName="lucide:github" href="#"/>
+            <IconLink iconName="lucide:twitter" href="#"/>
+            <IconLink iconName="lucide:instagram" href="#"/>
+        </div>
+    </div>
+    <div class="flex flex-col gap-8 justify-center items-center pt-8 md:justify-start md:flex-row md:w-full md:pt-16 md:gap-x-12">
+        <AnimatedLink client:only="react" text="Data Protection" href="#"/>
+        <AnimatedLink client:only="react" text="Legal Notices" href="#"/>
+        <IconLink iconName="lucide:cookie" href="#"/>
+    </div>
 </footer>

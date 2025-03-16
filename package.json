@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.1.1",
     "@astrojs/react": "^4.2.1",
+    "@radix-ui/react-popover": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.9",
@@ -32,7 +33,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@iconify-json/flag": "^1.2.5",
     "@iconify-json/lucide": "^1.2.29",
+    "@iconify/react": "^5.2.0",
     "astro-icon": "^1.1.5"
   }
 }
