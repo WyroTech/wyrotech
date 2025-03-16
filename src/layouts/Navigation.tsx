@@ -32,7 +32,7 @@ export function LanguageSwitcher() {
 	);
 }
 
-export function Navigation() {
+export function Navigation(props: { imageUrl: string }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	// Menu animation variants
@@ -77,7 +77,7 @@ export function Navigation() {
 		<nav className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-black to-transparent">
 			<div className="flex justify-between items-center py-8 px-8">
 				<a href="/" className="z-20">
-					<Logo />
+					<Logo imageUrl={props.imageUrl} />
 				</a>
 				{/* biome-ignore lint/a11y/useFocusableInteractive: <explanation> */}
 				{/* biome-ignore lint/a11y/useSemanticElements: <explanation> */}

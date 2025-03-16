@@ -1,6 +1,9 @@
-export function Logo() {
+export function Logo(props: { imageUrl: string }) {
 	return (
-		<div className="flex items-center gap-px ">
+		<div className="flex items-center gap-px">
+			<div className="mr-1">
+				<img src={props.imageUrl} alt="logo" width="28" />
+			</div>
 			<span className="font-extrabold! text-2xl! text-white!">Wyro</span>
 			<span className="font-thin! text-2xl! text-white!">Tech</span>
 		</div>

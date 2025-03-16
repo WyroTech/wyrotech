@@ -1,7 +1,15 @@
 ---
 import "../styles/global.css";
+import { getImage } from "astro:assets";
+import LogoImg from "public/Wi-fi.png";
 import { Navigation } from "./Navigation.tsx";
 import Footer from "./footer.astro";
+
+const optimizedImage = await getImage({
+	src: LogoImg,
+	width: 64,
+	format: "webp", // Convert to webp for better compression
+});
 ---
 
 <html lang="en">
@@ -12,7 +20,7 @@ import Footer from "./footer.astro";
     <title>WyroTech by Andreas Wyrobek</title>
 </head>
 <body>
-<Navigation client:only="react"/>
+<Navigation client:only="react" imageUrl={optimizedImage.src}/>
 <div>
     <slot/>
 </div>
