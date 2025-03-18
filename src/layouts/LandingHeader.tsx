@@ -4,7 +4,7 @@ import {useRef} from "react";
 export function LandingHeader() {
 	const video = useRef<HTMLVideoElement>(null);
 	return (
-		<section className="w-screen h-screen relative bg-black">
+		<section className="w-[100dvw] h-[100dvh] relative bg-black">
 			<div className="absolute inset-0 z-0 flex justify-center items-center">
 				<video
 					ref={video}
