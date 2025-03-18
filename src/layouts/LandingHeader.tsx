@@ -7,7 +7,7 @@ export function LandingHeader() {
 	const container = useRef<HTMLDivElement>(null);
 
 	const { scrollYProgress } = useScroll();
-	const translateY = useTransform(scrollYProgress, [0, 1], [0, 50]);
+	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
 	return (
 		<section
@@ -30,11 +30,13 @@ export function LandingHeader() {
 				/>
 			</div>
 			<motion.div
-				className="relative flex flex-col justify-start items-center gap-12 px-8 h-screen pt-[35lvh] mx-auto z-10"
+				className="relative flex flex-col justify-start items-center gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
 				style={{ translateY }}
 			>
 				<div className="flex flex-col gap-6 items-center">
-					<h1 className="text-center lg:text-[9vw]!">Andreas Wyrobek</h1>
+					<h1 className="text-center text-7xl! lg:text-[9vw]!">
+						Andreas Wyrobek
+					</h1>
 					<h5 className="text-center max-w-2xl">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
