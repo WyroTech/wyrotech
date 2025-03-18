@@ -28,7 +28,7 @@ export function LandingHeader() {
 					loop
 					onPlay={() => {
 						if (video.current) {
-							video.current.playbackRate = 0.5;
+							video.current.playbackRate = 1;
 						}
 					}}
 					muted
