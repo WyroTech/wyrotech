@@ -18,13 +18,10 @@ export function LandingHeader() {
 			ref={container}
 			className="w-[100dvw] h-[100lvh] relative bg-black"
 		>
-			<motion.div
-				className="absolute inset-0 z-0 flex justify-center items-center"
-				style={{ opacity }}
-			>
+			<motion.div className="absolute inset-0 z-0 flex justify-center items-center">
 				<video
 					ref={video}
-					className="w-[100dvw] h-[100lvh] opacity-25 object-cover"
+					className="w-[100dvw] h-[100lvh] opacity-35 object-cover"
 					src="/objects.mp4"
 					autoPlay
 					loop
@@ -35,6 +32,7 @@ export function LandingHeader() {
 					}}
 					muted
 				/>
+				<div className="absolute bottom-0 left-0 right-0 h-[25dvh] bg-gradient-to-b from-transparent to-[#0c0c11]" />
 			</motion.div>
 			<motion.div
 				className="relative flex flex-col justify-start items-center gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
