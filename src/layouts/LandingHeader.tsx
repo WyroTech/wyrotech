@@ -8,7 +8,7 @@ export function LandingHeader() {
 			<div className="absolute inset-0 z-0 flex justify-center items-center">
 				<video
 					ref={video}
-					className="w-full h-full max-h-[100dvh] opacity-25"
+					className="w-full h-full max-h-[100dvh] opacity-25 object-fill"
 					src="/objects.mp4"
 					autoPlay
 					loop
