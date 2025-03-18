@@ -31,7 +31,7 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 
 	const buttonBackground = useTransform(bgColor, (color) => {
 		if (severity === "primary") {
-			return `linear-gradient(100% 100% at 45.2174% 5.76611e-07%, ${color} 8.01213%, rgb(20, 20, 39) 100%)`;
+			return `radial-gradient(100% 100% at 45.2174% 5.76611e-07%, ${color} 8.01213%, rgb(20, 20, 39) 100%)`;
 		}
 		return "rgb(208, 211, 218)";
 	});
@@ -67,8 +67,8 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 				/>
 				<motion.button
 					type="button"
-					style={{ background: buttonBackground }}
 					className="group"
+					style={{ background: buttonBackground }}
 				>
 					<div className="flex flex-col overflow-hidden h-6">
 						<span
