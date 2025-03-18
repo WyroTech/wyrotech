@@ -21,7 +21,7 @@ export function LandingHeader() {
 			<motion.div className="absolute inset-0 z-0 flex justify-center items-center">
 				<motion.video
 					ref={video}
-					className="w-[100dvw] h-[100lvh] opacity-35 object-cover"
+					className="w-[100dvw] h-[100lvh] opacity-55 object-cover"
 					src="/objects.mp4"
 					style={{ translateY: translateYReverse }}
 					autoPlay
