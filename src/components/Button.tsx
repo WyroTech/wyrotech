@@ -5,7 +5,7 @@ import React from "react";
 interface ButtonContainerProps {
 	severity: string;
 	text: string;
-	icon: string;
+	icon?: string;
 }
 
 const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
@@ -15,22 +15,26 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 	const bgColor = useMotionValue("rgb(15, 14, 56)");
 
 	// Transform `rotate` into a dynamic background gradient
-	const background = useTransform(
-		rotate,
-		(r) =>
-			`linear-gradient(${r}deg, rgb(96, 93, 255) 0%, rgb(19, 19, 83) 32%, rgb(19, 19, 83) 69.401%, rgb(224, 103, 255) 100%)`,
-	);
+	const background = useTransform(rotate, (r) => {
+		if (severity === "primary") {
+			return `linear-gradient(${r}deg, rgb(96, 93, 255) 0%, rgb(19, 19, 83) 32%, rgb(19, 19, 83) 69.401%, rgb(224, 103, 255) 100%)`;
+		}
+		return "rgb(208, 211, 218)";
+	});
 
-	const boxShadow = useTransform(
-		shadowSize,
-		(s) => `rgba(99, 35, 204, 0.6) 0px 0px ${s}px 0px`,
-	);
+	const boxShadow = useTransform(shadowSize, (s) => {
+		if (severity === "primary") {
+			return `rgba(99, 35, 204, 0.6) 0px 0px ${s}px 0px`;
+		}
+		return `rgba(255, 255, 255, 0.4) 0px 0px ${s}px 0px`;
+	});
 
-	const buttonBackground = useTransform(
-		bgColor,
-		(color) =>
-			`radial-gradient(100% 100% at 45.2174% 5.76611e-07%, ${color} 8.01213%, rgb(20, 20, 39) 100%)`,
-	);
+	const buttonBackground = useTransform(bgColor, (color) => {
+		if (severity === "primary") {
+			return `linear-gradient(100% 100% at 45.2174% 5.76611e-07%, ${color} 8.01213%, rgb(20, 20, 39) 100%)`;
+		}
+		return "rgb(208, 211, 218)";
+	});
 
 	return (
 		<motion.a
@@ -61,10 +65,25 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 					className="border"
 					style={{ background }} // Now updates reactively with smooth transition!
 				/>
-				<motion.button type="button" style={{ background: buttonBackground }}>
-					<span>{text}</span>
+				<motion.button
+					type="button"
+					style={{ background: buttonBackground }}
+					className="group"
+				>
+					<div className="flex flex-col overflow-hidden h-6">
+						<span
+							className={`${severity === "primary" ? "text-white!" : "text-slate-700!"} h-6 transition-all cube -translate-y-full group-hover:translate-y-0`}
+						>
+							{text}
+						</span>
+						<span
+							className={`${severity === "primary" ? "text-white!" : "text-slate-700!"} h-6 transition-all cube -translate-y-full group-hover:translate-y-0`}
+						>
+							{text}
+						</span>
+					</div>
 					{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
-					<DynamicIcon name={icon as any} size={16} />
+					{icon ? <DynamicIcon name={icon as any} size={16} /> : null}
 				</motion.button>
 			</div>
 		</motion.a>

@@ -1,4 +1,5 @@
 import {AnimatedLink} from "@/components/AnimatedLink.tsx";
+import ButtonContainer from "@/components/Button.tsx";
 import {Logo} from "@/components/Logo";
 import {Popover, PopoverContent, PopoverTrigger,} from "@/components/ui/popover";
 import {Icon} from "@iconify/react";
@@ -156,9 +157,7 @@ export function Navigation(props: { imageUrl: string }) {
 					</div>
 				</div>
 				<a href="/" className="hidden lg:flex gap-4">
-					<button type="button" className="cursor-pointer">
-						Contact
-					</button>
+					<ButtonContainer text="Contact" severity="secondary" />
 				</a>
 			</div>
 		</nav>
