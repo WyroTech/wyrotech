@@ -11,7 +11,7 @@ export function LandingHeader() {
 		offset: ["end end", "end start"],
 	});
 	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-	const translateYReverse = useTransform(scrollYProgress, [0, 1], [0, -50]);
+	const translateYReverse = useTransform(scrollYProgress, [0, 1], [0, -25]);
 
 	return (
 		<section
