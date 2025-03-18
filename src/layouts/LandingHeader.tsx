@@ -6,15 +6,22 @@ export function LandingHeader() {
 	const video = useRef<HTMLVideoElement>(null);
 	const container = useRef<HTMLDivElement>(null);
 
-	const { scrollYProgress } = useScroll();
+	const { scrollYProgress } = useScroll({
+		target: container,
+		offset: ["end end", "end start"],
+	});
 	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
+	const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
 	return (
 		<section
 			ref={container}
 			className="w-[100dvw] h-[100lvh] relative bg-black"
 		>
-			<div className="absolute inset-0 z-0 flex justify-center items-center">
+			<motion.div
+				className="absolute inset-0 z-0 flex justify-center items-center"
+				style={{ opacity }}
+			>
 				<video
 					ref={video}
 					className="w-[100dvw] h-[100lvh] opacity-25 object-cover"
@@ -28,7 +35,7 @@ export function LandingHeader() {
 					}}
 					muted
 				/>
-			</div>
+			</motion.div>
 			<motion.div
 				className="relative flex flex-col justify-start items-center gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
 				style={{ translateY }}
