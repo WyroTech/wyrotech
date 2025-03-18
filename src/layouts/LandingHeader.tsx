@@ -44,8 +44,8 @@ export function LandingHeader() {
 						Andreas Wyrobek
 					</h1>
 					<h5 className="text-center max-w-2xl">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+						Where Code Meets Color | Full-Stack Developer | Angular & UX
+						Specialist
 					</h5>
 				</div>
 				<div className="flex gap-4">
