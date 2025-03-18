@@ -4,11 +4,11 @@ import {useRef} from "react";
 export function LandingHeader() {
 	const video = useRef<HTMLVideoElement>(null);
 	return (
-		<section className="w-[100dvw] h-[100dvh] relative bg-black">
+		<section className="w-[100dvw] h-[100lvh] relative bg-black">
 			<div className="absolute inset-0 z-0 flex justify-center items-center">
 				<video
 					ref={video}
-					className="w-full h-full max-h-[100dvh] opacity-25 object-cover"
+					className="w-full h-full opacity-25 object-cover"
 					src="/objects.mp4"
 					autoPlay
 					loop
