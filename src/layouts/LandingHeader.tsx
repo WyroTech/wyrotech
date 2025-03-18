@@ -11,7 +11,7 @@ export function LandingHeader() {
 		offset: ["end end", "end start"],
 	});
 	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-	const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+	const translateYReverse = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
 	return (
 		<section
@@ -19,10 +19,11 @@ export function LandingHeader() {
 			className="w-[100dvw] h-[100lvh] relative bg-black"
 		>
 			<motion.div className="absolute inset-0 z-0 flex justify-center items-center">
-				<video
+				<motion.video
 					ref={video}
 					className="w-[100dvw] h-[100lvh] opacity-35 object-cover"
 					src="/objects.mp4"
+					style={{ translateY: translateYReverse }}
 					autoPlay
 					loop
 					onPlay={() => {
