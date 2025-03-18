@@ -34,7 +34,7 @@ export function LandingHeader() {
 				style={{ translateY }}
 			>
 				<div className="flex flex-col gap-6 items-center">
-					<h1 className="text-center text-[9vw]!">Andreas Wyrobek</h1>
+					<h1 className="text-center lg:text-[9vw]!">Andreas Wyrobek</h1>
 					<h5 className="text-center max-w-2xl">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
