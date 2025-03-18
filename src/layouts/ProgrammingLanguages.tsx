@@ -3,7 +3,7 @@ import {Icon} from "@iconify/react";
 function ProgrammingIcon({ icon, name }: { icon: string; name: string }) {
 	const size = 72;
 	return (
-		<div className="transition-opacity cube group-hover:opacity-40 hover:!opacity-100 cube flex flex-col items-center gap-0.5">
+		<div className="transition-all cube group-hover:scale-95 group-hover:opacity-40 hover:!scale-110 hover:!opacity-100 cube flex flex-col items-center gap-0.5">
 			<div className="w-24 h-24 flex justify-center items-center">
 				<Icon icon={`logos:${icon}`} width={size} height={size} />
 			</div>
