@@ -16,10 +16,10 @@ export function ProgrammingLanguages() {
 	const size = 96;
 	return (
 		<div className="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16">
-			<h1 className="text-center text-7xl! lg:text-[6vw]!">
+			<h1 className="text-center text-7xl! lg:text-[6vw]! pt-16">
 				Skills & Languages
 			</h1>
-			<div className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16">
+			<div className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16">
 				<ProgrammingIcon name="Docker" icon="docker-icon" />
 				<ProgrammingIcon name="Tailwind" icon="tailwindcss-icon" />
 				<ProgrammingIcon name="Python" icon="python" />
