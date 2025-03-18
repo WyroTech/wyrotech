@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@iconify-json/bxl": "^1.2.2",
     "@iconify-json/flag": "^1.2.5",
     "@iconify-json/lucide": "^1.2.29",
     "@iconify/react": "^5.2.0",
