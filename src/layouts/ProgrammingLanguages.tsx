@@ -36,6 +36,7 @@ export function ProgrammingLanguages() {
 				<ProgrammingIcon name="Sass" icon="sass" />
 				<ProgrammingIcon name="PostgreSQL" icon="postgresql" />
 				<ProgrammingIcon name="Posthog" icon="posthog-icon" />
+				<ProgrammingIcon name="Storybook" icon="storybook-icon" />
 			</div>
 		</div>
 	);
