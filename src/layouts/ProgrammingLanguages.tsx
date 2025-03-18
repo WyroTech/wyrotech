@@ -15,7 +15,7 @@ function ProgrammingIcon({ icon, name }: { icon: string; name: string }) {
 export function ProgrammingLanguages() {
 	const size = 96;
 	return (
-		<div className="h-[100dvh] flex flex-col items-center justify-center px-8 gap-16">
+		<div className="min-h-[100dvh] flex flex-col items-center justify-center px-8 gap-16">
 			<h1 className="text-center text-7xl! lg:text-[6vw]!">
 				Skills & Languages
 			</h1>
