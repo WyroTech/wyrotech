@@ -1,9 +1,11 @@
 ---
 import { LandingHeader } from "@/layouts/LandingHeader";
 import { ProgrammingLanguages } from "@/layouts/ProgrammingLanguages";
+import { SpeakingLanguages } from "@/layouts/SpeakingLanguages";
 import Main from "../layouts/main.astro";
 ---
 <Main>
     <LandingHeader client:only="react"/>
     <ProgrammingLanguages client:only="react"/>
+    <SpeakingLanguages client:only="react"/>
 </Main>
