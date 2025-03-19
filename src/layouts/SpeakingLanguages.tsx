@@ -7,7 +7,7 @@ function LanguageIcon({
 	name,
 	subText,
 }: { icon: string; name: string; subText: string }) {
-	const size = 72;
+	const size = 96;
 	return (
 		<motion.div className="transition-all cube hover:!scale-120 cube flex flex-col items-center gap-0.5 max-w-32">
 			<div className="w-24 h-24 flex justify-center items-center">
@@ -35,7 +35,7 @@ export function SpeakingLanguages() {
 			<h1 className="title pt-8">Languages I speak</h1>
 			<div
 				ref={ref}
-				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"
+				className="group flex flex-wrap w-full justify-center gap-x-16 gap-y-24 pb-16"
 			>
 				<LanguageIcon name="Deutsch" subText="Native" icon="de-4x3" />
 				<LanguageIcon name="Polski" subText="2nd Native" icon="pl-4x3" />
