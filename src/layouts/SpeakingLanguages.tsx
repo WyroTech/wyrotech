@@ -37,7 +37,7 @@ export function SpeakingLanguages() {
 			</div>
 			<div
 				ref={ref}
-				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16 z-20"
+				className="group grid grid-cols-2 lg:flex lg:flex-wrap w-full justify-center justify-items-center gap-x-12 gap-y-16 pb-16 z-20"
 			>
 				<LanguageIcon name="Deutsch" subText="Native" icon="de-4x3" />
 				<LanguageIcon name="Polski" subText="2nd Native" icon="pl-4x3" />
