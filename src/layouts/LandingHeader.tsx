@@ -51,7 +51,7 @@ export function LandingHeader() {
 						/>
 					</div>
 					<h5 className="text-center max-w-2xl">
-						Where Code Meets Color | Full-Stack Developer | Angular & UX
+						Based in Bavaria, Germany | Full-Stack Developer | Angular & UX
 						Specialist
 					</h5>
 				</div>
