@@ -27,15 +27,17 @@ export function SpeakingLanguages() {
 
 	return (
 		<motion.div
-			className="min-h-[80lvh] flex flex-col items-center justify-center px-8 gap-16"
+			className="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16"
 			initial={{ opacity: 0, y: -40 }}
 			animate={isInView ? { opacity: 1, y: 0 } : {}}
 			transition={{ duration: 0.5 }}
 		>
-			<h1 className="title pt-8">Languages I speak</h1>
+			<div className="relative pt-8 z-10">
+				<h1 className="relative title z-20">Languages I speak</h1>
+			</div>
 			<div
 				ref={ref}
-				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"
+				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16 z-20"
 			>
 				<LanguageIcon name="Deutsch" subText="Native" icon="de-4x3" />
 				<LanguageIcon name="Polski" subText="2nd Native" icon="pl-4x3" />
