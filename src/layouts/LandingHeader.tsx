@@ -41,7 +41,7 @@ export function LandingHeader() {
 			>
 				<div className="flex flex-col gap-6 items-center">
 					<div className="flex justify-center relative">
-						<h1 className="text-center text-7xl! lg:text-[9vw]! relative z-10">
+						<h1 className="text-center text-7xl! lg:text-[9vw]! relative z-10 pt-12">
 							Andreas Wyrobek
 						</h1>
 						<img
