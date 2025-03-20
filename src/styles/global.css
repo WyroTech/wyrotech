@@ -208,3 +208,7 @@ a:hover > span:last-child {
 		rgb(179, 146, 239) 100%
 	);
 }
+
+.profile {
+	mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+}

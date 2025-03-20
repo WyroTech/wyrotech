@@ -40,9 +40,16 @@ export function LandingHeader() {
 				style={{ translateY }}
 			>
 				<div className="flex flex-col gap-6 items-center">
-					<h1 className="text-center text-7xl! lg:text-[9vw]!">
-						Andreas Wyrobek
-					</h1>
+					<div className="flex justify-center relative">
+						<h1 className="text-center text-7xl! lg:text-[9vw]! relative z-10">
+							Andreas Wyrobek
+						</h1>
+						<img
+							className="absolute bottom-6 h-64 z-0 brightness-90 profile"
+							src="/profile.png"
+							alt="logo"
+						/>
+					</div>
 					<h5 className="text-center max-w-2xl">
 						Where Code Meets Color | Full-Stack Developer | Angular & UX
 						Specialist
