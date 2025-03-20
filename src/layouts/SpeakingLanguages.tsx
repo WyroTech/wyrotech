@@ -41,7 +41,7 @@ export function SpeakingLanguages() {
 			>
 				<LanguageIcon name="Deutsch" subText="Native" icon="de-4x3" />
 				<LanguageIcon name="Polski" subText="2nd Native" icon="pl-4x3" />
-				<LanguageIcon name="English" subText="C1 Level" icon="us-4x3" />
+				<LanguageIcon name="English" subText="C1 Level" icon="gb-4x3" />
 				<LanguageIcon name="日本語" subText="N5 Level" icon="jp-4x3" />
 			</div>
 		</motion.div>

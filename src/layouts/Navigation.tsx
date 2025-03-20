@@ -12,7 +12,7 @@ export function LanguageSwitcher() {
 		<Popover>
 			<PopoverTrigger>
 				<div className="flex gap-2 items-center rounded-full cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors px-4 py-2">
-					<Icon icon="flag:us-4x3" />
+					<Icon icon="flag:gb-4x3" />
 					<span className="text-sm!">EN</span>
 					<ChevronDownIcon size={12} />
 				</div>
@@ -24,7 +24,7 @@ export function LanguageSwitcher() {
 						<span className="text-sm!">German</span>
 					</div>
 					<div className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors">
-						<Icon icon="flag:us-4x3" className="border border-gray-700" />
+						<Icon icon="flag:gb-4x3" className="border border-gray-700" />
 						<span className="text-sm!">English</span>
 					</div>
 				</div>
