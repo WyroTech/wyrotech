@@ -1,5 +1,5 @@
 import {GlowingEffect} from "@/components/ui/glowing-effect";
-import {Cloud, CodeXml, FileHeart, Hammer, UsersRound} from "lucide-react";
+import {CodeXml, FileHeart, Hammer, LayoutDashboard, UsersRound,} from "lucide-react";
 import type React from "react";
 
 export function GlowingEffectDemoSecond() {
@@ -32,9 +32,11 @@ export function GlowingEffectDemoSecond() {
 
 			<GridItem
 				area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-				icon={<Cloud className="h-4 w-4 text-black dark:text-neutral-400" />}
-				title="Azure Cloud Architecture Pro"
-				description="Deploying scalable solutions for enterprise needs."
+				icon={
+					<LayoutDashboard className="h-4 w-4 text-black dark:text-neutral-400" />
+				}
+				title="Scrumban Implementation Pro "
+				description="Leading agile development through Azure DevOps."
 			/>
 
 			<GridItem

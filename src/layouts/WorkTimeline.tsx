@@ -135,7 +135,7 @@ export function WorkTimeline() {
 		},
 	];
 	return (
-		<div className="w-full">
+		<div className="w-full py-24">
 			<Timeline data={data} />
 		</div>
 	);
