@@ -87,7 +87,9 @@ export function WorkTimeline() {
 			title: "11.2024",
 			content: (
 				<div className="flex flex-col gap-2">
-					<h1 className="text-gradiant">Representative on the Connecta 2024</h1>
+					<h1 className="text-gradiant">
+						Representative on the Connecta 2024 in Regensburg
+					</h1>
 					<a
 						href="https://connecta-regensburg.de/"
 						className="flex items-center gap-2 text-blue-500"
