@@ -45,7 +45,7 @@ export function LandingHeader() {
 							Andreas Wyrobek
 						</h1>
 						<img
-							className="absolute bottom-3 h-60 z-0 brightness-90 profile grayscale-40"
+							className="absolute bottom-3 h-[18vw] z-0 brightness-90 profile grayscale-40"
 							src="/profile.png"
 							alt="logo"
 						/>
