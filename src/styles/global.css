@@ -95,6 +95,7 @@
 html,
 body {
 	@apply font-mono bg-background text-foreground overflow-x-hidden;
+	scroll-behavior: smooth;
 }
 
 h1 {

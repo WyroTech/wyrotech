@@ -15,6 +15,7 @@ export function LandingHeader() {
 
 	return (
 		<section
+			id="home"
 			ref={container}
 			className="w-[100dvw] h-[100lvh] relative bg-black"
 		>
@@ -58,7 +59,11 @@ export function LandingHeader() {
 				</div>
 				<div className="flex gap-4">
 					<Button severity="secondary" text="My Work" icon="chevron-right" />
-					<a href="https://www.linkedin.com/in/andreas-wyrobek/" target="_blank" rel="noreferrer">
+					<a
+						href="https://www.linkedin.com/in/andreas-wyrobek/"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<Button severity="primary" text="Contact" icon="chevron-right" />
 					</a>
 				</div>

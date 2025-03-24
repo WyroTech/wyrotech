@@ -261,7 +261,7 @@ export function WorkTimeline() {
 		},
 	];
 	return (
-		<div className="w-full py-24">
+		<div className="w-full py-24" id="journey">
 			<Timeline data={data} />
 		</div>
 	);
