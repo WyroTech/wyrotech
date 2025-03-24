@@ -33,6 +33,7 @@ export function LandingHeader() {
 					}}
 					muted
 				/>
+
 				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90%" />
 			</motion.div>
 			<motion.div
@@ -45,12 +46,12 @@ export function LandingHeader() {
 							Andreas Wyrobek
 						</h1>
 						<img
-							className="absolute bottom-3 h-[18vw] z-0 brightness-90 profile grayscale-40"
+							className="absolute bottom-3 min-h-64 md:min-h-48 h-[18vw] max-h-96 z-0 brightness-90 profile grayscale-10"
 							src="/profile.png"
 							alt="logo"
 						/>
 					</div>
-					<h5 className="text-center max-w-2xl">
+					<h5 className="text-center max-w-2xl text-balance">
 						Based in Bavaria, Germany | Full-Stack Developer | Angular & UX
 						Specialist
 					</h5>
