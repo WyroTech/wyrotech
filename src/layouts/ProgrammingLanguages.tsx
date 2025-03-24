@@ -20,6 +20,7 @@ export function ProgrammingLanguages() {
 
 	return (
 		<motion.div
+			id="skills"
 			className="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16"
 			initial={{ opacity: 0, y: -40 }}
 			animate={isInView ? { opacity: 1, y: 0 } : {}}

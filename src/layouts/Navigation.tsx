@@ -120,18 +120,18 @@ export function Navigation(props: { imageUrl: string }) {
 									Home
 								</motion.a>
 								<motion.a
+									href="#skills"
+									className="text-3xl font-sans"
+									variants={menuItemVariants}
+								>
+									Skills
+								</motion.a>
+								<motion.a
 									href="#journey"
 									className="text-3xl font-sans"
 									variants={menuItemVariants}
 								>
 									My Journey
-								</motion.a>
-								<motion.a
-									href="/"
-									className="text-3xl font-sans"
-									variants={menuItemVariants}
-								>
-									About us
 								</motion.a>
 								<motion.a
 									href="/"
@@ -158,8 +158,8 @@ export function Navigation(props: { imageUrl: string }) {
 						<div className="absolute -inset-0.5 bg-white z-0 nav-gradiant" />
 						<div className="relative flex items-center gap-12 pl-8 pr-6 py-4 rounded-full bg-black z-10 w-full h-full">
 							<AnimatedLink text="Home" href="#home" />
+							<AnimatedLink text="Skills" href="#skills" />
 							<AnimatedLink text="My Journey" href="#journey" />
-							<AnimatedLink text="About us" href="/" />
 							<AnimatedLink text="Imprint" href="/" />
 							<LanguageSwitcher />
 						</div>
