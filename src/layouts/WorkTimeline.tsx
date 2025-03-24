@@ -1,16 +1,23 @@
+import {LinkPreview} from "@/components/ui/link-preview.tsx";
 import {Timeline} from "@/components/ui/timeline";
 import {ExternalLink} from "lucide-react";
 import type React from "react";
 
-function BlueLink({ link, name }: { link: string; name: string }) {
+function BlueLink({
+	link,
+	name,
+	imageUrl,
+}: { link: string; name: string; imageUrl: string }) {
 	return (
-		<div>
-			<a href={link} className=" text-blue-500">
-				{name}
-				<div className="inline-flex px-1">
-					<ExternalLink size={14} />
+		<div className="z-50">
+			<LinkPreview url={link} imageSrc={imageUrl}>
+				<div className="inline-flex text-blue-500!">
+					{name}
+					<div className="inline-flex px-1">
+						<ExternalLink size={14} />
+					</div>
 				</div>
-			</a>
+			</LinkPreview>
 		</div>
 	);
 }
@@ -36,6 +43,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.firstcontact-deggendorf.de/startseite.html"}
 						name={"FirstContact Deggendorf"}
+						imageUrl="/public/screenshots/firstcontact-deggendorf.png"
 					/>
 				</div>
 			),
@@ -51,6 +59,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.dab-europe.com/"}
 						name={"dab: Daten - Analysen & Beratung GmbH"}
+						imageUrl="/public/screenshots/dab.png"
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
@@ -79,6 +88,7 @@ export function WorkTimeline() {
 							"https://www.coursera.org/account/accomplishments/professional-cert/FA3AWC8GLJJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof"
 						}
 						name={"Coursera"}
+						imageUrl="/public/screenshots/coursera.png"
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
@@ -115,6 +125,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://connecta-regensburg.de/"}
 						name={"Connecta in Regensburg"}
+						imageUrl="/public/screenshots/connacta-regensburg.png"
 					/>
 				</div>
 			),
@@ -127,6 +138,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.dab-europe.com/"}
 						name={"dab: Daten - Analysen & Beratung GmbH"}
+						imageUrl="/public/screenshots/dab.png"
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
@@ -165,6 +177,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.edvschule-plattling.de/"}
 						name={"EDV-Schulen des Landkreises Deggendorf"}
+						imageUrl="/public/screenshots/edvschule.png"
 					/>
 				</div>
 			),
@@ -177,6 +190,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.dab-europe.com/"}
 						name={"dab: Daten - Analysen & Beratung GmbH"}
+						imageUrl="/public/screenshots/dab.png"
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
@@ -209,6 +223,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.acp-gruppe.com/de-de"}
 						name={"ACP IT Solutions AG"}
+						imageUrl="/public/screenshots/acp.png"
 					/>
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<BulletPoint>Developing of Odoo - Drag & Drop Addon</BulletPoint>
@@ -235,6 +250,7 @@ export function WorkTimeline() {
 					<BlueLink
 						link={"https://www.edvschule-plattling.de/"}
 						name={"EDV-Schulen des Landkreises Deggendorf"}
+						imageUrl="/public/screenshots/edvschule.png"
 					/>
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<BulletPoint>Project Work & Team Coordination</BulletPoint>

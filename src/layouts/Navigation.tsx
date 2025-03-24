@@ -75,7 +75,7 @@ export function Navigation(props: { imageUrl: string }) {
 	};
 
 	return (
-		<nav className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-black to-transparent">
+		<nav className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-black to-transparent z-[9999]">
 			<div className="flex justify-between items-center py-8 px-8">
 				<a href="/" className="z-20">
 					<Logo imageUrl={props.imageUrl} />
@@ -140,11 +140,13 @@ export function Navigation(props: { imageUrl: string }) {
 								>
 									Imprint
 								</motion.a>
-								<motion.a href="https://www.linkedin.com/in/andreas-wyrobek/"
-										  target="_blank"
-										  rel="noreferrer"
-										  className="lg:hidden flex gap-4"
-										  variants={menuItemVariants}>
+								<motion.a
+									href="https://www.linkedin.com/in/andreas-wyrobek/"
+									target="_blank"
+									rel="noreferrer"
+									className="lg:hidden flex gap-4"
+									variants={menuItemVariants}
+								>
 									<ButtonContainer text="Contact" severity="secondary" />
 								</motion.a>
 							</div>
@@ -163,7 +165,12 @@ export function Navigation(props: { imageUrl: string }) {
 						</div>
 					</div>
 				</div>
-				<a href="https://www.linkedin.com/in/andreas-wyrobek/" target="_blank" rel="noreferrer" className="hidden lg:flex gap-4">
+				<a
+					href="https://www.linkedin.com/in/andreas-wyrobek/"
+					target="_blank"
+					rel="noreferrer"
+					className="hidden lg:flex gap-4"
+				>
 					<ButtonContainer text="Contact" severity="secondary" />
 				</a>
 			</div>
