@@ -37,9 +37,8 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 	});
 
 	return (
-		<motion.a
+		<motion.div
 			// biome-ignore lint/a11y/useValidAnchor: <explanation>
-			href="#"
 			className={`${severity} button-container`}
 			style={{ boxShadow }}
 			onHoverStart={() => {
@@ -86,7 +85,7 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 					{icon ? <DynamicIcon name={icon as any} size={16} /> : null}
 				</motion.button>
 			</div>
-		</motion.a>
+		</motion.div>
 	);
 };
 

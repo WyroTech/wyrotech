@@ -140,6 +140,13 @@ export function Navigation(props: { imageUrl: string }) {
 								>
 									Imprint
 								</motion.a>
+								<motion.a href="https://www.linkedin.com/in/andreas-wyrobek/"
+										  target="_blank"
+										  rel="noreferrer"
+										  className="lg:hidden flex gap-4"
+										  variants={menuItemVariants}>
+									<ButtonContainer text="Contact" severity="secondary" />
+								</motion.a>
 							</div>
 						</motion.div>
 					)}
@@ -156,7 +163,7 @@ export function Navigation(props: { imageUrl: string }) {
 						</div>
 					</div>
 				</div>
-				<a href="/" className="hidden lg:flex gap-4">
+				<a href="https://www.linkedin.com/in/andreas-wyrobek/" target="_blank" rel="noreferrer" className="hidden lg:flex gap-4">
 					<ButtonContainer text="Contact" severity="secondary" />
 				</a>
 			</div>

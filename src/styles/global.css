@@ -98,36 +98,36 @@ body {
 }
 
 h1 {
-	@apply block text-4xl font-medium font-sans;
+	@apply block text-4xl font-medium font-sans text-balance;
 }
 
 h1.title {
-	@apply text-center text-6xl! lg:text-[6vw]!;
+	@apply text-center text-6xl! lg:text-[6vw]! text-balance;
 }
 
 h2 {
-	@apply block text-3xl font-medium font-sans tracking-tight;
+	@apply block text-3xl font-medium font-sans tracking-tight text-balance;
 }
 
 h3 {
-	@apply block text-2xl font-medium font-sans;
+	@apply block text-2xl font-medium font-sans text-balance;
 }
 
 h4 {
-	@apply block text-xl font-medium font-sans;
+	@apply block text-xl font-medium font-sans text-balance;
 }
 
 h5 {
-	@apply block text-lg font-medium font-sans;
+	@apply block text-lg font-medium font-sans text-balance;
 }
 
 h6 {
-	@apply text-white block text-base font-medium font-sans;
+	@apply text-white block text-base font-medium font-sans text-balance;
 }
 
 span,
 p {
-	@apply block text-base font-normal tracking-tight;
+	@apply block text-base font-normal tracking-tight text-balance;
 	color: rgb(208, 211, 218);
 }
 
