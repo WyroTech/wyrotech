@@ -30,11 +30,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
 	return (
 		<div className="w-full px-8" ref={containerRef}>
-			<div className="max-w-7xl mx-auto pt-10 px-4 md:px-8 lg:px-10">
+			<div className="mx-auto pt-10 px-4 md:px-8 lg:px-10">
 				<h1 className="text-left! md:text-center! title">My journey</h1>
 			</div>
 
-			<div ref={ref} className="relative mx-auto pb-20">
+			<div ref={ref} className="relative mx-auto pb-20 max-w-7xl">
 				{data.map((item, index) => (
 					<div
 						key={index}
@@ -46,7 +46,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 							</div>
 						</div>
 
-						<div className="relative pl-4 md:pl-20 pr-4 md:pl-4 w-full">
+						<div className="relative pl-4 md:pl-4 w-full">
 							<h2 className="md:hidden block mb-4">{item.title}</h2>
 							{item.content}{" "}
 						</div>
