@@ -2,6 +2,17 @@ import {Timeline} from "@/components/ui/timeline";
 import {ExternalLink} from "lucide-react";
 import React from "react";
 
+function BlueLink({link, name}: {link: string, name: string}) {
+	return <div>
+		<a href={link} className="inline-flex items-center gap-2 text-blue-500">
+			{name}
+			<div className="-translate-y-1/8">
+				<ExternalLink size={14} />
+			</div>
+		</a>
+	</div>;
+}
+
 export function WorkTimeline() {
 	const data = [
 		{
@@ -11,15 +22,7 @@ export function WorkTimeline() {
 					<h1 className="text-gradiant">
 						Representative on the FirstContact 2025 in Deggendorf
 					</h1>
-					<a
-						href="https://www.firstcontact-deggendorf.de/startseite.html"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						FirstContact Deggendorf
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.firstcontact-deggendorf.de/startseite.html"} name={"FirstContact Deggendorf"} />
 				</div>
 			),
 		},
@@ -30,15 +33,8 @@ export function WorkTimeline() {
 					<h1 className="text-gradiant">
 						Principal Software Engineer & UX/UI Lead
 					</h1>
-					<a
-						href="https://www.dab-europe.com/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						dab: Daten - Analysen & Beratung GmbH
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+
+					<BlueLink link={"https://www.dab-europe.com/"} name={"dab: Daten - Analysen & Beratung GmbH"} />
 
 					<div className="mb-2 flex flex-col gap-1">
 						<div>✅ Technical Supervisor for Junior-Mid Developer</div>
@@ -57,15 +53,7 @@ export function WorkTimeline() {
 			content: (
 				<div className="flex flex-col gap-3">
 					<h1 className="text-gradiant">Certfication: Google UX Design</h1>
-					<a
-						href="https://www.coursera.org/account/accomplishments/professional-cert/FA3AWC8GLJJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						Coursera
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.coursera.org/account/accomplishments/professional-cert/FA3AWC8GLJJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof"} name={"Coursera"} />
 
 					<div className="mb-2 flex flex-col gap-1">
 						<div>✅ Build Dynamic User Interfaces (UI) for Websites</div>
@@ -88,17 +76,9 @@ export function WorkTimeline() {
 			content: (
 				<div className="flex flex-col gap-2">
 					<h1 className="text-gradiant">
-						Representative on the Connecta 2024 in Regensburg
+						Representative on the Connecta 2024
 					</h1>
-					<a
-						href="https://connecta-regensburg.de/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						Connecta
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://connecta-regensburg.de/"} name={"Connecta in Regensburg"} />
 				</div>
 			),
 		},
@@ -107,15 +87,7 @@ export function WorkTimeline() {
 			content: (
 				<div className="flex flex-col gap-3">
 					<h1 className="text-gradiant">Senior Software Developer</h1>
-					<a
-						href="https://www.dab-europe.com/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						dab: Daten - Analysen & Beratung GmbH
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.dab-europe.com/"} name={"dab: Daten - Analysen & Beratung GmbH"} />
 
 					<div className="mb-2 flex flex-col gap-1">
 						<div>
@@ -150,15 +122,7 @@ export function WorkTimeline() {
 					<h1 className="text-gradiant">
 						Representative on the Presentation-Days at EDV School in Plattling
 					</h1>
-					<a
-						href="https://www.edvschule-plattling.de/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						EDV-Schulen des Landkreises Deggendorf
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.edvschule-plattling.de/"} name={"EDV-Schulen des Landkreises Deggendorf"} />
 				</div>
 			),
 		},
@@ -167,15 +131,7 @@ export function WorkTimeline() {
 			content: (
 				<div className="flex flex-col gap-3">
 					<h1 className="text-gradiant">Software Developer</h1>
-					<a
-						href="https://www.dab-europe.com/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						dab: Daten - Analysen & Beratung GmbH
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.dab-europe.com/"} name={"dab: Daten - Analysen & Beratung GmbH"} />
 
 					<div className="mb-2 flex flex-col gap-1">
 						<div>
@@ -203,15 +159,7 @@ export function WorkTimeline() {
 			content: (
 				<div className="flex flex-col gap-2">
 					<h1 className="text-gradiant">Software-Developer - Python & Odoo</h1>
-					<a
-						href="https://www.acp-gruppe.com/de-de/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						ACP IT Solutions AG
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.acp-gruppe.com/de-de"} name={"ACP IT Solutions AG"} />
 					<div className="mb-2 flex flex-col gap-1">
 						<div>✅ Developing of Odoo - Drag & Drop Addon</div>
 						<div>✅ Developing of Odoo - Azure SSO Integration Addon</div>
@@ -228,15 +176,7 @@ export function WorkTimeline() {
 					<h1 className="text-gradiant">
 						Training - Junior Software Developer
 					</h1>
-					<a
-						href="https://www.edvschule-plattling.de/"
-						className="flex items-center gap-2 text-blue-500"
-					>
-						EDV-Schulen des Landkreises Deggendorf
-						<div className="-translate-y-1/8">
-							<ExternalLink size={14} />
-						</div>
-					</a>
+					<BlueLink link={"https://www.edvschule-plattling.de/"} name={"EDV-Schulen des Landkreises Deggendorf"} />
 					<div className="mb-2 flex flex-col gap-1">
 						<div>✅ Project Work & Team Coordination</div>
 						<div>✅ Fundamentals of Software Development</div>
