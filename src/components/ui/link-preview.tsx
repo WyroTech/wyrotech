@@ -102,7 +102,7 @@ export const LinkPreview = ({
 								<a
 									href={url}
 									target="_blank"
-									className="block p-1 bg-white border-2 border-transparent shadow rounded-md hover:border-neutral-200 dark:hover:border-neutral-800"
+									className="block p-1 bg-gray-800 border-2 border-transparent shadow rounded hover:border-neutral-200 dark:hover:border-neutral-800"
 									style={{ fontSize: 0 }}
 									rel="noreferrer"
 								>
@@ -110,7 +110,7 @@ export const LinkPreview = ({
 										src={isStatic ? imageSrc : src}
 										width={width}
 										height={height}
-										className="rounded-lg"
+										className="rounded"
 										// biome-ignore lint/a11y/noRedundantAlt: <explanation>
 										alt="preview image"
 									/>
