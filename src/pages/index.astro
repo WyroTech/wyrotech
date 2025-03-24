@@ -7,6 +7,7 @@ import { WorkTimeline } from "../layouts/WorkTimeline";
 import Main from "../layouts/main.astro";
 
 import { getImage } from "astro:assets";
+import profileImg from "public/profile.png";
 import acpImg from "public/screenshots/acp.png";
 import connectaImg from "public/screenshots/connacta-regensburg.png";
 import courseraImg from "public/screenshots/coursera.png";
@@ -59,9 +60,17 @@ const images = {
 		})
 	).src,
 };
+
+const profile = (
+	await getImage({
+		src: profileImg,
+		width: 300,
+		format: "webp",
+	})
+).src;
 ---
 <Main>
-    <LandingHeader client:only="react"/>
+    <LandingHeader client:only="react" imageUrl={profile}/>
     <Stats client:only="react"/>
     <ProgrammingLanguages client:only="react"/>
     <SpeakingLanguages client:only="react"/>

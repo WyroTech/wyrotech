@@ -2,7 +2,7 @@ import Button from "@/components/Button.tsx";
 import {motion, useScroll, useTransform} from "framer-motion";
 import {useRef} from "react";
 
-export function LandingHeader() {
+export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 	const video = useRef<HTMLVideoElement>(null);
 	const container = useRef<HTMLDivElement>(null);
 
@@ -48,7 +48,7 @@ export function LandingHeader() {
 						</h1>
 						<img
 							className="absolute bottom-3 min-h-64 md:min-h-48 h-[18vw] max-h-96 z-0 brightness-90 profile grayscale-10"
-							src="/profile.png"
+							src={imageUrl}
 							alt="logo"
 						/>
 					</div>
