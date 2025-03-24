@@ -44,7 +44,7 @@ export function WorkTimeline() {
 						name={"dab: Daten - Analysen & Beratung GmbH"}
 					/>
 
-					<div className="mb-2 flex flex-col gap-1">
+					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<div>✅ Technical Supervisor for Junior-Mid Developer</div>
 						<div>✅ Creation of Design System for dab Nexus</div>
 						<div>✅ Planing Product Features in Figma for dab Nexus</div>
@@ -68,7 +68,7 @@ export function WorkTimeline() {
 						name={"Coursera"}
 					/>
 
-					<div className="mb-2 flex flex-col gap-1">
+					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<div>✅ Build Dynamic User Interfaces (UI) for Websites</div>
 						<div>✅ Foundations of User Experience (UX) Design</div>
 						<div>
@@ -106,7 +106,7 @@ export function WorkTimeline() {
 						name={"dab: Daten - Analysen & Beratung GmbH"}
 					/>
 
-					<div className="mb-2 flex flex-col gap-1">
+					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<div>
 							✅ Worked on numerous features for dab Nexus, delivering over 10
 							major feature releases.
@@ -156,7 +156,7 @@ export function WorkTimeline() {
 						name={"dab: Daten - Analysen & Beratung GmbH"}
 					/>
 
-					<div className="mb-2 flex flex-col gap-1">
+					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<div>
 							✅ Creation of dab Link as a Electron App to fastly access SAP
 							data in the SAP GUI with a "One-Link"-Click Solution.
@@ -186,7 +186,7 @@ export function WorkTimeline() {
 						link={"https://www.acp-gruppe.com/de-de"}
 						name={"ACP IT Solutions AG"}
 					/>
-					<div className="mb-2 flex flex-col gap-1">
+					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<div>✅ Developing of Odoo - Drag & Drop Addon</div>
 						<div>✅ Developing of Odoo - Azure SSO Integration Addon</div>
 						<div>✅ Developing of Migration tool for "Odin"-Plattform</div>
@@ -206,7 +206,7 @@ export function WorkTimeline() {
 						link={"https://www.edvschule-plattling.de/"}
 						name={"EDV-Schulen des Landkreises Deggendorf"}
 					/>
-					<div className="mb-2 flex flex-col gap-1">
+					<div className="mb-2 flex flex-col gap-1 text-sm!">
 						<div>✅ Project Work & Team Coordination</div>
 						<div>✅ Fundamentals of Software Development</div>
 					</div>
