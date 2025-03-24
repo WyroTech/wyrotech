@@ -137,7 +137,7 @@ export function WorkTimeline() {
 			content: (
 				<div className="flex flex-col gap-2">
 					<h1 className="text-gradiant">
-						Representative on the Presentation-Days at EDV School in Plattling
+						Representative on the Presentation-Days at EDV School
 					</h1>
 					<BlueLink
 						link={"https://www.edvschule-plattling.de/"}
