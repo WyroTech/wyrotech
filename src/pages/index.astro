@@ -5,11 +5,65 @@ import { SpeakingLanguages } from "@/layouts/SpeakingLanguages";
 import { Stats } from "../layouts/Stats";
 import { WorkTimeline } from "../layouts/WorkTimeline";
 import Main from "../layouts/main.astro";
+
+import { getImage } from "astro:assets";
+import acpImg from "public/screenshots/acp.png";
+import connectaImg from "public/screenshots/connacta-regensburg.png";
+import courseraImg from "public/screenshots/coursera.png";
+import dabImg from "public/screenshots/dab.png";
+import edvschuleImg from "public/screenshots/edvschule.png";
+import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
+
+// Process images with Astro's image optimization
+const images = {
+	firstcontact: (
+		await getImage({
+			src: firstcontactImg,
+			width: 256,
+			format: "webp",
+		})
+	).src,
+	dab: (
+		await getImage({
+			src: dabImg,
+			width: 256,
+			format: "webp",
+		})
+	).src,
+	coursera: (
+		await getImage({
+			src: courseraImg,
+			width: 256,
+			format: "webp",
+		})
+	).src,
+	connecta: (
+		await getImage({
+			src: connectaImg,
+			width: 256,
+			format: "webp",
+		})
+	).src,
+	edvschule: (
+		await getImage({
+			src: edvschuleImg,
+			width: 256,
+			format: "webp",
+		})
+	).src,
+	acp: (
+		await getImage({
+			src: acpImg,
+			width: 256,
+			format: "webp",
+		})
+	).src,
+};
 ---
 <Main>
     <LandingHeader client:only="react"/>
     <Stats client:only="react"/>
     <ProgrammingLanguages client:only="react"/>
     <SpeakingLanguages client:only="react"/>
-    <WorkTimeline client:only="react"/>
+    <WorkTimeline client:only="react" images={images}/>
 </Main>
