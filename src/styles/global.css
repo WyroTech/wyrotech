@@ -98,7 +98,7 @@ body {
 }
 
 h1 {
-	@apply block text-4xl font-medium font-sans text-balance;
+	@apply block text-4xl font-medium font-sans;
 }
 
 h1.title {
