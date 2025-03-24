@@ -1,6 +1,6 @@
 import {Timeline} from "@/components/ui/timeline";
 import {ExternalLink} from "lucide-react";
-import React from "react";
+import type React from "react";
 
 function BlueLink({ link, name }: { link: string; name: string }) {
 	return (
@@ -11,6 +11,15 @@ function BlueLink({ link, name }: { link: string; name: string }) {
 					<ExternalLink size={14} />
 				</div>
 			</a>
+		</div>
+	);
+}
+
+function BulletPoint({ children: child }: { children: React.ReactNode }) {
+	return (
+		<div className="flex gap-2">
+			<div>✅</div>
+			{child}
 		</div>
 	);
 }
@@ -45,13 +54,17 @@ export function WorkTimeline() {
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
-						<div>✅ Technical Supervisor for Junior-Mid Developer</div>
-						<div>✅ Creation of Design System for dab Nexus</div>
-						<div>✅ Planing Product Features in Figma for dab Nexus</div>
-						<div>
-							✅ Creating UX Journey of dab's newest AI Project and creating
-							first Mockups and Prototypes in Figma
-						</div>
+						<BulletPoint>
+							Technical Supervisor for Junior-Mid Developer
+						</BulletPoint>
+						<BulletPoint>Creation of Design System for dab Nexus</BulletPoint>
+						<BulletPoint>
+							Planing Product Features in Figma for dab Nexus
+						</BulletPoint>
+						<BulletPoint>
+							Creating UX Journey of dab's newest AI Project and creating first
+							Mockups and Prototypes in Figma
+						</BulletPoint>
 					</div>
 				</div>
 			),
@@ -69,17 +82,27 @@ export function WorkTimeline() {
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
-						<div>✅ Build Dynamic User Interfaces (UI) for Websites</div>
-						<div>✅ Foundations of User Experience (UX) Design</div>
-						<div>
-							✅ Start the UX Design Process: Empathize, Define, and Ideate
-						</div>
-						<div>✅ Create High-Fidelity Designs and Prototypes in Figma</div>
-						<div>✅ Build Wireframes and Low-Fidelity Prototypes</div>
-						<div>✅ Conduct UX Research and Test Early Concepts</div>
-						<div>
-							✅ Design a User Experience for Social Good & Prepare for Jobs
-						</div>
+						<BulletPoint>
+							Build Dynamic User Interfaces (UI) for Websites
+						</BulletPoint>
+						<BulletPoint>
+							Foundations of User Experience (UX) Design
+						</BulletPoint>
+						<BulletPoint>
+							Start the UX Design Process: Empathize, Define, and Ideate
+						</BulletPoint>
+						<BulletPoint>
+							Create High-Fidelity Designs and Prototypes in Figma
+						</BulletPoint>
+						<BulletPoint>
+							Build Wireframes and Low-Fidelity Prototypes
+						</BulletPoint>
+						<BulletPoint>
+							Conduct UX Research and Test Early Concepts
+						</BulletPoint>
+						<BulletPoint>
+							Design a User Experience for Social Good & Prepare for Jobs
+						</BulletPoint>
 					</div>
 				</div>
 			),
@@ -107,27 +130,27 @@ export function WorkTimeline() {
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
-						<div>
-							✅ Worked on numerous features for dab Nexus, delivering over 10
+						<BulletPoint>
+							Worked on numerous features for dab Nexus, delivering over 10
 							major feature releases.
-						</div>
-						<div>
-							✅ Revamped the SAP Extraction Library (C#), achieving up to a 70%
+						</BulletPoint>
+						<BulletPoint>
+							Revamped the SAP Extraction Library (C#), achieving up to a 70%
 							performance boost.
-						</div>
-						<div>
-							✅ Planned and strategized dab Nexus Loom as a SaaS solution on
+						</BulletPoint>
+						<BulletPoint>
+							Planned and strategized dab Nexus Loom as a SaaS solution on
 							Azure.
-						</div>
-						<div>
-							✅ Designed intuitive UX and UI for dab Nexus Loom using Figma.
-						</div>
-						<div>
-							✅ Built the user interface for dab Nexus Loom with Angular.
-						</div>
-						<div>
-							✅ Crafted the UX and UI for the in-house licensing tool "Mars."
-						</div>
+						</BulletPoint>
+						<BulletPoint>
+							Designed intuitive UX and UI for dab Nexus Loom using Figma.
+						</BulletPoint>
+						<BulletPoint>
+							Built the user interface for dab Nexus Loom with Angular.
+						</BulletPoint>
+						<BulletPoint>
+							Crafted the UX and UI for the in-house licensing tool "Mars."
+						</BulletPoint>
 					</div>
 				</div>
 			),
@@ -157,22 +180,23 @@ export function WorkTimeline() {
 					/>
 
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
-						<div>
-							✅ Creation of dab Link as a Electron App to fastly access SAP
-							data in the SAP GUI with a "One-Link"-Click Solution.
-						</div>
-						<div>
-							✅ Start of dab Nexus. Creation of the base Product with Angular
-							and .NET Core.
-						</div>
-						<div>✅ Integration of CI/CD Pipelines with Azure DevOps.</div>
-						<div>
-							✅ Creation of the "Apollo"-Customer Portal Design System in
-							Figma.
-						</div>
-						<div>
-							✅ Development of the Apollo Customer Portal with Angular.
-						</div>
+						<BulletPoint>
+							Creation of dab Link as a Electron App to fastly access SAP data
+							in the SAP GUI with a "One-Link"-Click Solution.
+						</BulletPoint>
+						<BulletPoint>
+							Start of dab Nexus. Creation of the base Product with Angular and
+							.NET Core.
+						</BulletPoint>
+						<BulletPoint>
+							Integration of CI/CD Pipelines with Azure DevOps.
+						</BulletPoint>
+						<BulletPoint>
+							Creation of the "Apollo"-Customer Portal Design System in Figma.
+						</BulletPoint>
+						<BulletPoint>
+							Development of the Apollo Customer Portal with Angular.
+						</BulletPoint>
 					</div>
 				</div>
 			),
@@ -187,10 +211,16 @@ export function WorkTimeline() {
 						name={"ACP IT Solutions AG"}
 					/>
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
-						<div>✅ Developing of Odoo - Drag & Drop Addon</div>
-						<div>✅ Developing of Odoo - Azure SSO Integration Addon</div>
-						<div>✅ Developing of Migration tool for "Odin"-Plattform</div>
-						<div>✅ Developing custom Addons for Customers for Odoo</div>
+						<BulletPoint>Developing of Odoo - Drag & Drop Addon</BulletPoint>
+						<BulletPoint>
+							Developing of Odoo - Azure SSO Integration Addon
+						</BulletPoint>
+						<BulletPoint>
+							Developing of Migration tool for "Odin"-Plattform
+						</BulletPoint>
+						<BulletPoint>
+							Developing custom Addons for Customers for Odoo
+						</BulletPoint>
 					</div>
 				</div>
 			),
@@ -207,8 +237,8 @@ export function WorkTimeline() {
 						name={"EDV-Schulen des Landkreises Deggendorf"}
 					/>
 					<div className="mb-2 flex flex-col gap-1 text-sm!">
-						<div>✅ Project Work & Team Coordination</div>
-						<div>✅ Fundamentals of Software Development</div>
+						<BulletPoint>Project Work & Team Coordination</BulletPoint>
+						<BulletPoint>Fundamentals of Software Development</BulletPoint>
 					</div>
 				</div>
 			),
