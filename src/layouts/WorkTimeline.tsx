@@ -13,7 +13,7 @@ function BlueLink({
 			<LinkPreview url={link} imageSrc={imageUrl}>
 				<div className="inline-flex text-blue-500!">
 					{name}
-					<div className="inline-flex px-1">
+					<div className="inline-flex px-1 pt-1">
 						<ExternalLink size={14} />
 					</div>
 				</div>
