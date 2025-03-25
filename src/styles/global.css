@@ -117,7 +117,8 @@ h4 {
 	@apply block text-xl font-medium font-sans text-balance;
 }
 
-h5 {
+h5,
+.h5 {
 	@apply block text-lg font-medium font-sans text-balance;
 }
 

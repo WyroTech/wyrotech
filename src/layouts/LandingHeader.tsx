@@ -52,10 +52,10 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 							alt="logo"
 						/>
 					</div>
-					<h5 className="text-center max-w-2xl text-balance">
+					<span className="h5 text-center max-w-2xl text-balance">
 						Based in Bavaria, Germany | Full-Stack Developer | Angular & UX
 						Specialist
-					</h5>
+					</span>
 				</div>
 				<div className="flex gap-4">
 					<a href="#journey">
