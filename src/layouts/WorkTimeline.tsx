@@ -21,7 +21,13 @@ function BlueLink({
 }: { link: string; name: string; imageUrl: string }) {
 	return (
 		<div className="z-50">
-			<LinkPreview url={link} imageSrc={imageUrl} isStatic={true}>
+			<LinkPreview
+				url={link}
+				imageSrc={imageUrl}
+				isStatic={true}
+				width={200}
+				height={113}
+			>
 				<div className="inline-flex text-blue-500!">
 					{name}
 					<div className="inline-flex px-1 pt-1">
