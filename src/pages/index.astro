@@ -76,3 +76,20 @@ const profile = (
     <SpeakingLanguages client:only="react"/>
     <WorkTimeline client:only="react" images={images}/>
 </Main>
+<script>
+    const body = document.getElementById("body")!;
+    const loadingDiv = document.getElementById("loading-screen")!;
+
+    body.classList.add("main-loading");
+
+    let loadedComponents = 0;
+
+    (document as any).finishedLoadingComponent = () => {
+        loadedComponents++;
+        if (loadedComponents === 6) {
+            body.classList.remove("main-loading");
+            setTimeout(() =>loadingDiv.classList.add("opacity-0"), 300);
+            setTimeout(() => loadingDiv.remove(), 800);
+        }
+    };
+</script>

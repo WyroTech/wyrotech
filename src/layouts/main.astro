@@ -25,15 +25,34 @@ const optimizedImage = await getImage({
     <meta property="og:description" content="Full-Stack Developer & UX Specialist"/>
     <meta property="og:type" content="website"/>
 
+    <link rel="preload" href={optimizedImage.src} as="image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-<Navigation client:only="react" imageUrl={optimizedImage.src}/>
-<div>
-    <slot/>
+<div id="body">
+    <Navigation client:only="react" imageUrl={optimizedImage.src}/>
+    <div>
+        <slot/>
+    </div>
+    <Footer/>
 </div>
-<Footer/>
+<div id="loading-screen" class="loading-screen fixed inset-0 z-[999999] bg-black transition-opacity duration-300">
+    <div class="fixed inset-0 flex justify-center items-center">
+        <div class="flex items-center gap-px">
+            <img
+                    src={optimizedImage.src}
+                    alt="logo"
+                    width="28"
+                    height="28"
+                    class="mr-1"
+            />
+            <span class="font-extrabold! text-2xl! text-white!">Wyro</span>
+            <span class="font-thin! text-2xl! text-white!">Tech</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -18,6 +18,8 @@ export function ProgrammingLanguages() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.1 });
 
+	(document as any).finishedLoadingComponent();
+
 	return (
 		<motion.div
 			id="skills"

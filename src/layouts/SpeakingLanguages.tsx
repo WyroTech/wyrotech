@@ -25,6 +25,8 @@ export function SpeakingLanguages() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.1 });
 
+	(document as any).finishedLoadingComponent();
+
 	return (
 		<motion.div
 			className="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16"

@@ -13,6 +13,8 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 	const translateYReverse = useTransform(scrollYProgress, [0, 1], [0, -25]);
 
+	(document as any).finishedLoadingComponent();
+
 	return (
 		<section
 			id="home"

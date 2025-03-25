@@ -74,6 +74,8 @@ export function Navigation(props: { imageUrl: string }) {
 		},
 	};
 
+	(document as any).finishedLoadingComponent();
+
 	return (
 		<nav className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-black to-transparent z-[9999]">
 			<div className="flex justify-between items-center py-8 px-8">
