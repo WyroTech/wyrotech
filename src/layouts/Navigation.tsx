@@ -77,7 +77,7 @@ export function Navigation(props: { imageUrl: string }) {
 	(document as any).finishedLoadingComponent();
 
 	return (
-		<nav className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-black to-transparent z-[9999]">
+		<nav className="fixed top-0 left-0 right-0 bg-linear-to-b from-black to-transparent z-[9999]">
 			<div className="flex justify-between items-center py-8 px-8">
 				<a href="/" className="z-20">
 					<Logo imageUrl={props.imageUrl} />
@@ -87,6 +87,7 @@ export function Navigation(props: { imageUrl: string }) {
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 				<div
 					role="button"
+					aria-label="Navigation Button"
 					className="block lg:hidden cursor-pointer w-8 h-8 z-20"
 					onClick={() => setIsOpen(!isOpen)}
 				>
