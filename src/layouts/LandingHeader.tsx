@@ -58,7 +58,13 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 					</h5>
 				</div>
 				<div className="flex gap-4">
-					<Button severity="secondary" text="My Work" icon="chevron-right" />
+					<a href="#journey">
+						<Button
+							severity="secondary"
+							text="My Journey"
+							icon="chevron-right"
+						/>
+					</a>
 					<a
 						href="https://www.linkedin.com/in/andreas-wyrobek/"
 						target="_blank"
