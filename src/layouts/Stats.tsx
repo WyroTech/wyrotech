@@ -84,9 +84,9 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
 							{icon}
 						</div>
 						<div className="space-y-3">
-							<h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 md:text-2xl/[1.875rem] text-balance text-black dark:text-white">
+							<span className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 md:text-2xl/[1.875rem] text-balance text-black dark:text-white">
 								{title}
-							</h3>
+							</span>
 							<h2
 								className="[&_b]:md:font-semibold [&_strong]:md:font-semibold font-sans text-sm/[1.125rem]
               md:text-base/[1.375rem]  text-black dark:text-neutral-400"
