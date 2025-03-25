@@ -17,7 +17,9 @@ const optimizedImage = await getImage({
     <div class="w-full flex flex-col gap-16 justify-center items-center md:flex-row md:justify-start md:items-end">
         <div class="w-full flex flex-col gap-8 items-center md:grid md:grid-cols-2 md:w-2xs md:gap-y-8 md:gap-x-16 md:items-end">
             <div class="col-span-2">
-                <Logo client:only="react" imageUrl={optimizedImage.src}/>
+                <a href="/">
+                    <Logo client:only="react" imageUrl={optimizedImage.src}/>
+                </a>
             </div>
             <AnimatedLink client:only="react" text="Home" href="#home"/>
             <AnimatedLink client:only="react" text="Skills" href="#skills"/>
