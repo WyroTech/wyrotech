@@ -1,0 +1,55 @@
+---
+import { getImage } from "astro:assets";
+import { Logo } from "@/components/Logo";
+import profileImg from "public/Wi-fi.png";
+import Main from "../layouts/main.astro";
+
+const profile = (
+	await getImage({
+		src: profileImg,
+		width: 300,
+		format: "webp",
+	})
+).src;
+---
+
+<Main hasNav={false}>
+    <div class="mx-auto max-w-screen-lg px-8 py-16 flex flex-col">
+        <div class="mb-12">
+            <a href="/">
+                <Logo imageUrl={profile}/>
+            </a>
+        </div>
+        <h1 class="text-gradiant">Impressum</h1>
+        <br>
+        <p>Angaben gemäß § 5 TMG:</p>
+        <br>
+        <p>Andreas Wyrobek</p>
+        <p>Pferdemarkt 18</p>
+        <p>94469 Deggendorf</p>
+        <p>Deutschland</p>
+        <br>
+        <p>Kontakt:</p>
+        <p>E-Mail: wyrotechde@gmail.com</p>
+        <p>Website: wyro.tech</p>
+        <br> <br>
+        <p>Umsatzsteuer-ID: -</p>
+        <p>(Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG, falls vorhanden)</p>
+        <br> <br>
+        <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</p>
+        <p>Andreas Wyrobek</p>
+        <p>Pferdemarkt 18</p>
+        <p>94469 Deggendorf</p>
+        <p>Deutschland</p>
+        <br> <br>
+        <h4>Haftung für Inhalte</h4>
+        <p>Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p>
+        <br> <br>
+        <h4>Haftung für Links</h4>
+        <p>Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+        <br> <br>
+        <h4>Urheberrecht</h4>
+        <p>Die durch mich erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+
+    </div>
+</Main>

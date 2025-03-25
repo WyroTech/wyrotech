@@ -137,7 +137,7 @@ export function Navigation(props: { imageUrl: string }) {
 									My Journey
 								</motion.a>
 								<motion.a
-									href="/"
+									href="/impressum"
 									className="text-3xl font-sans"
 									variants={menuItemVariants}
 								>
@@ -163,7 +163,7 @@ export function Navigation(props: { imageUrl: string }) {
 							<AnimatedLink text="Home" href="#home" />
 							<AnimatedLink text="Skills" href="#skills" />
 							<AnimatedLink text="My Journey" href="#journey" />
-							<AnimatedLink text="Imprint" href="/" />
+							<AnimatedLink text="Imprint" href="/impressum" />
 							<LanguageSwitcher />
 						</div>
 					</div>

@@ -5,6 +5,8 @@ import LogoImg from "public/Wi-fi.png";
 import { Navigation } from "./Navigation.tsx";
 import Footer from "./footer.astro";
 
+const { hasNav } = Astro.props;
+
 const optimizedImage = await getImage({
 	src: LogoImg,
 	width: 64,
@@ -33,26 +35,30 @@ const optimizedImage = await getImage({
 </head>
 <body>
 <div id="body">
-    <Navigation client:only="react" imageUrl={optimizedImage.src}/>
+    {hasNav && <Navigation client:only="react" imageUrl={optimizedImage.src}/>}
     <div>
         <slot/>
     </div>
-    <Footer/>
+    {hasNav && <Footer/>}
 </div>
-<div id="loading-screen" class="loading-screen fixed inset-0 z-[999999] bg-black transition-opacity duration-1000">
-    <div class="fixed inset-0 flex justify-center items-center">
-        <div class="flex items-center gap-px">
-            <img
-                    src={optimizedImage.src}
-                    alt="logo"
-                    width="56"
-                    height="56"
-                    class="mr-1"
-            />
-            <span class="font-extrabold! text-6xl! text-white!">Wyro</span>
-            <span class="font-thin! text-6xl! text-white!">Tech</span>
+
+{hasNav &&
+    <div id="loading-screen" class="loading-screen fixed inset-0 z-[999999] bg-black transition-opacity duration-1000">
+        <div class="fixed inset-0 flex justify-center items-center">
+            <div class="flex items-center gap-px">
+                <img
+                        src={optimizedImage.src}
+                        alt="logo"
+                        width="56"
+                        height="56"
+                        class="mr-1"
+                />
+                <span class="font-extrabold! text-6xl! text-white!">Wyro</span>
+                <span class="font-thin! text-6xl! text-white!">Tech</span>
+            </div>
         </div>
     </div>
-</div>
+}
+
 </body>
 </html>
