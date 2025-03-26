@@ -13,9 +13,6 @@ const t = useTranslations(lang);
 
 export function LanguageSwitcher() {
 	const [open, setOpen] = useState(false);
-	const switchLanguage = (language: string) => {
-		setOpen(false);
-	};
 
 	return (
 		<Popover open={open} onOpenChange={setOpen}>
