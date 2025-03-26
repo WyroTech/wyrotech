@@ -16,58 +16,26 @@ import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 
 // Process images with Astro's image optimization
-const images = {
-	firstcontact: (
+const processImages = async (img, width = 256) => {
+	return (
 		await getImage({
-			src: firstcontactImg,
-			width: 256,
+			src: img,
+			width: width,
 			format: "webp",
 		})
-	).src,
-	dab: (
-		await getImage({
-			src: dabImg,
-			width: 256,
-			format: "webp",
-		})
-	).src,
-	coursera: (
-		await getImage({
-			src: courseraImg,
-			width: 256,
-			format: "webp",
-		})
-	).src,
-	connecta: (
-		await getImage({
-			src: connectaImg,
-			width: 256,
-			format: "webp",
-		})
-	).src,
-	edvschule: (
-		await getImage({
-			src: edvschuleImg,
-			width: 256,
-			format: "webp",
-		})
-	).src,
-	acp: (
-		await getImage({
-			src: acpImg,
-			width: 256,
-			format: "webp",
-		})
-	).src,
+	).src;
 };
 
-const profile = (
-	await getImage({
-		src: profileImg,
-		width: 300,
-		format: "webp",
-	})
-).src;
+const images = {
+	firstcontact: await processImages(firstcontactImg),
+	dab: await processImages(dabImg),
+	coursera: await processImages(courseraImg),
+	connecta: await processImages(connectaImg),
+	edvschule: await processImages(edvschuleImg),
+	acp: await processImages(acpImg),
+};
+
+const profile = await processImages(profileImg, 300);
 ---
 <Main hasNav={true}>
     <LandingHeader client:only="react" imageUrl={profile}/>
