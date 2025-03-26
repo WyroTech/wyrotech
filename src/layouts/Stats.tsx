@@ -1,6 +1,10 @@
 import {GlowingEffect} from "@/components/ui/glowing-effect";
+import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import {CodeXml, FileHeart, Hammer, LayoutDashboard, UsersRound,} from "lucide-react";
 import type React from "react";
+
+const lang = getLangFromWindow();
+const t = useTranslations(lang);
 
 export function GlowingEffectDemoSecond() {
 	(document as any).finishedLoadingComponent();
@@ -10,8 +14,8 @@ export function GlowingEffectDemoSecond() {
 			<GridItem
 				area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
 				icon={<CodeXml className="h-4 w-4 text-black dark:text-neutral-400" />}
-				title="Full-Stack Developer Expert"
-				description="Angular and TypeScript specialist since 2019."
+				title={t("stats.fullstack.title")}
+				description={t("stats.fullstack.description")}
 			/>
 
 			<GridItem
@@ -19,8 +23,8 @@ export function GlowingEffectDemoSecond() {
 				icon={
 					<FileHeart className="h-4 w-4 text-black dark:text-neutral-400" />
 				}
-				title="Google UX Design Certified"
-				description="Building intuitive interfaces that users love."
+				title={t("stats.uxdesign.title")}
+				description={t("stats.uxdesign.description")}
 			/>
 
 			<GridItem
@@ -28,8 +32,8 @@ export function GlowingEffectDemoSecond() {
 				icon={
 					<UsersRound className="h-4 w-4 text-black dark:text-neutral-400" />
 				}
-				title="Technical Supervisor Experience"
-				description="Mentoring junior devs to reach their potential."
+				title={t("stats.supervisor.title")}
+				description={t("stats.supervisor.description")}
 			/>
 
 			<GridItem
@@ -37,15 +41,15 @@ export function GlowingEffectDemoSecond() {
 				icon={
 					<LayoutDashboard className="h-4 w-4 text-black dark:text-neutral-400" />
 				}
-				title="Scrumban Implementation Pro "
-				description="Leading agile development through Azure DevOps."
+				title={t("stats.scrumban.title")}
+				description={t("stats.scrumban.description")}
 			/>
 
 			<GridItem
 				area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
 				icon={<Hammer className="h-4 w-4 text-black dark:text-neutral-400" />}
-				title="Product Feature Designer"
-				description="From Figma mockups to functional code implementation."
+				title={t("stats.designer.title")}
+				description={t("stats.designer.description")}
 			/>
 		</ul>
 	);
@@ -54,7 +58,7 @@ export function GlowingEffectDemoSecond() {
 export function Stats() {
 	return (
 		<div className="flex flex-col min-h-[100lvh] items-center justify-center gap-16 px-8 py-32">
-			<h1 className="text-center title">Overview</h1>
+			<h1 className="text-center title">{t("stats.overview")}</h1>
 			<GlowingEffectDemoSecond />
 		</div>
 	);
