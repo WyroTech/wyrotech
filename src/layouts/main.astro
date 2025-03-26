@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { getImage } from "astro:assets";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import LogoImg from "public/Wi-fi.png";
 import { Navigation } from "./Navigation.tsx";
 import Footer from "./footer.astro";
@@ -13,7 +14,6 @@ const optimizedImage = await getImage({
 	format: "webp", // Convert to webp for better compression
 });
 ---
-
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -34,6 +34,7 @@ const optimizedImage = await getImage({
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
+<SpeedInsights/>
 <div id="body">
     {hasNav && <Navigation client:only="react" imageUrl={optimizedImage.src}/>}
     <div>
