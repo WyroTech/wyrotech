@@ -1,6 +1,10 @@
+import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import {Icon} from "@iconify/react";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
+
+const lang = getLangFromWindow();
+const t = useTranslations(lang);
 
 function ProgrammingIcon({ icon, name }: { icon: string; name: string }) {
 	const size = 72;
@@ -28,7 +32,7 @@ export function ProgrammingLanguages() {
 			animate={isInView ? { opacity: 1, y: 0 } : {}}
 			transition={{ duration: 0.5 }}
 		>
-			<h1 className="title pt-16">Skills & Languages</h1>
+			<h1 className="title pt-16">{t("title.language")}</h1>
 			<div
 				ref={ref}
 				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"

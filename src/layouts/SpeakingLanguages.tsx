@@ -1,6 +1,10 @@
+import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import {Icon} from "@iconify/react";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
+
+const lang = getLangFromWindow();
+const t = useTranslations(lang);
 
 function LanguageIcon({
 	icon,
@@ -35,7 +39,7 @@ export function SpeakingLanguages() {
 			transition={{ duration: 0.5 }}
 		>
 			<div className="relative pt-8 z-10">
-				<h1 className="relative title z-20">Languages I speak</h1>
+				<h1 className="relative title z-20">{t("title.languagesIspeak")}</h1>
 			</div>
 			<div
 				ref={ref}
