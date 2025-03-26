@@ -1,6 +1,10 @@
 import Button from "@/components/Button.tsx";
+import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import {motion, useScroll, useTransform} from "framer-motion";
 import {useRef} from "react";
+
+const lang = getLangFromWindow();
+const t = useTranslations(lang);
 
 export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 	const video = useRef<HTMLVideoElement>(null);
@@ -55,15 +59,14 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 						/>
 					</div>
 					<span className="h5 text-center max-w-2xl text-balance">
-						Based in Bavaria, Germany | Full-Stack Developer | Angular & UX
-						Specialist
+						{t("landing.subtext")}
 					</span>
 				</div>
 				<div className="flex gap-4">
 					<a href="#journey">
 						<Button
 							severity="secondary"
-							text="My Journey"
+							text={t("journey")}
 							icon="chevron-right"
 						/>
 					</a>
@@ -72,7 +75,11 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<Button severity="primary" text="Contact" icon="chevron-right" />
+						<Button
+							severity="primary"
+							text={t("contact")}
+							icon="chevron-right"
+						/>
 					</a>
 				</div>
 			</motion.div>

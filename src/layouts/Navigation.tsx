@@ -6,6 +6,10 @@ import {Icon} from "@iconify/react";
 import {AnimatePresence, motion} from "framer-motion";
 import {ChevronDownIcon, LucideMenu, LucideX} from "lucide-react";
 import {useState} from "react";
+import {getLangFromWindow, useTranslations} from "../i18n/utils";
+
+const lang = getLangFromWindow();
+const t = useTranslations(lang);
 
 export function LanguageSwitcher() {
 	const [open, setOpen] = useState(false);
@@ -17,29 +21,27 @@ export function LanguageSwitcher() {
 		<Popover open={open} onOpenChange={setOpen}>
 			<PopoverTrigger>
 				<div className="flex gap-2 items-center rounded-full cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors px-4 py-2">
-					<Icon icon="flag:gb-4x3" />
-					<span className="text-sm!">EN</span>
+					<Icon icon={lang === "de" ? "flag:de-4x3" : "flag:gb-4x3"} />
+					<span className="text-sm!">{lang.toUpperCase()}</span>
 					<ChevronDownIcon size={12} />
 				</div>
 			</PopoverTrigger>
 			<PopoverContent>
 				<div className="p-2 flex flex-col gap-2 ">
-					<button
-						type="submit"
+					<a
+						href="/de"
 						className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors"
-						onClick={() => switchLanguage("de")}
 					>
 						<Icon icon="flag:de-4x3" className="border border-gray-700" />
-						<span className="text-sm!">German</span>
-					</button>
-					<button
-						type="button"
+						<p className="text-sm!">German</p>
+					</a>
+					<a
+						href="/en"
 						className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors"
-						onClick={() => switchLanguage("en")}
 					>
 						<Icon icon="flag:gb-4x3" className="border border-gray-700" />
-						<span className="text-sm!">English</span>
-					</button>
+						<p className="text-sm!">English</p>
+					</a>
 				</div>
 			</PopoverContent>
 		</Popover>
@@ -133,7 +135,7 @@ export function Navigation(props: { imageUrl: string }) {
 									className="text-3xl font-sans"
 									variants={menuItemVariants}
 								>
-									Home
+									{t("home")}
 								</motion.a>
 								<motion.a
 									href="#skills"
@@ -173,10 +175,10 @@ export function Navigation(props: { imageUrl: string }) {
 					<div className="relative p-px rounded-full overflow-hidden h-full">
 						<div className="absolute -inset-0.5 bg-white z-0 nav-gradiant" />
 						<div className="relative flex items-center gap-12 pl-8 pr-6 py-4 rounded-full bg-black z-10 w-full h-full">
-							<AnimatedLink text="Home" href="#home" />
-							<AnimatedLink text="Skills" href="#skills" />
-							<AnimatedLink text="My Journey" href="#journey" />
-							<AnimatedLink text="Imprint" href="/impressum" />
+							<AnimatedLink text={t("home")} href="#home" />
+							<AnimatedLink text={t("skills")} href="#skills" />
+							<AnimatedLink text={t("journey")} href="#journey" />
+							<AnimatedLink text={t("imprint")} href="/impressum" />
 							<LanguageSwitcher />
 						</div>
 					</div>
@@ -187,7 +189,7 @@ export function Navigation(props: { imageUrl: string }) {
 					rel="noreferrer"
 					className="hidden lg:flex gap-4"
 				>
-					<ButtonContainer text="Contact" severity="secondary" />
+					<ButtonContainer text={t("contact")} severity="secondary" />
 				</a>
 			</div>
 		</nav>
