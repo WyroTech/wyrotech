@@ -30,7 +30,7 @@ export function LanguageSwitcher() {
 						className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors"
 					>
 						<Icon icon="flag:de-4x3" className="border border-gray-700" />
-						<p className="text-sm!">German</p>
+						<p className="text-sm!">Deutsch</p>
 					</a>
 					<a
 						href="/en"
