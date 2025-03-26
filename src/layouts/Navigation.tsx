@@ -8,8 +8,13 @@ import {ChevronDownIcon, LucideMenu, LucideX} from "lucide-react";
 import {useState} from "react";
 
 export function LanguageSwitcher() {
+	const [open, setOpen] = useState(false);
+	const switchLanguage = (language: string) => {
+		setOpen(false);
+	};
+
 	return (
-		<Popover>
+		<Popover open={open} onOpenChange={setOpen}>
 			<PopoverTrigger>
 				<div className="flex gap-2 items-center rounded-full cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors px-4 py-2">
 					<Icon icon="flag:gb-4x3" />
@@ -18,15 +23,23 @@ export function LanguageSwitcher() {
 				</div>
 			</PopoverTrigger>
 			<PopoverContent>
-				<div className="p-2 flex flex-col gap-2">
-					<div className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors">
+				<div className="p-2 flex flex-col gap-2 ">
+					<button
+						type="submit"
+						className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors"
+						onClick={() => switchLanguage("de")}
+					>
 						<Icon icon="flag:de-4x3" className="border border-gray-700" />
 						<span className="text-sm!">German</span>
-					</div>
-					<div className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors">
+					</button>
+					<button
+						type="button"
+						className="flex gap-2 items-center rounded-md cursor-pointer py-2 px-4 hover:bg-gray-900 transition-colors"
+						onClick={() => switchLanguage("en")}
+					>
 						<Icon icon="flag:gb-4x3" className="border border-gray-700" />
 						<span className="text-sm!">English</span>
-					</div>
+					</button>
 				</div>
 			</PopoverContent>
 		</Popover>
@@ -77,7 +90,7 @@ export function Navigation(props: { imageUrl: string }) {
 	(document as any).finishedLoadingComponent();
 
 	return (
-		<nav className="fixed top-0 left-0 right-0 bg-linear-to-b from-black to-transparent z-[9999]">
+		<nav className="fixed top-0 left-0 right-0 bg-linear-to-b from-black to-transparent z-40">
 			<div className="flex justify-between items-center py-8 px-8">
 				<a href="/" className="z-20">
 					<Logo imageUrl={props.imageUrl} />

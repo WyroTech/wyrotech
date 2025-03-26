@@ -20,7 +20,7 @@ function BlueLink({
 	imageUrl,
 }: { link: string; name: string; imageUrl: string }) {
 	return (
-		<div className="z-50">
+		<div className="z-30">
 			<LinkPreview
 				url={link}
 				imageSrc={imageUrl}
