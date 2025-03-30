@@ -139,21 +139,21 @@ export function Navigation(props: { imageUrl: string }) {
 									className="text-3xl font-sans"
 									variants={menuItemVariants}
 								>
-									Skills
+									{t("skills")}
 								</motion.a>
 								<motion.a
 									href="#journey"
 									className="text-3xl font-sans"
 									variants={menuItemVariants}
 								>
-									My Journey
+									{t("journey")}
 								</motion.a>
 								<motion.a
 									href="/impressum"
 									className="text-3xl font-sans"
 									variants={menuItemVariants}
 								>
-									Imprint
+									{t("imprint")}
 								</motion.a>
 								<motion.a
 									href="https://www.linkedin.com/in/andreas-wyrobek/"
@@ -162,7 +162,7 @@ export function Navigation(props: { imageUrl: string }) {
 									className="lg:hidden flex gap-4"
 									variants={menuItemVariants}
 								>
-									<ButtonContainer text="Contact" severity="secondary" />
+									<ButtonContainer text={t("contact")} severity="secondary" />
 								</motion.a>
 							</div>
 						</motion.div>

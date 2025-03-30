@@ -1,7 +1,11 @@
 "use client";
+import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import {motion, useScroll, useTransform} from "motion/react";
 import type React from "react";
 import {useEffect, useRef, useState} from "react";
+
+const lang = getLangFromWindow();
+const t = useTranslations(lang);
 
 interface TimelineEntry {
 	title: string;
@@ -31,7 +35,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 	return (
 		<div className="w-full px-4" ref={containerRef}>
 			<div className="mx-auto pt-10 px-4 md:px-8 lg:px-10">
-				<h1 className="text-center! title">My journey</h1>
+				<h1 className="text-center! title">{t("journey")}</h1>
 			</div>
 
 			<div ref={ref} className="relative mx-auto pb-20 max-w-5xl">
