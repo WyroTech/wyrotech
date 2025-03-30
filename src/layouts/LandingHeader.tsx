@@ -53,7 +53,7 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 							Andreas Wyrobek
 						</h1>
 						<img
-							className="absolute bottom-3 min-h-64 md:min-h-48 h-[18vw] max-h-96 z-0 brightness-90 profile grayscale-10"
+							className="absolute bottom-3 min-h-64 md:min-h-48 h-[16vw] max-h-96 z-0 brightness-90 profile grayscale-10"
 							src={imageUrl}
 							alt="logo"
 						/>
