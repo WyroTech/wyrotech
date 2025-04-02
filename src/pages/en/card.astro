@@ -42,7 +42,7 @@ const generateQrUrl = `background-image: url('${await generateQR()}')`;
     </div>
 
     <div class="flex justify-center items-center px-8">
-        <AnimatedLink client:only="react" text="Back Home" href="/"/>
+        <AnimatedLink client:only="react" text="Back Home" href={lang === "de" ? "/de" : "/en"}/>
     </div>
 </Main>
 
