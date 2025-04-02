@@ -1,12 +1,10 @@
-# WyroTech
+# WyroTech - Portfolio Webpage
 
-Welcome to the **WyroTech** website repository! This project is built with **Astro** for fast, modern web development.
+This project is built with **Astro** for fast, modern web development.
 
 ## Tech Stack
 - **Astro** – Static site generation
 - **Tailwind CSS** – Styling
-- **TypeScript** – Strongly typed JavaScript
-- **MDX** – Markdown with React components
 
 ## Installation
 ```sh
