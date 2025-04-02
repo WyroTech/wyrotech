@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import { getImage } from "astro:assets";
 import SpeedInsights from "@vercel/speed-insights/astro";
-import LogoImg from "public/Wi-fi.png";
+import LogoImg from "../../public/logo.png";
 import { Navigation } from "./Navigation.tsx";
 import Footer from "./footer.astro";
 
@@ -26,6 +26,7 @@ const optimizedImage = await getImage({
     <meta property="og:title" content="WyroTech by Andreas Wyrobek"/>
     <meta property="og:description" content="Full-Stack Developer & UX Specialist"/>
     <meta property="og:type" content="website"/>
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="preload" href={optimizedImage.src} as="image" />
 
