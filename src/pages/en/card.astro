@@ -1,0 +1,33 @@
+---
+import { getImage } from "astro:assets";
+import { Logo } from "@/components/Logo";
+import LogoImg from "public/Wi-fi.png";
+import QRCode from "qrcode";
+import { getLangFromUrl } from "../../i18n/utils";
+import Main from "../../layouts/main.astro";
+import cardDeTxt from "./../de/card.txt?raw";
+import cardTxt from "./card.txt?raw";
+
+const lang = getLangFromUrl(Astro.url);
+
+const optimizedImage = await getImage({
+	src: LogoImg,
+	width: 64,
+	format: "webp", // Convert to webp for better compression
+});
+
+const generateQR = async () =>
+	await QRCode.toDataURL(lang === "de" ? cardDeTxt : cardTxt);
+const generateQrUrl = `background-image: url('${await generateQR()}')`;
+---
+<Main hasNav={false}>
+    <div class="p-8 flex justify-center items-center">
+        <Logo imageUrl={optimizedImage.src}/>
+    </div>
+    <div class="flex justify-center items-center h-[75vh] px-8 pb-8">
+        <div class="bg-contain bg-no-repeat bg-center w-full h-full" style={generateQrUrl} />
+    </div>
+</Main>
+
+<style>
+</style>
