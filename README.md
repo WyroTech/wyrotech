@@ -1,4 +1,4 @@
-# WyroTech 🚀
+# WyroTech - Andreas Wyrobek
 
 ## About
 I'm Andreas Wyrobek, a Germany-based 🇩🇪 **Principal Software Engineer**, **UX/UI Lead**, and **Full-Stack Developer**. I build intuitive user experiences with **Angular** and **TypeScript**.
