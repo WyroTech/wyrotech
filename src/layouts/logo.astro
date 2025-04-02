@@ -1,0 +1,25 @@
+---
+import { getImage } from "astro:assets";
+import LogoImg from "public/Wi-fi.png";
+
+const width = 56;
+
+const optimizedImage = await getImage({
+	src: LogoImg,
+	width,
+	format: "webp", // Convert to webp for better compression
+});
+---
+<div class="flex justify-center items-center">
+    <div class="flex items-center gap-px">
+        <img
+                src={optimizedImage.src}
+                alt="logo"
+                width={width}
+                height={width}
+                class="mr-1"
+        />
+        <span class="font-extrabold! text-6xl! text-white!">Wyro</span>
+        <span class="font-thin! text-6xl! text-white!">Tech</span>
+    </div>
+</div>

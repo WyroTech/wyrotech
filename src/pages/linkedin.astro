@@ -1,0 +1,22 @@
+---
+import { AnimatedLink } from "@/components/AnimatedLink";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Logo from "../layouts/logo.astro";
+import Main from "../layouts/main.astro";
+import QRCode from "../layouts/qrcode.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Main hasNav={false}>
+    <div class=" pt-16 pb-12 flex justify-center items-center">
+        <Logo/>
+    </div>
+
+    <QRCode text="https://www.linkedin.com/in/andreas-wyrobek/"/>
+
+    <div class="flex justify-center items-center px-8">
+        <AnimatedLink client:only="react" text={t('card.backHome')} href={lang === "de" ? "/de" : "/en"}/>
+    </div>
+</Main>

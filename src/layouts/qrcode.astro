@@ -1,0 +1,15 @@
+---
+import QRCode from "qrcode";
+
+const { text } = Astro.props;
+
+const generateQR = async () =>
+	await QRCode.toDataURL(text, {
+		width: 600,
+	});
+const generateQrUrl = `background-image: url('${await generateQR()}')`;
+---
+
+<div class="flex justify-center items-center h-[60vh] px-8 pb-8">
+    <div class="bg-contain bg-no-repeat bg-top w-full h-full" style={generateQrUrl} />
+</div>
