@@ -1,14 +1,15 @@
 ---
 import { getImage } from "astro:assets";
-import { Logo } from "@/components/Logo";
+import { AnimatedLink } from "@/components/AnimatedLink";
 import LogoImg from "public/Wi-fi.png";
 import QRCode from "qrcode";
-import { getLangFromUrl } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Main from "../../layouts/main.astro";
 import cardDeTxt from "./../de/card.txt?raw";
 import cardTxt from "./card.txt?raw";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const optimizedImage = await getImage({
 	src: LogoImg,
@@ -38,6 +39,10 @@ const generateQrUrl = `background-image: url('${await generateQR()}')`;
     </div>
     <div class="flex justify-center items-center h-[75vh] px-8 pb-8">
         <div class="bg-contain bg-no-repeat bg-center bg-top w-full h-full" style={generateQrUrl} />
+    </div>
+
+    <div class="flex justify-center items-center px-8">
+        <AnimatedLink client:only="react" text="Back Home" href="/"/>
     </div>
 </Main>
 
