@@ -2,6 +2,7 @@
 import { getImage } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import CarImage from "public/projects/car.png";
+import LoomImage from "public/projects/loom.webp";
 import WyroTechImage from "public/projects/wyrotech.png";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
@@ -31,11 +32,17 @@ const projects = [
 		tech: ["cplusplus", "python", "javascript"],
 		image: await processImages(CarImage),
 	},
+	{
+		title: "dab Nexus Loom",
+		link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
+		image: await processImages(LoomImage),
+		tech: ["angular", "docker", "dotnet"],
+	},
 ].reverse();
 ---
 <div class="py-48 flex flex-col items-center justify-center gap-8">
     <h1 class="title">{t('project')}</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 gap-y-24 py-16 px-8 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-24 py-16 px-8 w-full">
         {projects.map((project) => (
                 <div class="items-center flex flex-col gap-6">
                     <a class="w-full h-64 bg-[#222] rounded-lg hover:scale-105 transition-all duration-500" href={project.link} target="_blank">
