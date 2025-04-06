@@ -1,0 +1,49 @@
+---
+import { getImage } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import CarImage from "public/projects/car.png";
+import WyroTechImage from "public/projects/wyrotech.png";
+
+const processImages = async (img, width = 800) => {
+	return (
+		await getImage({
+			src: img,
+			width: width,
+			format: "webp",
+		})
+	).src;
+};
+
+const projects = [
+	{
+		title: "Website - WyroTech",
+		image: await processImages(WyroTechImage),
+		link: "https://github.com/WyroTech/wyrotech",
+		tech: ["react", "astro", "tailwindcss", "vercel"],
+	},
+	{
+		title: "RoboCar 4.0",
+		link: "https://github.com/WyroTech/RoboCar",
+		tech: ["cplusplus", "python", "javascript"],
+		image: await processImages(CarImage),
+	},
+].reverse();
+---
+<div class="py-48 flex flex-col items-center justify-center gap-8">
+    <h1 class="title">Projects</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 gap-y-24 py-16 px-8 w-full">
+        {projects.map((project) => (
+                <div class="items-center flex flex-col gap-6">
+                    <a class="w-full h-64 bg-[#222] rounded-lg hover:scale-105 transition-all duration-500" href={project.link} target="_blank">
+                        <img src={project.image} class="w-full h-full object-cover rounded-lg" alt={project.title}/>
+                    </a>
+                    <h2>{project.title}</h2>
+                    <div class="flex gap-4">
+                        {project.tech.map((tech) => (
+                            <Icon title={tech} name={`simple-icons:${tech}`} width={36} height={36} />
+                        ))}
+                    </div>
+                </div>
+        ))}
+    </div>
+</div>

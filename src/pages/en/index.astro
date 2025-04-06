@@ -14,6 +14,7 @@ import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
+import Projects from "../../layouts/projects.astro";
 
 // Process images with Astro's image optimization
 const processImages = async (img, width = 256) => {
@@ -42,6 +43,7 @@ const profile = await processImages(profileImg, 500);
     <ProgrammingLanguages client:only="react"/>
     <SpeakingLanguages client:only="react"/>
     <Stats client:only="react"/>
+    <Projects/>
     <WorkTimeline client:only="react" images={images}/>
 </Main>
 <script>
