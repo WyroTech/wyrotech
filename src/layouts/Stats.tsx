@@ -52,7 +52,6 @@ export function GlowingEffectDemoSecond() {
 export function Stats() {
 	return (
 		<div className="flex flex-col min-h-[100lvh] items-center justify-center gap-16 px-8 py-32">
-			<h1 className="text-center title">{t("stats.overview")}</h1>
 			<GlowingEffectDemoSecond />
 		</div>
 	);

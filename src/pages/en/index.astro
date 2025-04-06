@@ -39,9 +39,9 @@ const profile = await processImages(profileImg, 500);
 ---
 <Main hasNav={true}>
     <LandingHeader client:only="react" imageUrl={profile}/>
-    <Stats client:only="react"/>
     <ProgrammingLanguages client:only="react"/>
     <SpeakingLanguages client:only="react"/>
+    <Stats client:only="react"/>
     <WorkTimeline client:only="react" images={images}/>
 </Main>
 <script>
