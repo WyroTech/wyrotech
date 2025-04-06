@@ -122,6 +122,7 @@ export const ui = {
 		"timeline.training.bullet1": "Project Work & Team Coordination",
 		"timeline.training.bullet2": "Fundamentals of Software Development",
 		"card.backHome": "Back to Home",
+		project: "Projects",
 	},
 	de: {
 		home: "Startseite",
@@ -240,5 +241,6 @@ export const ui = {
 		"timeline.training.bullet1": "Projektarbeit & Team-Koordination",
 		"timeline.training.bullet2": "Grundlagen der Softwareentwicklung",
 		"card.backHome": "Zurück zur Startseite",
+		project: "Projekte",
 	},
 } as const;

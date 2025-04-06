@@ -3,6 +3,10 @@ import { getImage } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import CarImage from "public/projects/car.png";
 import WyroTechImage from "public/projects/wyrotech.png";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const processImages = async (img, width = 800) => {
 	return (
@@ -30,7 +34,7 @@ const projects = [
 ].reverse();
 ---
 <div class="py-48 flex flex-col items-center justify-center gap-8">
-    <h1 class="title">Projects</h1>
+    <h1 class="title">{t('project')}</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 gap-y-24 py-16 px-8 w-full">
         {projects.map((project) => (
                 <div class="items-center flex flex-col gap-6">
