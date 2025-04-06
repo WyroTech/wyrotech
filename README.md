@@ -10,10 +10,10 @@ I'm Andreas Wyrobek, a Germany-based 🇩🇪 **Principal Software Engineer**, *
 - Japanese 🇯🇵
 
 ## Skills & Technologies
-- Frontend: Angular, TypeScript, JavaScript, HTML, CSS, TailwindCSS, SASS
+- Frontend: Angular, React, TypeScript, JavaScript, HTML, CSS, TailwindCSS, SASS, RxJs
 - Backend: Node.js, .NET, Python
-- DevOps: Docker, Kubernetes, CI/CD
-- Databases: SQL, Firebase, PostgreSQL
+- DevOps: Docker, CI/CD
+- Databases: SQL, Microsft SQL Server, PostgreSQL
 - Cloud: Azure, AWS, GitHub Actions
 
 ### Expertise
