@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { getImage } from "astro:assets";
+import { SplashCursor } from "@/components/ui/splash-cursor";
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import LogoImg from "../../public/logo.png";
@@ -38,6 +39,7 @@ const optimizedImage = await getImage({
 <body>
 <SpeedInsights/>
 <Analytics/>
+<SplashCursor client:only="react" />
 <div id="body">
     {hasNav && <Navigation client:only="react" imageUrl={optimizedImage.src}/>}
     <div>
