@@ -2,16 +2,16 @@ import {useEffect, useRef} from "react";
 
 function SplashCursor({
 	// Add whatever props you like for customization
-	SIM_RESOLUTION = 128,
-	DYE_RESOLUTION = 1440,
-	CAPTURE_RESOLUTION = 512,
+	SIM_RESOLUTION = 80,
+	DYE_RESOLUTION = 140,
+	CAPTURE_RESOLUTION = 12,
 	DENSITY_DISSIPATION = 5.5,
 	VELOCITY_DISSIPATION = 7,
 	PRESSURE = 0.01,
 	PRESSURE_ITERATIONS = 10,
 	CURL = 10,
-	SPLAT_RADIUS = 0.1,
-	SPLAT_FORCE = 10000,
+	SPLAT_RADIUS = 0.03,
+	SPLAT_FORCE = 8000,
 	SHADING = true,
 	COLOR_UPDATE_SPEED = 6,
 	BACK_COLOR = { r: 0, g: 0, b: 0 },
@@ -1250,7 +1250,7 @@ function SplashCursor({
 	]);
 
 	return (
-		<div className="fixed top-0 left-0 z-50 pointer-events-none opacity-60">
+		<div className="fixed top-0 left-0 z-50 pointer-events-none opacity-40">
 			<canvas ref={canvasRef} id="fluid" className="w-screen h-screen" />
 		</div>
 	);
