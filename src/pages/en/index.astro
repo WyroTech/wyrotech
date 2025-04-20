@@ -17,7 +17,7 @@ import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import Projects from "../../layouts/projects.astro";
 
 // Process images with Astro's image optimization
-const processImages = async (img, width = 256) => {
+const processImages = async (img, width = 200) => {
 	return (
 		await getImage({
 			src: img,
