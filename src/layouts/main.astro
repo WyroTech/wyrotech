@@ -60,7 +60,6 @@ const optimizedImage = await getImage({
     <meta property="og:locale" content={lang === "de" ? "de_DE" : "en_US"}>
 </head>
 <body>
-<SpeedInsights/>
 <Analytics/>
 <SplashCursor client:only="react"/>
 <div id="body">
@@ -69,7 +68,8 @@ const optimizedImage = await getImage({
     <div>
         <slot/>
     </div>
-    {hasNav && <Footer/>}
+    {hasNav &&
+            <Footer/>}
 </div>
 
 {hasNav &&
