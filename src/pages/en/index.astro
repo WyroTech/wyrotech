@@ -36,7 +36,7 @@ const images = {
 	acp: await processImages(acpImg),
 };
 
-const profile = await processImages(profileImg, 300);
+const profile = await processImages(profileImg, 200);
 ---
 <Main hasNav={true}>
     <LandingHeader client:only="react" imageUrl={profile}/>
