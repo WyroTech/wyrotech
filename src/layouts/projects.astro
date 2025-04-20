@@ -46,7 +46,7 @@ const projects = [
         {projects.map((project) => (
                 <div class="items-center flex flex-col gap-6">
                     <a class="w-full h-64 bg-[#222] rounded-lg hover:scale-105 transition-all duration-500" href={project.link} target="_blank">
-                        <img src={project.image} class="w-full h-full object-cover rounded-lg" alt={project.title}/>
+                        <img src={project.image} class="w-full h-full object-cover rounded-lg" alt={project.title} loading="lazy"/>
                     </a>
                     <h2>{project.title}</h2>
                     <div class="flex gap-4">

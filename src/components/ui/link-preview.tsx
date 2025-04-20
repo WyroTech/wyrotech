@@ -53,7 +53,13 @@ export const LinkPreview = ({
 			{isMounted ? (
 				<div className="hidden">
 					{/* biome-ignore lint/a11y/noRedundantAlt: <explanation> */}
-					<img src={src} width={width} height={height} alt="hidden image" />
+					<img
+						src={src}
+						width={width}
+						height={height}
+						alt="hidden image"
+						loading="lazy"
+					/>
 				</div>
 			) : null}
 
@@ -113,6 +119,7 @@ export const LinkPreview = ({
 										className="rounded"
 										// biome-ignore lint/a11y/noRedundantAlt: <explanation>
 										alt="preview image"
+										loading="lazy"
 									/>
 								</a>
 							</motion.div>

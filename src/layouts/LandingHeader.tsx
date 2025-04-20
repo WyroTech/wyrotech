@@ -56,6 +56,7 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 							className="absolute bottom-3 min-h-64 md:min-h-48 h-[16vw] max-h-96 z-0 brightness-90 profile grayscale-10"
 							src={imageUrl}
 							alt="logo"
+							loading="lazy"
 						/>
 					</div>
 					<span className="h5 text-center max-w-2xl text-balance">
