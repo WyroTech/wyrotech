@@ -58,8 +58,8 @@ const profile = await processImages(profileImg, 500);
         loadedComponents++;
         if (loadedComponents === 6) {
             body.classList.remove("main-loading");
-            setTimeout(() =>loadingDiv.classList.add("opacity-0"), 300);
-            setTimeout(() => loadingDiv.remove(), 1300);
+            setTimeout(() =>loadingDiv.classList.add("opacity-0"), 0);
+            setTimeout(() => loadingDiv.remove(), 1000);
         }
     };
 </script>
