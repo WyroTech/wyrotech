@@ -9,7 +9,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const processImages = async (img, width = 800) => {
+const processImages = async (img, width = 550) => {
 	return (
 		await getImage({
 			src: img,
