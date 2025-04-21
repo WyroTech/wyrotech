@@ -1,9 +1,9 @@
 ---
 import { AnimatedLink } from "@/components/AnimatedLink";
+import Logo from "../components/logo.astro";
+import QRCode from "../components/qrcode.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import Logo from "../layouts/logo.astro";
 import Main from "../layouts/main.astro";
-import QRCode from "../layouts/qrcode.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
