@@ -1,6 +1,7 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
+import compressor from "astro-compressor";
 import icon from "astro-icon";
 // @ts-check
 import {defineConfig} from "astro/config";
@@ -12,5 +13,5 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 
-	integrations: [react(), icon(), sitemap()],
+	integrations: [react(), icon(), sitemap(), compressor()],
 });
