@@ -14,21 +14,47 @@ import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject } from "../../lib/models";
 
-const obj = {
-	logo: await getLogo(),
-	profileUrl: await processImage(profileImg, 300),
+const [
+	logo,
+	profileUrl,
+	firstcontact,
+	dab,
+	coursera,
+	connecta,
+	edvschule,
+	acp,
+	wyrotech,
+	car,
+	loom,
+] = await Promise.all([
+	getLogo(),
+	processImage(profileImg, 300),
+	processImage(firstcontactImg, 200),
+	processImage(dabImg, 200),
+	processImage(courseraImg, 200),
+	processImage(connectaImg, 200),
+	processImage(edvschuleImg, 200),
+	processImage(acpImg, 200),
+	processImage(WyroTechImage, 400),
+	processImage(CarImage, 400),
+	processImage(LoomImage, 400),
+]);
+
+const obj: LandingPageObject = {
+	logo,
+	profileUrl,
 	timelineImages: {
-		firstcontact: await processImage(firstcontactImg, 200),
-		dab: await processImage(dabImg, 200),
-		coursera: await processImage(courseraImg, 200),
-		connecta: await processImage(connectaImg, 200),
-		edvschule: await processImage(edvschuleImg, 200),
-		acp: await processImage(acpImg, 200),
+		firstcontact,
+		dab,
+		coursera,
+		connecta,
+		edvschule,
+		acp,
 	},
 	projects: [
 		{
 			title: "Website - WyroTech",
-			image: await processImage(WyroTechImage, 400),
+			image: wyrotech,
 			link: "https://github.com/WyroTech/wyrotech",
 			tech: ["react", "astro", "tailwindcss", "vercel"],
 		},
@@ -36,16 +62,16 @@ const obj = {
 			title: "RoboCar 4.0",
 			link: "https://github.com/WyroTech/RoboCar",
 			tech: ["cplusplus", "python", "javascript"],
-			image: await processImage(CarImage, 400),
+			image: car,
 		},
 		{
 			title: "dab Nexus Loom",
 			link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
-			image: await processImage(LoomImage, 400),
+			image: loom,
 			tech: ["angular", "docker", "dotnet"],
 		},
 	].reverse(),
-} as LandingPageObject;
+};
 ---
 <Main hasNav={true}>
     <IndexPage client:only="react" obj={obj}/>
