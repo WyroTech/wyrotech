@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Analytics from "@vercel/analytics/astro";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import { getLangFromUrl } from "../i18n/utils";
 import { getLogo } from "../lib/helper";
 
@@ -27,8 +28,7 @@ const optimizedImage = await getLogo();
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"
-          rel="stylesheet">
+    <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"/>
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WyroTech by Andreas Wyrobek">
