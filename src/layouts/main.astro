@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import Analytics from "@vercel/analytics/astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
 import { getLangFromUrl } from "../i18n/utils";
 import { getLogo } from "../lib/helper";
 
@@ -53,5 +52,26 @@ const optimizedImage = await getLogo();
 <body>
 <slot/>
 <Analytics/>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "WyroTech by Andreas Wyrobek",
+        "logo": "https://wyro.tech/logo_small.png",
+        "url": "https://wyro.tech",
+        "jobTitle": "Principal Software Engineer & UX/UI Lead",
+        "nationality": "German",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "WyroTech"
+        },
+        "skills": [
+            "Angular",
+            "UX Design",
+            "Principal Software Engineer",
+            "UX/UI Lead"
+        ]
+    }
+</script>
 </body>
 </html>
