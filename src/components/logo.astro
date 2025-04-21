@@ -1,22 +1,15 @@
 ---
-import { getImage } from "astro:assets";
-import LogoImg from "../../public/logo.png";
+import { getLogo } from "../lib/helper";
 
-const width = 56;
-
-const optimizedImage = await getImage({
-	src: LogoImg,
-	width,
-	format: "webp", // Convert to webp for better compression
-});
+const optimizedImage = await getLogo(56);
 ---
 <div class="flex justify-center items-center">
     <div class="flex items-center gap-px">
         <img
-                src={optimizedImage.src}
+                src={optimizedImage}
                 alt="logo"
-                width={width}
-                height={width}
+                width={56}
+                height={56}
                 class="mr-1"
                 loading="lazy"
         />

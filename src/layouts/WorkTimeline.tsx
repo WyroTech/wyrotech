@@ -234,8 +234,6 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 		},
 	];
 
-	(document as any).finishedLoadingComponent();
-
 	return (
 		<div className="w-full py-24" id="journey">
 			<Timeline data={data} />

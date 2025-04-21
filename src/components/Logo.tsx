@@ -1,8 +1,8 @@
-export function Logo(props: { imageUrl: string }) {
+export function Logo(props: { logoUrl: string }) {
 	return (
 		<div className="flex items-center gap-px">
 			<img
-				src={props.imageUrl}
+				src={props.logoUrl}
 				alt="logo"
 				width="28"
 				height="28"

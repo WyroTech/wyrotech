@@ -1,16 +1,9 @@
 ---
-import { getImage } from "astro:assets";
 import { Logo } from "@/components/Logo";
-import profileImg from "../../public/logo.png";
 import Main from "../layouts/main.astro";
+import { getLogo } from "../lib/helper";
 
-const profile = (
-	await getImage({
-		src: profileImg,
-		width: 300,
-		format: "webp",
-	})
-).src;
+const profile = await getLogo(300);
 ---
 
 <Main hasNav={false}>

@@ -1,65 +1,52 @@
 ---
-import { LandingHeader } from "@/layouts/LandingHeader";
-import { ProgrammingLanguages } from "@/layouts/ProgrammingLanguages";
-import { SpeakingLanguages } from "@/layouts/SpeakingLanguages";
-import { Stats } from "@/layouts/Stats";
-import { WorkTimeline } from "@/layouts/WorkTimeline";
+import { IndexPage } from "@/layouts/IndexPage";
 import Main from "@/layouts/main.astro";
-
-import { getImage } from "astro:assets";
 import profileImg from "public/profile.png";
+import CarImage from "public/projects/car.png";
+import LoomImage from "public/projects/loom.webp";
+import WyroTechImage from "public/projects/wyrotech.png";
 import acpImg from "public/screenshots/acp.png";
 import connectaImg from "public/screenshots/connacta-regensburg.png";
 import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
-import Projects from "../../layouts/projects.astro";
+import { getLogo, processImage } from "../../lib/helper";
+import type { LandingPageObject } from "../../lib/models";
 
-// Process images with Astro's image optimization
-const processImages = async (img, width = 200) => {
-	return (
-		await getImage({
-			src: img,
-			width: width,
-			format: "webp",
-		})
-	).src;
-};
-
-const images = {
-	firstcontact: await processImages(firstcontactImg),
-	dab: await processImages(dabImg),
-	coursera: await processImages(courseraImg),
-	connecta: await processImages(connectaImg),
-	edvschule: await processImages(edvschuleImg),
-	acp: await processImages(acpImg),
-};
-
-const profile = await processImages(profileImg, 300);
+const obj = {
+	logo: await getLogo(),
+	profileUrl: await processImage(profileImg, 300),
+	timelineImages: {
+		firstcontact: await processImage(firstcontactImg, 200),
+		dab: await processImage(dabImg, 200),
+		coursera: await processImage(courseraImg, 200),
+		connecta: await processImage(connectaImg, 200),
+		edvschule: await processImage(edvschuleImg, 200),
+		acp: await processImage(acpImg, 200),
+	},
+	projects: [
+		{
+			title: "Website - WyroTech",
+			image: await processImage(WyroTechImage, 400),
+			link: "https://github.com/WyroTech/wyrotech",
+			tech: ["react", "astro", "tailwindcss", "vercel"],
+		},
+		{
+			title: "RoboCar 4.0",
+			link: "https://github.com/WyroTech/RoboCar",
+			tech: ["cplusplus", "python", "javascript"],
+			image: await processImage(CarImage, 400),
+		},
+		{
+			title: "dab Nexus Loom",
+			link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
+			image: await processImage(LoomImage, 400),
+			tech: ["angular", "docker", "dotnet"],
+		},
+	].reverse(),
+} as LandingPageObject;
 ---
 <Main hasNav={true}>
-    <LandingHeader client:only="react" imageUrl={profile}/>
-    <ProgrammingLanguages client:only="react"/>
-    <SpeakingLanguages client:only="react"/>
-    <Stats client:only="react"/>
-    <Projects/>
-    <WorkTimeline client:only="react" images={images}/>
+    <IndexPage client:only="react" obj={obj}/>
 </Main>
-<script>
-    const body = document.getElementById("body")!;
-    const loadingDiv = document.getElementById("loading-screen")!;
-
-    body.classList.add("main-loading");
-
-    let loadedComponents = 0;
-
-    (document as any).finishedLoadingComponent = () => {
-        loadedComponents++;
-        if (loadedComponents === 6) {
-            body.classList.remove("main-loading");
-            setTimeout(() =>loadingDiv.classList.add("opacity-0"), 0);
-            setTimeout(() => loadingDiv.remove(), 1000);
-        }
-    };
-</script>

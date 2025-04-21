@@ -6,7 +6,7 @@ import {useRef} from "react";
 const lang = getLangFromWindow();
 const t = useTranslations(lang);
 
-export function LandingHeader({ imageUrl }: { imageUrl: string }) {
+export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 	const video = useRef<HTMLVideoElement>(null);
 	const container = useRef<HTMLDivElement>(null);
 
@@ -16,8 +16,6 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 	});
 	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 	const translateYReverse = useTransform(scrollYProgress, [0, 1], [0, -25]);
-
-	(document as any).finishedLoadingComponent();
 
 	return (
 		<section
@@ -54,8 +52,8 @@ export function LandingHeader({ imageUrl }: { imageUrl: string }) {
 						</h1>
 						<img
 							className="absolute bottom-3 min-h-64 md:min-h-48 h-[16vw] max-h-96 z-0 brightness-90 profile grayscale-10"
-							src={imageUrl}
-							alt="logo"
+							src={profileUrl}
+							alt="ProfilePicture"
 						/>
 					</div>
 					<span className="h5 text-center max-w-2xl text-balance">

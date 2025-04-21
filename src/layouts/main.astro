@@ -1,22 +1,12 @@
 ---
 import "../styles/global.css";
-import { getImage } from "astro:assets";
-import { SplashCursor } from "@/components/ui/splash-cursor";
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
-import LogoImg from "../../public/logo.png";
 import { getLangFromUrl } from "../i18n/utils";
-import { Navigation } from "./Navigation.tsx";
-import Footer from "./footer.astro";
+import { getLogo } from "../lib/helper";
 
-const { hasNav } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
-
-const optimizedImage = await getImage({
-	src: LogoImg,
-	width: 64,
-	format: "webp", // Convert to webp for better compression
-});
+const optimizedImage = await getLogo();
 ---
 <html lang="en">
 <head>
@@ -34,7 +24,7 @@ const optimizedImage = await getImage({
     <meta property="og:type" content="website"/>
     <link rel="manifest" href="/site.webmanifest">
 
-    <link rel="preload" href={optimizedImage.src} as="image"/>
+    <link rel="preload" href={optimizedImage} as="image"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,38 +50,7 @@ const optimizedImage = await getImage({
     <meta property="og:locale" content={lang === "de" ? "de_DE" : "en_US"}>
 </head>
 <body>
-<SpeedInsights/>
-<Analytics/>
-<SplashCursor client:only="react"/>
-<div id="body">
-    {hasNav &&
-            <Navigation client:only="react" imageUrl={optimizedImage.src}/>}
-    <div>
-        <slot/>
-    </div>
-    {hasNav &&
-            <Footer/>}
-</div>
-
-{hasNav &&
-        <div id="loading-screen"
-             class="loading-screen fixed inset-0 z-[999999] bg-black transition-opacity duration-1000">
-            <div class="fixed inset-0 flex justify-center items-center">
-                <div class="flex items-center gap-px">
-                    <img
-                            src={optimizedImage.src}
-                            alt="logo"
-                            width="56"
-                            height="56"
-                            class="mr-1"
-                            loading="lazy"
-                    />
-                    <span class="font-extrabold! text-6xl! text-white!">Wyro</span>
-                    <span class="font-thin! text-6xl! text-white!">Tech</span>
-                </div>
-            </div>
-        </div>
-}
+<slot/>
 
 <script type="application/ld+json">
     {
@@ -114,5 +73,8 @@ const optimizedImage = await getImage({
         ]
     }
 </script>
+
+<SpeedInsights/>
+<Analytics/>
 </body>
 </html>

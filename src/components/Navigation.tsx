@@ -45,7 +45,7 @@ export function LanguageSwitcher() {
 	);
 }
 
-export function Navigation(props: { imageUrl: string }) {
+export function Navigation(props: { logo: string }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	// Menu animation variants
@@ -86,13 +86,11 @@ export function Navigation(props: { imageUrl: string }) {
 		},
 	};
 
-	(document as any).finishedLoadingComponent();
-
 	return (
 		<nav className="fixed top-0 left-0 right-0 bg-linear-to-b from-black to-transparent z-40">
 			<div className="flex justify-between items-center py-8 px-8">
 				<a href="/" className="z-20">
-					<Logo imageUrl={props.imageUrl} />
+					<Logo logoUrl={props.logo} />
 				</a>
 				{/* biome-ignore lint/a11y/useFocusableInteractive: <explanation> */}
 				{/* biome-ignore lint/a11y/useSemanticElements: <explanation> */}
