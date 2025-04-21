@@ -1,5 +1,4 @@
 import {Navigation} from "@/components/Navigation.tsx";
-import {SplashCursor} from "@/components/ui/splash-cursor.tsx";
 import {Footer} from "@/layouts/Footer.tsx";
 import {ProgrammingLanguages} from "@/layouts/ProgrammingLanguages.tsx";
 import {Projects} from "@/layouts/Projects.tsx";
@@ -20,8 +19,6 @@ export function IndexPage(props: { obj: LandingPageObject }) {
 			<Projects projects={props.obj.projects} />
 			<WorkTimeline images={props.obj.timelineImages} />
 			<Footer logoUrl={props.obj.logo} />
-
-			<SplashCursor />
 		</>
 	);
 }
