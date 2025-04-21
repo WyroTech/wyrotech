@@ -4,6 +4,11 @@ import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import { getLangFromUrl } from "../i18n/utils";
 import { getLogo } from "../lib/helper";
+import type { LandingPageObject } from "../lib/models";
+
+interface Props {
+	obj: LandingPageObject;
+}
 
 const { obj } = Astro.props;
 
