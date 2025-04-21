@@ -4,13 +4,6 @@ import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import { getLangFromUrl } from "../i18n/utils";
 import { getLogo } from "../lib/helper";
-import type { LandingPageObject } from "../lib/models";
-
-interface Props {
-	obj: LandingPageObject;
-}
-
-const { obj } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const optimizedImage = await getLogo();
@@ -37,8 +30,6 @@ const optimizedImage = await getLogo();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"
           rel="stylesheet">
-    <link rel="prefetch" href={obj.logo} />
-    <link rel="prefetch" href={obj.profileUrl} />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WyroTech by Andreas Wyrobek">
@@ -57,6 +48,7 @@ const optimizedImage = await getLogo();
     <meta property="og:image:height" content="895">
     <meta property="og:url" content="https://wyro.tech">
     <meta property="og:locale" content={lang === "de" ? "de_DE" : "en_US"}>
+    <slot name="head"></slot>
 </head>
 <body>
 <slot/>

@@ -73,6 +73,9 @@ const obj: LandingPageObject = {
 	].reverse(),
 };
 ---
-<Main obj={obj}>
+
+<Main>
+    <link slot="head" rel="prefetch" href={obj.logo} />
+    <link slot="head" rel="prefetch" href={obj.profileUrl} />
     <IndexPage client:only="react" obj={obj}/>
 </Main>
