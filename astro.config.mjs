@@ -1,9 +1,9 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import compressor from "astro-compressor";
 import icon from "astro-icon";
 import vercel from '@astrojs/vercel';
+import compress from "astro-compress";
 // @ts-check
 import {defineConfig} from "astro/config";
 
@@ -18,7 +18,7 @@ export default defineConfig({
 		edgeMiddleware: true,
 		webAnalytics: {
 			enabled: true,
-		}
+		},
 	}),
-	integrations: [react(), icon(), sitemap(), compressor()],
+	integrations: [react(), icon(), sitemap(), compress()],
 });
