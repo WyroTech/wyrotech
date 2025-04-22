@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import compressor from "astro-compressor";
 import icon from "astro-icon";
+import vercel from '@astrojs/vercel';
 // @ts-check
 import {defineConfig} from "astro/config";
 
@@ -12,6 +13,16 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-
+	output: 'server',
+	adapter: vercel({
+		edgeMiddleware: true,
+		imageService: true,
+		webAnalytics: {
+			enabled: true,
+		},
+		imagesConfig: {
+			sizes: [320, 640, 1280],
+		},
+	}),
 	integrations: [react(), icon(), sitemap(), compressor()],
 });
