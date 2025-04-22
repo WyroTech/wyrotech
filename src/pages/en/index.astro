@@ -16,6 +16,7 @@ import type { LandingPageObject } from "../../lib/models";
 
 const [
 	logo,
+    logoSmall,
 	profileUrl,
 	firstcontact,
 	dab,
@@ -28,6 +29,7 @@ const [
 	loom,
 ] = await Promise.all([
 	getLogo(),
+    getLogo(28),
 	processImage(profileImg, 300),
 	processImage(firstcontactImg, 200),
 	processImage(dabImg, 200),
@@ -42,6 +44,7 @@ const [
 
 const obj: LandingPageObject = {
 	logo,
+    logoSmall,
 	profileUrl,
 	timelineImages: {
 		firstcontact,
