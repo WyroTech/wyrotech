@@ -7,6 +7,8 @@ import Main from "../../layouts/main.astro";
 import _cardDeTxt from "./../de/card.txt?raw";
 import _cardTxt from "./card.txt?raw";
 
+export const prerender = true;
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
