@@ -19,10 +19,7 @@ export default defineConfig({
 		imageService: true,
 		webAnalytics: {
 			enabled: true,
-		},
-		imagesConfig: {
-			sizes: [320, 640, 1280],
-		},
+		}
 	}),
 	integrations: [react(), icon(), sitemap(), compressor()],
 });
