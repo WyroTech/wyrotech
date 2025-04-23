@@ -123,6 +123,19 @@ export const ui = {
 		"timeline.training.bullet2": "Fundamentals of Software Development",
 		"card.backHome": "Back to Home",
 		project: "Projects",
+		"meta.title": "WyroTech 🌍 by Andreas Wyrobek",
+		"meta.description":
+			"Andreas Wyrobek: Principal Software Engineer specializing in Angular development and UX/UI design. Based in Bavaria, offering expert full-stack development services.",
+		"meta.keywords":
+			"full-stack developer, angular specialist, ux design, bavaria, AI solutions, machine learning, software engineering, web development",
+		"meta.ogTitle":
+			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead at WyroTech",
+		"meta.ogDescription":
+			"Andreas Wyrobek: Principal Software Engineer specializing in Angular development and UX/UI design. Based in Bavaria.",
+		"meta.twitterTitle":
+			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead | WyroTech",
+		"meta.twitterDescription":
+			"Andreas Wyrobek: Principal Software Engineer at WyroTech, specializing in Angular development and UX/UI design. Based in Bavaria.",
 	},
 	de: {
 		home: "Startseite",
@@ -242,5 +255,18 @@ export const ui = {
 		"timeline.training.bullet2": "Grundlagen der Softwareentwicklung",
 		"card.backHome": "Zurück zur Startseite",
 		project: "Projekte",
+		"meta.title": "WyroTech 🌍 von Andreas Wyrobek",
+		"meta.description":
+			"Andreas Wyrobek: Principal Software Engineer spezialisiert auf Angular-Entwicklung und UX/UI-Design. Ansässig in Bayern, bietet professionelle Full-Stack-Entwicklungsdienste an.",
+		"meta.keywords":
+			"full-stack entwickler, angular spezialist, ux design, bayern, KI-Lösungen, maschinelles lernen, softwareentwicklung, webentwicklung",
+		"meta.ogTitle":
+			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead bei WyroTech",
+		"meta.ogDescription":
+			"Andreas Wyrobek: Principal Software Engineer spezialisiert auf Angular-Entwicklung und UX/UI-Design. Ansässig in Bayern.",
+		"meta.twitterTitle":
+			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead | WyroTech",
+		"meta.twitterDescription":
+			"Andreas Wyrobek: Principal Software Engineer bei WyroTech, spezialisiert auf Angular-Entwicklung und UX/UI-Design. Ansässig in Bayern.",
 	},
 } as const;

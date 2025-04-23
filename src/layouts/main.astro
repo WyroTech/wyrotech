@@ -1,24 +1,24 @@
 ---
 import "../styles/global.css";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getLogo } from "../lib/helper";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const optimizedImage = await getLogo();
 ---
-<html lang="en">
+<html lang={lang}>
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="icon" href="/favico.ico"/>
     <link rel="image_src" href={optimizedImage}>
-    <title>WyroTech 🌍 by Andreas Wyrobek</title>
+    <title>{t('meta.title')}</title>
     <!-- SEO metadata -->
-    <meta name="description"
-          content="Andreas Wyrobek - Principal Software Engineer & UX/UI Lead  | Angular & UX Specialist"/>
-    <meta name="keywords" content="full-stack developer, angular specialist, ux design, bavaria"/>
-    <meta property="og:title" content="WyroTech by Andreas Wyrobek"/>
-    <meta property="og:description" content="Principal Software Engineer & UX/UI Lead"/>
+    <meta name="description" content={t('meta.description')}/>
+    <meta name="keywords" content={t('meta.keywords')}/>
+    <meta property="og:title" content={t('meta.ogTitle')}/>
+    <meta property="og:description" content={t('meta.ogDescription')}/>
     <meta property="og:type" content="website"/>
     <link rel="manifest" href="/site.webmanifest">
 
@@ -34,9 +34,8 @@ const optimizedImage = await getLogo();
 
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WyroTech by Andreas Wyrobek">
-    <meta name="twitter:description"
-          content="Principal Software Engineer & UX/UI Lead | Angular & UX Specialist">
+    <meta name="twitter:title" content={t('meta.twitterTitle')}>
+    <meta name="twitter:description" content={t('meta.twitterDescription')}/>
     <meta name="twitter:image" content="https://wyro.tech/logo_small.png">
 
     <link rel="canonical" href={"https://wyro.tech/" + Astro.url.pathname}>
