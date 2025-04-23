@@ -4,8 +4,10 @@ import Logo from "../../components/logo.astro";
 import QRCode from "../../components/qrcode.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Main from "../../layouts/main.astro";
-import cardDeTxt from "./../de/card.txt?raw";
-import cardTxt from "./card.txt?raw";
+import _cardDeTxt from "./../de/card.txt?raw";
+import _cardTxt from "./card.txt?raw";
+
+export const prerender = true;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -17,7 +19,7 @@ const t = useTranslations(lang);
         </a>
     </div>
     
-    <QRCode text={lang === "de" ? cardDeTxt : cardTxt} />
+    <QRCode text={lang === "de" ? _cardDeTxt : _cardTxt} />
 
     <div class="flex justify-center items-center px-8">
         <AnimatedLink client:only="react"

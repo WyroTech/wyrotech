@@ -14,8 +14,11 @@ import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject } from "../../lib/models";
 
+export const prerender = true;
+
 const [
 	logo,
+    logoSmall,
 	profileUrl,
 	firstcontact,
 	dab,
@@ -28,6 +31,7 @@ const [
 	loom,
 ] = await Promise.all([
 	getLogo(),
+    getLogo(28),
 	processImage(profileImg, 300),
 	processImage(firstcontactImg, 200),
 	processImage(dabImg, 200),
@@ -42,6 +46,7 @@ const [
 
 const obj: LandingPageObject = {
 	logo,
+    logoSmall,
 	profileUrl,
 	timelineImages: {
 		firstcontact,
@@ -75,8 +80,8 @@ const obj: LandingPageObject = {
 ---
 
 <Main>
-    <link slot="head" rel="prefetch" href={obj.logo} />
-    <link slot="head" rel="prefetch" href={obj.profileUrl} />
+    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.logo} />
+    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
 
     <IndexPage client:only="react" obj={obj}/>
 </Main>

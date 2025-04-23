@@ -1,6 +1,5 @@
 import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {DynamicIcon} from "lucide-react/dynamic";
-import React from "react";
 
 interface ButtonContainerProps {
 	severity: string;
@@ -38,7 +37,6 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 
 	return (
 		<motion.div
-			// biome-ignore lint/a11y/useValidAnchor: <explanation>
 			className={`${severity} button-container`}
 			style={{ boxShadow }}
 			onHoverStart={() => {

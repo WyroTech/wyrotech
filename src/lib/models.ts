@@ -16,6 +16,7 @@ interface TimelineImages {
 
 export interface LandingPageObject {
 	logo: string;
+	logoSmall: string;
 	profileUrl: string;
 	projects: Project[];
 	timelineImages: TimelineImages;

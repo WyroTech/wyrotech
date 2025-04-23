@@ -11,14 +11,14 @@ import {Stats} from "./Stats";
 export function IndexPage(props: { obj: LandingPageObject }) {
 	return (
 		<>
-			<Navigation logo={props.obj.logo} />
+			<Navigation logo={props.obj.logoSmall} />
 			<LandingHeader profileUrl={props.obj.profileUrl} />
 			<ProgrammingLanguages />
 			<SpeakingLanguages />
 			<Stats />
 			<Projects projects={props.obj.projects} />
 			<WorkTimeline images={props.obj.timelineImages} />
-			<Footer logoUrl={props.obj.logo} />
+			<Footer logoUrl={props.obj.logoSmall} />
 		</>
 	);
 }
