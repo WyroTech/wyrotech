@@ -13,7 +13,7 @@ export function IndexPage(props: { obj: LandingPageObject }) {
 	const [isLoading, setIsLoading] = useState(true);
 	useEffect(() => {
 		const handleLoad = () => {
-			setTimeout(() => setIsLoading(false), 900);
+			setTimeout(() => setIsLoading(false), 500);
 			(window as any).removeLoadingScreen();
 		};
 
