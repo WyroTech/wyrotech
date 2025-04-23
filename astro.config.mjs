@@ -7,18 +7,20 @@ import compress from "astro-compress";
 // @ts-check
 import {defineConfig} from "astro/config";
 
+import robotsTxt from "astro-robots-txt";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://wyro.tech",
-	vite: {
-		plugins: [tailwindcss()],
-	},
-	output: 'server',
-	adapter: vercel({
-		edgeMiddleware: true,
-		webAnalytics: {
-			enabled: true,
-		},
-	}),
-	integrations: [react(), icon(), sitemap(), compress()],
+    site: "https://wyro.tech",
+    vite: {
+        plugins: [tailwindcss()],
+    },
+    output: 'server',
+    adapter: vercel({
+        edgeMiddleware: true,
+        webAnalytics: {
+            enabled: true,
+        },
+    }),
+    integrations: [react(), icon(), sitemap(), compress(), robotsTxt()],
 });
