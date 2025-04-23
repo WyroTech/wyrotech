@@ -11,6 +11,7 @@ import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
+import LoadingScreen from "../../components/LoadingScreen.astro";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject } from "../../lib/models";
 
@@ -18,7 +19,7 @@ export const prerender = true;
 
 const [
 	logo,
-    logoSmall,
+	logoSmall,
 	profileUrl,
 	firstcontact,
 	dab,
@@ -31,7 +32,7 @@ const [
 	loom,
 ] = await Promise.all([
 	getLogo(),
-    getLogo(28),
+	getLogo(28),
 	processImage(profileImg, 300),
 	processImage(firstcontactImg, 200),
 	processImage(dabImg, 200),
@@ -46,7 +47,7 @@ const [
 
 const obj: LandingPageObject = {
 	logo,
-    logoSmall,
+	logoSmall,
 	profileUrl,
 	timelineImages: {
 		firstcontact,
@@ -84,4 +85,5 @@ const obj: LandingPageObject = {
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
 
     <IndexPage client:only="react" obj={obj}/>
+    <LoadingScreen logoUrl={obj.logo}/>
 </Main>
