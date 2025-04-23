@@ -11,10 +11,23 @@ import {Stats} from "./Stats";
 
 export function IndexPage(props: { obj: LandingPageObject }) {
 	const [isLoading, setIsLoading] = useState(true);
-	setTimeout(() => {
-		setTimeout(() => setIsLoading(false), 500);
-		(window as any).removeLoadingScreen();
-	}, 0);
+	useEffect(() => {
+		const handleLoad = () => {
+			setTimeout(() => setIsLoading(false), 900);
+			(window as any).removeLoadingScreen();
+		};
+
+		if (document.readyState === "complete") {
+			// In case the load event has already fired
+			setFullyLoaded(true);
+		} else {
+			window.addEventListener("load", handleLoad);
+		}
+
+		return () => {
+			window.removeEventListener("load", handleLoad);
+		};
+	}, []);
 
 	return (
 		<>
