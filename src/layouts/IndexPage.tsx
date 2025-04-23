@@ -9,7 +9,8 @@ import {LandingHeader} from "./LandingHeader";
 import {Stats} from "./Stats";
 
 export function IndexPage(props: { obj: LandingPageObject }) {
-	setTimeout(() => (window as any).removeLoadingScreen(), 100);
+	setTimeout(() => (window as any).removeLoadingScreen(), 0);
+
 	return (
 		<>
 			<Navigation logo={props.obj.logoSmall} />
