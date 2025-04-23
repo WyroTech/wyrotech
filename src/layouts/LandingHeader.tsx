@@ -31,6 +31,8 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 					style={{ translateY: translateYReverse }}
 					autoPlay
 					loop
+					loading="lazy"
+					preload="none"
 					onPlay={() => {
 						if (video.current) {
 							video.current.playbackRate = 1;
