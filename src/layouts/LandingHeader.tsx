@@ -17,6 +17,11 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 	const translateY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 	const translateYReverse = useTransform(scrollYProgress, [0, 1], [0, -25]);
 
+	const videoUrl =
+		window.outerHeight < window.outerWidth
+			? "/video_desktop.mp4"
+			: "/video_mobile.mp4";
+
 	return (
 		<section
 			id="home"
@@ -27,7 +32,7 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 				<motion.video
 					ref={video}
 					className="w-[100dvw] h-[100lvh] opacity-75 object-cover"
-					src="/objects.mp4"
+					src={videoUrl}
 					style={{ translateY: translateYReverse }}
 					autoPlay
 					loop
