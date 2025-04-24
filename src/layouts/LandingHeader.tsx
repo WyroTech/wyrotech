@@ -61,6 +61,8 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 							className="absolute bottom-3 min-h-64 md:min-h-48 h-[16vw] max-h-96 z-0 brightness-90 profile grayscale-10 pointer-events-none"
 							src={profileUrl}
 							alt="ProfilePicture"
+							loading="eager"
+							fetchpriority="high"
 						/>
 					</div>
 					<span className="h5 text-center max-w-2xl text-balance">

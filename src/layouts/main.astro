@@ -22,7 +22,7 @@ const optimizedImage = await getLogo();
     <meta property="og:type" content="website"/>
     <link rel="manifest" href="/site.webmanifest">
 
-    <link rel="preload" href={optimizedImage} as="image"/>
+    <link rel="preload" href={optimizedImage} as="image" fetchpriority="high"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
