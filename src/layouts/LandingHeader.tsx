@@ -65,8 +65,6 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 								backgroundPosition: "top center",
 								backgroundRepeat: "no-repeat",
 							}}
-							role="img"
-							aria-label="ProfilePicture"
 						/>
 					</div>
 					<span className="h5 text-center max-w-2xl text-balance">
