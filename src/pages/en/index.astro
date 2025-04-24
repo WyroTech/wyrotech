@@ -15,6 +15,10 @@ import LoadingScreen from "../../components/LoadingScreen.astro";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject } from "../../lib/models";
 
+Astro.response.headers.set(
+	"Cache-Control",
+	"s-maxage=360, stale-while-revalidate",
+);
 export const prerender = true;
 
 const [
