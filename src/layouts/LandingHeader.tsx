@@ -32,9 +32,9 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 				className="relative flex justify-start gap-12 px-8 h-screen pt-[20lvh] lg:pt-[35lvh] mx-auto z-10"
 				style={{ translateY }}
 			>
-				<div className="absolute inset-0">
+				<div className="absolute inset-0 hidden lg:block">
 					<img
-						className="absolute m-auto bottom-0 right-0 left-0 lg:left-auto w-auto h-auto max-w-full max-h-1/2 lg:max-w-full md:max-h-3/4 z-0 brightness-90 profile grayscale-10 pointer-events-none object-center"
+						className="absolute m-auto bottom-0 right-0 left-0 lg:left-auto w-auto h-auto  lg:max-w-1/2 max-h-3/4 z-0 brightness-90 profile grayscale-10 pointer-events-none object-center"
 						src={profileUrl}
 						alt="ProfilePicture"
 					/>
@@ -73,6 +73,11 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 							/>
 						</a>
 					</div>
+					<img
+						className="block lg:hidden max-h-[50vh] z-0 brightness-90 profile grayscale-10 pointer-events-none object-bottom"
+						src={profileUrl}
+						alt="ProfilePicture"
+					/>
 				</div>
 			</motion.div>
 		</section>
