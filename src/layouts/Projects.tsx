@@ -48,12 +48,12 @@ export function Projects(props: { projects: Project[] }) {
 											<TooltipProvider key={tech}>
 												<Tooltip>
 													<TooltipTrigger>
-														<div className="opacity-50 group-hover:opacity-100 transition-all duration-500">
+														<div className="opacity-50 group-hover:opacity-100 transition-all duration-500 h-9 w-9 flex justify-center items-center">
 															<Icon
 																icon={`simple-icons:${tech}`}
 																name={`simple-icons:${tech}`}
-																width={20}
-																height={20}
+																width={26}
+																height={26}
 															/>
 														</div>
 													</TooltipTrigger>
