@@ -29,12 +29,12 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 			className="w-[100dvw] h-[100lvh] relative bg-black"
 		>
 			<motion.div
-				className="relative flex justify-start gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
+				className="relative flex justify-start gap-12 px-8 h-screen pt-[20lvh] lg:pt-[35lvh] mx-auto z-10"
 				style={{ translateY }}
 			>
 				<div className="absolute inset-0">
 					<img
-						className="absolute bottom-0 right-[10%] h-3/4 z-0 brightness-90 profile grayscale-10 pointer-events-none"
+						className="absolute m-auto bottom-0 right-0 left-0 lg:left-auto w-auto h-auto max-w-full max-h-1/2 lg:max-w-full md:max-h-3/4 z-0 brightness-90 profile grayscale-10 pointer-events-none object-center"
 						src={profileUrl}
 						alt="ProfilePicture"
 					/>
@@ -43,8 +43,8 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 				<div className="top-[5vh] left-[-60vh] blurry-circle" />
 				<div className="bottom-[5vh] right-[-60vh] blurry-circle" />
 
-				<div className="flex flex-col gap-12 items-end w-1/2">
-					<div className="flex flex-col items-end">
+				<div className="flex flex-col gap-12 items-center lg:items-end w-full lg:w-1/2">
+					<div className="flex flex-col items-center lg:items-end">
 						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 leading-1">
 							Andreas
 						</h1>
