@@ -37,6 +37,8 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 						className="absolute m-auto bottom-0 right-0 left-0 lg:left-auto w-auto h-auto  lg:max-w-1/2 max-h-3/4 z-0 brightness-90 profile grayscale-10 pointer-events-none object-center"
 						src={profileUrl}
 						alt="ProfilePicture"
+						loading="eager"
+						fetchpriority="high"
 					/>
 				</div>
 				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90%" />
@@ -77,6 +79,8 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 						className="block lg:hidden max-h-[50vh] z-0 brightness-90 profile grayscale-10 pointer-events-none object-bottom"
 						src={profileUrl}
 						alt="ProfilePicture"
+						loading="eager"
+						fetchpriority="high"
 					/>
 				</div>
 			</motion.div>
