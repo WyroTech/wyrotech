@@ -1,7 +1,8 @@
 ---
 import { IndexPage } from "@/layouts/IndexPage";
 import Main from "@/layouts/main.astro";
-import profileImg from "public/profile.png";
+import profileImg from "public/profile.webp";
+import profileSmallImg from "public/profileSmall.webp";
 import CarImage from "public/projects/car.png";
 import LoomImage from "public/projects/loom.webp";
 import WyroTechImage from "public/projects/wyrotech.png";
@@ -41,7 +42,7 @@ const [
 	getLogo(),
 	getLogo(42),
 	processImage(profileImg, 1200),
-	processImage(profileImg, 500),
+	processImage(profileSmallImg, 500),
 	processImage(firstcontactImg, 200),
 	processImage(dabImg, 200),
 	processImage(courseraImg, 200),
