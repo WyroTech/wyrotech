@@ -13,7 +13,7 @@ import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import LoadingScreen from "../../components/LoadingScreen.astro";
 import { getLogo, processImage } from "../../lib/helper";
-import type { LandingPageObject } from "../../lib/models";
+import type { LandingPageObject, Project } from "../../lib/models";
 
 Astro.response.headers.set(
 	"Cache-Control",
@@ -65,19 +65,28 @@ const obj: LandingPageObject = {
 	},
 	projects: [
 		{
-			title: "Website - WyroTech",
+			title: "WyroTech",
+			description:
+				"A personal portfolio website built with modern web technologies to showcase projects, skills, and professional experience.",
+			tag: "Website",
 			image: wyrotech,
 			link: "https://github.com/WyroTech/wyrotech",
 			tech: ["react", "astro", "tailwindcss", "vercel"],
-		},
+		} as Project,
 		{
 			title: "RoboCar 4.0",
+			description:
+				"Control a smart robot car via ESP32 and Python backend using WebSockets and JSON communication between ESP32 and Arduino.",
+			tag: "Robotic",
 			link: "https://github.com/WyroTech/RoboCar",
 			tech: ["cplusplus", "python", "javascript"],
 			image: car,
 		},
 		{
 			title: "dab Nexus Loom",
+			description:
+				"The ultimate SAP data analytics solution using Microsoft Fabric for seamless integration and advanced insights.",
+			tag: "Business-Analytic Platform",
 			link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
 			image: loom,
 			tech: ["angular", "docker", "dotnet"],
