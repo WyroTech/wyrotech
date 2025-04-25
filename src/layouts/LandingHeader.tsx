@@ -57,12 +57,16 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 						<h1 className="text-center text-7xl! lg:text-[9vw]! relative z-10 pt-12">
 							Andreas Wyrobek
 						</h1>
-						<img
-							className="absolute bottom-3 min-h-64 md:min-h-48 h-[16vw] max-h-96 z-0 brightness-90 profile grayscale-10 pointer-events-none"
-							src={profileUrl}
-							alt="ProfilePicture"
-							loading="eager"
-							fetchpriority="high"
+						<div
+							className="absolute bottom-3 w-full min-h-64 sm:bottom-[-2.5rem] lg:bottom-0 md:min-h-48 h-[16vw] z-0 brightness-90 profile grayscale-10 pointer-events-none" // Added w-full here
+							style={{
+								backgroundImage: `url(${profileUrl})`,
+								backgroundSize: "contain",
+								backgroundPosition: "top center",
+								backgroundRepeat: "no-repeat",
+							}}
+							role="img"
+							aria-label="ProfilePicture"
 						/>
 					</div>
 					<span className="h5 text-center max-w-2xl text-balance">
