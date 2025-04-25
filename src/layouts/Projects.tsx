@@ -44,7 +44,11 @@ export function Projects(props: { projects: Project[] }) {
 									<h2>{project.title}</h2>
 									<div className="flex gap-3">
 										{project.tech.map((tech) => (
-											<div key={tech} title={tech} className="opacity-50">
+											<div
+												key={tech}
+												title={tech}
+												className="opacity-50 group-hover:opacity-100 transition-all duration-500"
+											>
 												<Icon
 													icon={`simple-icons:${tech}`}
 													name={`simple-icons:${tech}`}
