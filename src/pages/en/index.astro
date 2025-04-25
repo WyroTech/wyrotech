@@ -27,6 +27,7 @@ const [
 	logo,
 	logoSmall,
 	profileUrl,
+	profileSmallUrl,
 	firstcontact,
 	dab,
 	coursera,
@@ -40,6 +41,7 @@ const [
 	getLogo(),
 	getLogo(42),
 	processImage(profileImg, 1200),
+	processImage(profileImg, 500),
 	processImage(firstcontactImg, 200),
 	processImage(dabImg, 200),
 	processImage(courseraImg, 200),
@@ -55,6 +57,7 @@ const obj: LandingPageObject = {
 	logo,
 	logoSmall,
 	profileUrl,
+	profileSmallUrl,
 	timelineImages: {
 		firstcontact,
 		dab,
@@ -98,6 +101,7 @@ const obj: LandingPageObject = {
 <Main>
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.logo} />
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
+    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileSmallUrl} />
 
     <IndexPage client:only="react" obj={obj}/>
     <LoadingScreen logoUrl={obj.logo}/>

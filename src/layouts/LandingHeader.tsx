@@ -6,7 +6,10 @@ import {useRef} from "react";
 const lang = getLangFromWindow();
 const t = useTranslations(lang);
 
-export function LandingHeader({ profileUrl }: { profileUrl: string }) {
+export function LandingHeader({
+	profileUrl,
+	profileSmallUrl,
+}: { profileUrl: string; profileSmallUrl: string }) {
 	const video = useRef<HTMLVideoElement>(null);
 	const container = useRef<HTMLDivElement>(null);
 
@@ -77,7 +80,7 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 					</div>
 					<img
 						className="block lg:hidden max-h-[50vh] z-0 brightness-90 profile grayscale-10 pointer-events-none object-bottom"
-						src={profileUrl}
+						src={profileSmallUrl}
 						alt="ProfilePicture"
 						loading="eager"
 						fetchpriority="high"

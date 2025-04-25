@@ -34,7 +34,10 @@ export function IndexPage(props: { obj: LandingPageObject }) {
 			{!isLoading && (
 				<>
 					<Navigation logo={props.obj.logoSmall} />
-					<LandingHeader profileUrl={props.obj.profileUrl} />
+					<LandingHeader
+						profileUrl={props.obj.profileUrl}
+						profileSmallUrl={props.obj.profileSmallUrl}
+					/>
 					<ProgrammingLanguages />
 					<SpeakingLanguages />
 					<Stats />
