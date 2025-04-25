@@ -87,7 +87,7 @@
 	}
 	body {
 		@apply text-foreground;
-		background: #0c0c11;
+		background: #000;
 	}
 }
 
@@ -254,4 +254,8 @@ a:hover > span:last-child {
 	> .text {
 		z-index: 2;
 	}
+}
+
+.blurry-circle {
+	@apply w-[75vh] h-[75vh] absolute  blur-[500px] rounded-full opacity-40 bg-[#327AF3];
 }

@@ -28,59 +28,51 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 			ref={container}
 			className="w-[100dvw] h-[100lvh] relative bg-black"
 		>
-			<motion.div className="absolute inset-0 z-0 flex justify-center items-center">
-				<motion.video
-					ref={video}
-					className="w-[100dvw] h-[100lvh] opacity-75 object-cover"
-					src={videoUrl}
-					style={{ translateY: translateYReverse }}
-					autoPlay
-					loop
-					loading="lazy"
-					preload="none"
-					muted
-				/>
-
-				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-95%" />
-			</motion.div>
 			<motion.div
-				className="relative flex flex-col justify-start items-center gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
+				className="relative flex justify-start gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
 				style={{ translateY }}
 			>
-				<div className="flex flex-col gap-6 items-center">
-					<div className="flex justify-center relative">
-						<h1 className="text-center text-7xl! lg:text-[9vw]! relative z-10 pt-12">
-							Andreas Wyrobek
-						</h1>
-						<img
-							className="absolute bottom-3 min-h-64 md:min-h-48 h-[16vw] max-h-96 z-0 brightness-90 profile grayscale-10 pointer-events-none"
-							src={profileUrl}
-							alt="ProfilePicture"
-						/>
-					</div>
-					<span className="h5 text-center max-w-2xl text-balance">
-						{t("landing.subtext")}
-					</span>
+				<div className="absolute inset-0">
+					<img
+						className="absolute bottom-0 right-[10%] h-3/4 z-0 brightness-90 profile grayscale-10 pointer-events-none"
+						src={profileUrl}
+						alt="ProfilePicture"
+					/>
 				</div>
-				<div className="flex gap-4">
-					<a href="#journey">
-						<Button
-							severity="secondary"
-							text={t("journey")}
-							icon="chevron-right"
-						/>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/andreas-wyrobek/"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<Button
-							severity="primary"
-							text={t("contact")}
-							icon="chevron-right"
-						/>
-					</a>
+				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90%" />
+				<div className="top-[5vh] left-[-60vh] blurry-circle" />
+				<div className="bottom-[5vh] right-[-60vh] blurry-circle" />
+
+				<div className="flex flex-col gap-12 items-end w-1/2">
+					<div className="flex flex-col items-end">
+						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 leading-1">
+							Andreas
+						</h1>
+						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 text-gradiant">
+							Wyrobek
+						</h1>
+					</div>
+
+					<div className="flex gap-4">
+						<a href="#journey">
+							<Button
+								severity="secondary"
+								text={t("journey")}
+								icon="chevron-right"
+							/>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/andreas-wyrobek/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<Button
+								severity="primary"
+								text={t("contact")}
+								icon="chevron-right"
+							/>
+						</a>
+					</div>
 				</div>
 			</motion.div>
 		</section>
