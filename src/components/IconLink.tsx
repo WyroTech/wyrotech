@@ -10,7 +10,7 @@ export const IconLink = (props: {
 			href={props.href}
 			aria-label={props.description}
 			title={props.description}
-			className="w-min text-white transition-all transform opacity-75 hover:opacity-100 hover:scale-110 duration-300"
+			className="w-9 h-9 flex justify-center items-center text-white transition-all transform opacity-75 hover:opacity-100 hover:scale-120 duration-300 hover:bg-gray-700 rounded-sm"
 			target="_blank"
 			rel="noopener noreferrer"
 		>

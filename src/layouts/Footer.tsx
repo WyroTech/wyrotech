@@ -21,32 +21,34 @@ export const Footer = (props: { logoUrl: string }) => {
 					<AnimatedLink text={t("journey")} href="#journey" />
 					<AnimatedLink text={t("imprint")} href="#" />
 				</div>
-				<div className="flex gap-8 md:w-full md:justify-end">
-					<IconLink
-						description="Mail"
-						iconName="lucide:mail"
-						href="mailto:a@wyro.tech"
-					/>
-					<IconLink
-						description="WaniKani"
-						iconName="hugeicons:alphabet-japanese"
-						href="https://www.wanikani.com/users/WyroTech"
-					/>
-					<IconLink
-						description="Leetcode"
-						iconName="simple-icons:leetcode"
-						href="https://leetcode.com/u/WyroTech/"
-					/>
-					<IconLink
-						description="LinkedIn"
-						iconName="lucide:linkedin"
-						href="https://www.linkedin.com/in/andreas-wyrobek/"
-					/>
-					<IconLink
-						description="Github"
-						iconName="lucide:github"
-						href="https://github.com/wyrotech"
-					/>
+				<div className="flex justify-center md:justify-end items-end w-full">
+					<div className="flex gap-4 md:justify-end bg-gray-800 rounded-lg px-5 py-3 shadow-lg">
+						<IconLink
+							description="Mail"
+							iconName="lucide:mail"
+							href="mailto:a@wyro.tech"
+						/>
+						<IconLink
+							description="WaniKani"
+							iconName="hugeicons:alphabet-japanese"
+							href="https://www.wanikani.com/users/WyroTech"
+						/>
+						<IconLink
+							description="Leetcode"
+							iconName="simple-icons:leetcode"
+							href="https://leetcode.com/u/WyroTech/"
+						/>
+						<IconLink
+							description="LinkedIn"
+							iconName="lucide:linkedin"
+							href="https://www.linkedin.com/in/andreas-wyrobek/"
+						/>
+						<IconLink
+							description="Github"
+							iconName="lucide:github"
+							href="https://github.com/wyrotech"
+						/>
+					</div>
 				</div>
 			</div>
 		</footer>
