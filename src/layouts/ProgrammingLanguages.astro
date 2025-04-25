@@ -1,0 +1,45 @@
+---
+import { useTranslations } from "@/i18n/utils.ts";
+import { Icon } from "astro-icon/components";
+import { getLangFromUrl } from "../i18n/utils";
+
+const icons = [
+	{ name: "Docker", icon: "logos:docker-icon" },
+	{ name: "Tailwind", icon: "logos:tailwindcss-icon" },
+	{ name: "Python", icon: "logos:python" },
+	{ name: "HTML5", icon: "logos:html-5" },
+	{ name: "CSS3", icon: "logos:css-3" },
+	{ name: "Javascript", icon: "logos:javascript" },
+	{ name: "Typescript", icon: "logos:typescript-icon" },
+	{ name: "Angular", icon: "logos:angular-icon" },
+	{ name: "RxJs", icon: "logos:reactivex" },
+	{ name: "React", icon: "logos:react" },
+	{ name: "Linux", icon: "logos:tux" },
+	{ name: "Git", icon: "logos:git-icon" },
+	{ name: "Figma", icon: "logos:figma" },
+	{ name: "Azure", icon: "logos:azure-icon" },
+	{ name: "dotnet", icon: "logos:dotnet" },
+	{ name: "C#", icon: "logos:c-sharp" },
+	{ name: "Sass", icon: "logos:sass" },
+	{ name: "PostgreSQL", icon: "logos:postgresql" },
+	{ name: "Posthog", icon: "logos:posthog-icon" },
+	{ name: "Storybook", icon: "logos:storybook-icon" },
+];
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div id="skills" class="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16">
+  <h1 class="title pt-16">{t("title.language")}</h1>
+  <div class="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16">
+    {icons.map((icon) => (
+      <div class="transition-all cube hover:!scale-120 flex flex-col items-center gap-0.5">
+        <div class="w-24 h-24 flex justify-center items-center">
+          <Icon name={icon.icon} width="72" height="72" />
+        </div>
+        <span class="w-full text-center text-sm!">{icon.name}</span>
+      </div>
+    ))}
+  </div>
+</div>
