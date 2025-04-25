@@ -127,7 +127,7 @@ export const ui = {
 		"meta.description":
 			"Andreas Wyrobek: Principal Software Engineer specializing in Angular development and UX/UI design. Based in Bavaria, offering expert full-stack development services.",
 		"meta.keywords":
-			"full-stack developer, angular specialist, ux design, bavaria, AI solutions, machine learning, software engineering, web development",
+			"andreas, andreas wyrobek, wyrobek, full-stack developer, angular specialist, ux design, bavaria, AI solutions, machine learning, software engineering, web development, websites, design, webdesign",
 		"meta.ogTitle":
 			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead at WyroTech",
 		"meta.ogDescription":
@@ -259,7 +259,7 @@ export const ui = {
 		"meta.description":
 			"Andreas Wyrobek: Principal Software Engineer spezialisiert auf Angular-Entwicklung und UX/UI-Design. Ansässig in Bayern, bietet professionelle Full-Stack-Entwicklungsdienste an.",
 		"meta.keywords":
-			"full-stack entwickler, angular spezialist, ux design, bayern, KI-Lösungen, maschinelles lernen, softwareentwicklung, webentwicklung",
+			"andreas, andreas wyrobek, wyrobek, full-stack entwickler, angular spezialist, ux design, bayern, KI-Lösungen, maschinelles lernen, softwareentwicklung, webentwicklung, websiten, designen, webdesign",
 		"meta.ogTitle":
 			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead bei WyroTech",
 		"meta.ogDescription":
