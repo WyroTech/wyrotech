@@ -59,7 +59,7 @@ export function Projects(props: { projects: Project[] }) {
 								<div className="w-full h-64 bg-[#222] rounded-t-xl opacity-50 translate-y-1/6 group-hover:opacity-85 group-hover:translate-y-1/8 transition-all duration-500">
 									<img
 										src={project.image}
-										className="w-full h-full object-cover rounded-t-xl"
+										className="w-full h-full object-cover rounded-t-xl shadow-2xl"
 										alt={project.title}
 										loading="lazy"
 									/>

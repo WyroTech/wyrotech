@@ -38,15 +38,10 @@ export function LandingHeader({ profileUrl }: { profileUrl: string }) {
 					loop
 					loading="lazy"
 					preload="none"
-					onPlay={() => {
-						if (video.current) {
-							video.current.playbackRate = 1;
-						}
-					}}
 					muted
 				/>
 
-				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90%" />
+				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-95%" />
 			</motion.div>
 			<motion.div
 				className="relative flex flex-col justify-start items-center gap-12 px-8 h-screen pt-[27lvh] lg:pt-[35lvh] mx-auto z-10"
