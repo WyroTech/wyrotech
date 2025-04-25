@@ -1,5 +1,5 @@
 ---
-import {IndexPage} from "@/layouts/IndexPage";
+import { IndexPage } from "@/layouts/IndexPage";
 import Main from "@/layouts/main.astro";
 import profileImg from "public/profile.png";
 import CarImage from "public/projects/car.png";
@@ -11,83 +11,85 @@ import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
-import {getLogo, processImage} from "../../lib/helper";
-import type {LandingPageObject} from "../../lib/models";
+import LoadingScreen from "../../components/LoadingScreen.astro";
+import { getLogo, processImage } from "../../lib/helper";
+import type { LandingPageObject } from "../../lib/models";
 
 Astro.response.headers.set(
-    "Cache-Control",
-    "s-maxage=360, stale-while-revalidate",
+	"Cache-Control",
+	"s-maxage=360, stale-while-revalidate",
 );
 Astro.response.headers.set("Vercel-CDN-Cache-Control", "max-age=3600");
 Astro.response.headers.set("CDN-Cache-Control", "max-age=60");
 export const prerender = true;
 
 const [
-    logo,
-    logoSmall,
-    profileUrl,
-    firstcontact,
-    dab,
-    coursera,
-    connecta,
-    edvschule,
-    acp,
-    wyrotech,
-    car,
-    loom,
+	logo,
+	logoSmall,
+	profileUrl,
+	firstcontact,
+	dab,
+	coursera,
+	connecta,
+	edvschule,
+	acp,
+	wyrotech,
+	car,
+	loom,
 ] = await Promise.all([
-    getLogo(),
-    getLogo(42),
-    processImage(profileImg, 300),
-    processImage(firstcontactImg, 200),
-    processImage(dabImg, 200),
-    processImage(courseraImg, 200),
-    processImage(connectaImg, 200),
-    processImage(edvschuleImg, 200),
-    processImage(acpImg, 200),
-    processImage(WyroTechImage, 400),
-    processImage(CarImage, 400),
-    processImage(LoomImage, 400),
+	getLogo(),
+	getLogo(42),
+	processImage(profileImg, 300),
+	processImage(firstcontactImg, 200),
+	processImage(dabImg, 200),
+	processImage(courseraImg, 200),
+	processImage(connectaImg, 200),
+	processImage(edvschuleImg, 200),
+	processImage(acpImg, 200),
+	processImage(WyroTechImage, 400),
+	processImage(CarImage, 400),
+	processImage(LoomImage, 400),
 ]);
 
 const obj: LandingPageObject = {
-    logo,
-    logoSmall,
-    profileUrl,
-    timelineImages: {
-        firstcontact,
-        dab,
-        coursera,
-        connecta,
-        edvschule,
-        acp,
-    },
-    projects: [
-        {
-            title: "Website - WyroTech",
-            image: wyrotech,
-            link: "https://github.com/WyroTech/wyrotech",
-            tech: ["react", "astro", "tailwindcss", "vercel"],
-        },
-        {
-            title: "RoboCar 4.0",
-            link: "https://github.com/WyroTech/RoboCar",
-            tech: ["cplusplus", "python", "javascript"],
-            image: car,
-        },
-        {
-            title: "dab Nexus Loom",
-            link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
-            image: loom,
-            tech: ["angular", "docker", "dotnet"],
-        },
-    ].reverse(),
+	logo,
+	logoSmall,
+	profileUrl,
+	timelineImages: {
+		firstcontact,
+		dab,
+		coursera,
+		connecta,
+		edvschule,
+		acp,
+	},
+	projects: [
+		{
+			title: "Website - WyroTech",
+			image: wyrotech,
+			link: "https://github.com/WyroTech/wyrotech",
+			tech: ["react", "astro", "tailwindcss", "vercel"],
+		},
+		{
+			title: "RoboCar 4.0",
+			link: "https://github.com/WyroTech/RoboCar",
+			tech: ["cplusplus", "python", "javascript"],
+			image: car,
+		},
+		{
+			title: "dab Nexus Loom",
+			link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
+			image: loom,
+			tech: ["angular", "docker", "dotnet"],
+		},
+	].reverse(),
 };
 ---
 
 <Main>
-    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.logo}/>
-    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl}/>
+    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.logo} />
+    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
 
     <IndexPage client:only="react" obj={obj}/>
+    <LoadingScreen logoUrl={obj.logo}/>
 </Main>
