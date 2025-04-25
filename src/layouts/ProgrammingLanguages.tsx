@@ -33,7 +33,7 @@ export function ProgrammingLanguages() {
 			<h1 className="title pt-16">{t("title.language")}</h1>
 			<div
 				ref={ref}
-				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"
+				className="group grid grid-cols-2 sm:flex sm:flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"
 			>
 				<ProgrammingIcon name="Docker" icon="docker-icon" />
 				<ProgrammingIcon name="Tailwind" icon="tailwindcss-icon" />
