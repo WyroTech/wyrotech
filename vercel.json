@@ -1,11 +1,12 @@
 {
+	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"headers": [
 		{
-			"source": "/(.*)\\.js",
+			"source": "/_vercel/insights/script.js",
 			"headers": [
 				{
 					"key": "Cache-Control",
-					"value": "public, max-age=31536000, immutable"
+					"value": "max-age=31536000"
 				}
 			]
 		},
@@ -14,7 +15,7 @@
 			"headers": [
 				{
 					"key": "Cache-Control",
-					"value": "public, max-age=0, must-revalidate"
+					"value": "public, max-age=31536000, immutable"
 				}
 			]
 		}
