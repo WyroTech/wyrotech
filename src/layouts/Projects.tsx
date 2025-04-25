@@ -1,3 +1,4 @@
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,} from "@/components/ui/tooltip.tsx";
 import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import type {Project} from "@/lib/models.ts";
 import {Icon} from "@iconify/react";
@@ -44,18 +45,21 @@ export function Projects(props: { projects: Project[] }) {
 									<h2>{project.title}</h2>
 									<div className="flex gap-3">
 										{project.tech.map((tech) => (
-											<div
-												key={tech}
-												title={tech}
-												className="opacity-50 group-hover:opacity-100 transition-all duration-500"
-											>
-												<Icon
-													icon={`simple-icons:${tech}`}
-													name={`simple-icons:${tech}`}
-													width={20}
-													height={20}
-												/>
-											</div>
+											<TooltipProvider key={tech}>
+												<Tooltip>
+													<TooltipTrigger>
+														<div className="opacity-50 group-hover:opacity-100 transition-all duration-500">
+															<Icon
+																icon={`simple-icons:${tech}`}
+																name={`simple-icons:${tech}`}
+																width={20}
+																height={20}
+															/>
+														</div>
+													</TooltipTrigger>
+													<TooltipContent>{tech}</TooltipContent>
+												</Tooltip>
+											</TooltipProvider>
 										))}
 									</div>
 									<p>{project.description}</p>
