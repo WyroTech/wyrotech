@@ -12,12 +12,15 @@ import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import LoadingScreen from "../../components/LoadingScreen.astro";
-import LandingHeader from "../../layouts/LandingHeader.astro";
-import ProgrammingLanguages from "../../layouts/ProgrammingLanguages.astro";
-import SpeakingLanguages from "../../layouts/SpeakingLanguages.astro";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject } from "../../lib/models";
 
+Astro.response.headers.set(
+	"Cache-Control",
+	"s-maxage=360, stale-while-revalidate",
+);
+Astro.response.headers.set("Vercel-CDN-Cache-Control", "max-age=3600");
+Astro.response.headers.set("CDN-Cache-Control", "max-age=60");
 export const prerender = true;
 
 const [
@@ -87,9 +90,6 @@ const obj: LandingPageObject = {
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.logo} />
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
 
-    <LandingHeader profileUrl={obj.profileUrl}/>
-    <ProgrammingLanguages/>
-    <SpeakingLanguages/>
     <IndexPage client:only="react" obj={obj}/>
     <LoadingScreen logoUrl={obj.logo}/>
 </Main>

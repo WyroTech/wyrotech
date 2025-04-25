@@ -1,29 +1,40 @@
-import {getLangFromUrl, useTranslations,} from "@/i18n/utils.ts";
+import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
 import {Icon} from "@iconify/react";
+import {motion, useInView} from "framer-motion";
+import {useRef} from "react";
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromWindow();
 const t = useTranslations(lang);
 
 function ProgrammingIcon({ icon, name }: { icon: string; name: string }) {
 	const size = 72;
 	return (
-		<div className="transition-all cube hover:!scale-120 cube flex flex-col items-center gap-0.5">
+		<motion.div className="transition-all cube hover:!scale-120 cube flex flex-col items-center gap-0.5">
 			<div className="w-24 h-24 flex justify-center items-center">
 				<Icon icon={`logos:${icon}`} width={size} height={size} />
 			</div>
 			<span className="w-full text-center text-sm!">{name}</span>
-		</div>
+		</motion.div>
 	);
 }
 
 export function ProgrammingLanguages() {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true, amount: 0.1 });
+
 	return (
-		<div
+		<motion.div
 			id="skills"
 			className="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16"
+			initial={{ opacity: 0, y: -40 }}
+			animate={isInView ? { opacity: 1, y: 0 } : {}}
+			transition={{ duration: 0.5 }}
 		>
 			<h1 className="title pt-16">{t("title.language")}</h1>
-			<div className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16">
+			<div
+				ref={ref}
+				className="group flex flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"
+			>
 				<ProgrammingIcon name="Docker" icon="docker-icon" />
 				<ProgrammingIcon name="Tailwind" icon="tailwindcss-icon" />
 				<ProgrammingIcon name="Python" icon="python" />
@@ -45,6 +56,6 @@ export function ProgrammingLanguages() {
 				<ProgrammingIcon name="Posthog" icon="posthog-icon" />
 				<ProgrammingIcon name="Storybook" icon="storybook-icon" />
 			</div>
-		</div>
+		</motion.div>
 	);
 }
