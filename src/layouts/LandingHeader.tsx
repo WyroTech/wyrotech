@@ -50,7 +50,7 @@ export function LandingHeader({
 
 				<div className="flex flex-col gap-12 items-center lg:items-end w-full lg:w-1/2">
 					<div className="flex flex-col items-center lg:items-end">
-						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 leading-[.9]">
+						<h1 className="text-center lg:text-right text-7xl! lg:text-[9vw]! relative z-10 pt-12 leading-[.9]">
 							Andreas
 							<br />
 							<div className="text-gradiant">Wyrobek</div>
