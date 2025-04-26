@@ -16,6 +16,7 @@ import { Navigation } from "../../components/Navigation";
 import Footer from "../../layouts/Footer.astro";
 import LandingHeader from "../../layouts/LandingHeader.astro";
 import ProgrammingLanguages from "../../layouts/ProgrammingLanguages.astro";
+import Projects from "../../layouts/Projects.astro";
 import SpeakingLanguages from "../../layouts/SpeakingLanguages.astro";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject, Project } from "../../lib/models";
@@ -89,6 +90,7 @@ const obj: LandingPageObject = {
     <LandingHeader profileUrl={obj.profileUrl} profileSmallUrl={obj.profileSmallUrl} />
     <ProgrammingLanguages/>
     <SpeakingLanguages/>
+    <Projects projects={obj.projects} />
     <IndexPage client:only="react" obj={obj}/>
     <Footer />
 </Main>

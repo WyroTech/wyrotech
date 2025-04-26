@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import type { Project } from "../lib/models";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+interface Props {
+	projects: Project[];
+}
+// You should pass in `projects` as a prop or define an example array here
+const { projects = [] } = Astro.props;
+---
+
+<div class="py-48 flex flex-col items-center justify-center gap-4">
+  <h1 class="title">{t("project")}</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 gap-y-12 py-16 px-8 w-full">
+    {projects.map((project) => (
+      <a
+        class="project-card p-px overflow-y-hidden group"
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div class="items-start flex flex-col w-full h-full px-6 pt-6">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center w-full justify-between gap-2">
+              <div class="tag">
+                <div class="bg"></div>
+                <div class="text">{project.tag}</div>
+              </div>
+              <div class="inline-flex justify-center gap-1 items-start opacity-50 transition-all duration-500 group-hover:opacity-100">
+                <span class="text-xs!">Open</span>
+                <Icon name="lucide:arrow-up-right" width={14} height={14} />
+              </div>
+            </div>
+            <h2>{project.title}</h2>
+            <div class="flex gap-3">
+              {project.tech.map(tech => (
+                <div
+                  class="opacity-100 lg:opacity-50 group-hover:opacity-100 transition-all duration-500 h-9 w-9 flex justify-center items-center"
+                >
+                  <Icon name={`simple-icons:${tech}`} width={26} height={26} />
+                </div>
+              ))}
+            </div>
+            <p>{project.description}</p>
+          </div>
+          <div class="w-full h-64 bg-[#222] rounded-t-xl opacity-50 translate-y-1/6 group-hover:opacity-85 group-hover:translate-y-1/8 transition-all duration-500">
+            <img
+              src={project.image}
+              class="w-full h-full object-cover rounded-t-xl shadow-2xl"
+              alt={project.title}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
