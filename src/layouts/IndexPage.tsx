@@ -10,7 +10,7 @@ import {LandingHeader} from "./LandingHeader";
 import {Stats} from "./Stats";
 
 export function IndexPage(props: { obj: LandingPageObject }) {
-	const [isLoading, setIsLoading] = useState(true);
+	const [, setIsLoading] = useState(true);
 	useEffect(() => {
 		const handleLoad = () => {
 			(window as any).removeLoadingScreen();
