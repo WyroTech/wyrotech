@@ -31,21 +31,19 @@ export function IndexPage(props: { obj: LandingPageObject }) {
 
 	return (
 		<>
-			{!isLoading && (
-				<>
-					<Navigation logo={props.obj.logoSmall} />
-					<LandingHeader
-						profileUrl={props.obj.profileUrl}
-						profileSmallUrl={props.obj.profileSmallUrl}
-					/>
-					<ProgrammingLanguages />
-					<SpeakingLanguages />
-					<Stats />
-					<Projects projects={props.obj.projects} />
-					<WorkTimeline images={props.obj.timelineImages} />
-					<Footer logoUrl={props.obj.logoSmall} />
-				</>
-			)}
+			<>
+				<Navigation logo={props.obj.logoSmall} />
+				<LandingHeader
+					profileUrl={props.obj.profileUrl}
+					profileSmallUrl={props.obj.profileSmallUrl}
+				/>
+				<ProgrammingLanguages />
+				<SpeakingLanguages />
+				<Stats />
+				<Projects projects={props.obj.projects} />
+				<WorkTimeline images={props.obj.timelineImages} />
+				<Footer logoUrl={props.obj.logoSmall} />
+			</>
 		</>
 	);
 }
