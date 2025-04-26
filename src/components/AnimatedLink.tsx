@@ -1,5 +1,3 @@
-import type React from "react";
-
 interface AnimatedLinkProps {
 	text: string;
 	href: string;

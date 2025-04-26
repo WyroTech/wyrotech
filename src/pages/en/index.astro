@@ -81,13 +81,13 @@ const obj: LandingPageObject = {
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileSmallUrl} />
 
-    <Navigation client:only="reacts" logo={obj.logoSmall} />
+    <Navigation client:only="preact" logo={obj.logoSmall} />
     <LandingHeader profileUrl={obj.profileUrl} profileSmallUrl={obj.profileSmallUrl} />
     <DeferWrapper server:defer>
         <ProgrammingLanguages/>
         <SpeakingLanguages/>
         <Projects projects={obj.projects} />
-        <IndexPage client:only="react" obj={obj}/>
+        <IndexPage client:only="preact" obj={obj}/>
         <Footer/>
     </DeferWrapper>
 </Main>

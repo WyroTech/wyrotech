@@ -1,5 +1,4 @@
 import prefetch from "@astrojs/prefetch";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
@@ -8,6 +7,8 @@ import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
 // @astrojs/image has been replaced with @astrojs/image-integration
 import {defineConfig} from "astro/config";
+
+import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,7 +48,6 @@ export default defineConfig({
 		},
 	}),
 	integrations: [
-		react(),
 		icon(),
 		sitemap(),
 		compress({
@@ -58,8 +58,8 @@ export default defineConfig({
 			svg: true,
 			logger: 1, // 0 = disabled, 1 = basic, 2 = verbose
 		}),
-		robotsTxt(),
+		robotsTxt(), // Security headers can be added through vercel.json instead
 		prefetch(),
-		// Security headers can be added through vercel.json instead
+		preact(),
 	],
 });
