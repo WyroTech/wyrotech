@@ -1,16 +1,13 @@
 ---
-import { Logo } from "@/components/Logo";
+import Logo from "../components/logo.astro";
 import Main from "../layouts/main.astro";
-import { getLogo } from "../lib/helper";
-
-const profile = await getLogo(300);
 ---
 
 <Main hasNav={false}>
     <div class="mx-auto max-w-screen-lg px-8 py-16 flex flex-col">
         <div class="mb-12">
             <a href="/">
-                <Logo logoUrl={profile}/>
+                <Logo small={true}/>
             </a>
         </div>
         <h1 class="text-gradiant">Impressum</h1>

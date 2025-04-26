@@ -1,6 +1,8 @@
 ---
 import { IndexPage } from "@/layouts/IndexPage";
 import Main from "@/layouts/main.astro";
+import logoImg from "public/logo.webp";
+import logoSmallImg from "public/logo_small.webp";
 import profileImg from "public/profile.webp";
 import profileSmallImg from "public/profileSmall.webp";
 import CarImage from "public/projects/car.png";
@@ -18,7 +20,6 @@ import LandingHeader from "../../layouts/LandingHeader.astro";
 import ProgrammingLanguages from "../../layouts/ProgrammingLanguages.astro";
 import Projects from "../../layouts/Projects.astro";
 import SpeakingLanguages from "../../layouts/SpeakingLanguages.astro";
-import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject, Project } from "../../lib/models";
 
 Astro.response.headers.set(
@@ -29,18 +30,11 @@ Astro.response.headers.set("Vercel-CDN-Cache-Control", "max-age=3600");
 Astro.response.headers.set("CDN-Cache-Control", "max-age=60");
 export const prerender = true;
 
-const [logo, logoSmall, profileUrl, profileSmallUrl] = await Promise.all([
-	getLogo(),
-	getLogo(42),
-	processImage(profileImg, 700),
-	processImage(profileSmallImg, 400),
-]);
-
 const obj: LandingPageObject = {
-	logo,
-	logoSmall,
-	profileUrl,
-	profileSmallUrl,
+	logo: logoImg.src,
+	logoSmall: logoSmallImg.src,
+	profileUrl: profileImg.src,
+	profileSmallUrl: profileSmallImg.src,
 	timelineImages: {
 		firstcontact: firstcontactImg.src,
 		dab: dabImg.src,
