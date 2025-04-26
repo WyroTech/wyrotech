@@ -46,7 +46,7 @@ export function Projects(props: { projects: Project[] }) {
 										{project.tech.map((tech) => (
 											<div
 												key={tech}
-												className="opacity-50 group-hover:opacity-100 transition-all duration-500 h-9 w-9 flex justify-center items-center"
+												className="opacity-100 lg:opacity-50 group-hover:opacity-100 transition-all duration-500 h-9 w-9 flex justify-center items-center"
 											>
 												<Icon
 													icon={`simple-icons:${tech}`}

@@ -214,10 +214,6 @@ a:hover > span:last-child {
 	);
 }
 
-.profile {
-	mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
-}
-
 .project-card {
 	@apply rounded-xl;
 	background: linear-gradient(

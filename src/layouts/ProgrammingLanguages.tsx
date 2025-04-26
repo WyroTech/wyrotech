@@ -26,11 +26,11 @@ export function ProgrammingLanguages() {
 		<motion.div
 			id="skills"
 			className="min-h-[100lvh] flex flex-col items-center justify-center px-8 gap-16"
-			initial={{ opacity: 0, y: -40 }}
-			animate={isInView ? { opacity: 1, y: 0 } : {}}
+			initial={{ opacity: 0 }}
+			animate={isInView ? { opacity: 1 } : {}}
 			transition={{ duration: 0.5 }}
 		>
-			<h1 className="title pt-16">{t("title.language")}</h1>
+			<h1 className="title pt-48">{t("title.language")}</h1>
 			<div
 				ref={ref}
 				className="group grid grid-cols-2 sm:flex sm:flex-wrap w-full justify-center gap-x-12 gap-y-16 pb-16"
