@@ -80,11 +80,11 @@ const obj: LandingPageObject = {
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileSmallUrl} />
 
-    <Navigation client:only="react" logo={obj.logoSmall} />
+    <Navigation client:only="reacts" logo={obj.logoSmall} />
     <LandingHeader profileUrl={obj.profileUrl} profileSmallUrl={obj.profileSmallUrl} />
-    <ProgrammingLanguages/>
-    <SpeakingLanguages/>
+    <ProgrammingLanguages server:defer/>
+    <SpeakingLanguages server:defer/>
     <Projects projects={obj.projects} />
     <IndexPage client:only="react" obj={obj}/>
-    <Footer />
+    <Footer server:defer/>
 </Main>
