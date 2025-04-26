@@ -12,7 +12,6 @@ import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
-import LoadingScreen from "../../components/LoadingScreen.astro";
 import { getLogo, processImage } from "../../lib/helper";
 import type { LandingPageObject, Project } from "../../lib/models";
 
@@ -105,5 +104,4 @@ const obj: LandingPageObject = {
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileSmallUrl} />
 
     <IndexPage client:only="react" obj={obj}/>
-    <LoadingScreen logoUrl={obj.logo}/>
 </Main>

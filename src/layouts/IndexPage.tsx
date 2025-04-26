@@ -5,45 +5,23 @@ import {Projects} from "@/layouts/Projects.tsx";
 import {SpeakingLanguages} from "@/layouts/SpeakingLanguages.tsx";
 import {WorkTimeline} from "@/layouts/WorkTimeline.tsx";
 import type {LandingPageObject} from "@/lib/models.ts";
-import {useEffect, useState} from "react";
 import {LandingHeader} from "./LandingHeader";
 import {Stats} from "./Stats";
 
 export function IndexPage(props: { obj: LandingPageObject }) {
-	const [, setIsLoading] = useState(true);
-	useEffect(() => {
-		const handleLoad = () => {
-			(window as any).removeLoadingScreen();
-			setTimeout(() => setIsLoading(false), 500); // let fade start but don’t block too long
-		};
-
-		if (document.readyState === "complete") {
-			// In case the load event has already fired
-			handleLoad();
-		} else {
-			window.addEventListener("load", handleLoad);
-		}
-
-		return () => {
-			window.removeEventListener("load", handleLoad);
-		};
-	}, []);
-
 	return (
 		<>
-			<>
-				<Navigation logo={props.obj.logoSmall} />
-				<LandingHeader
-					profileUrl={props.obj.profileUrl}
-					profileSmallUrl={props.obj.profileSmallUrl}
-				/>
-				<ProgrammingLanguages />
-				<SpeakingLanguages />
-				<Stats />
-				<Projects projects={props.obj.projects} />
-				<WorkTimeline images={props.obj.timelineImages} />
-				<Footer logoUrl={props.obj.logoSmall} />
-			</>
+			<Navigation logo={props.obj.logoSmall} />
+			<LandingHeader
+				profileUrl={props.obj.profileUrl}
+				profileSmallUrl={props.obj.profileSmallUrl}
+			/>
+			<ProgrammingLanguages />
+			<SpeakingLanguages />
+			<Stats />
+			<Projects projects={props.obj.projects} />
+			<WorkTimeline images={props.obj.timelineImages} />
+			<Footer logoUrl={props.obj.logoSmall} />
 		</>
 	);
 }
