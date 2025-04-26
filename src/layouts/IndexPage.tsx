@@ -5,17 +5,12 @@ import {Projects} from "@/layouts/Projects.tsx";
 import {SpeakingLanguages} from "@/layouts/SpeakingLanguages.tsx";
 import {WorkTimeline} from "@/layouts/WorkTimeline.tsx";
 import type {LandingPageObject} from "@/lib/models.ts";
-import {LandingHeader} from "./LandingHeader";
 import {Stats} from "./Stats";
 
 export function IndexPage(props: { obj: LandingPageObject }) {
 	return (
 		<>
 			<Navigation logo={props.obj.logoSmall} />
-			<LandingHeader
-				profileUrl={props.obj.profileUrl}
-				profileSmallUrl={props.obj.profileSmallUrl}
-			/>
 			<ProgrammingLanguages />
 			<SpeakingLanguages />
 			<Stats />

@@ -1,0 +1,61 @@
+---
+// Astro code block
+import Button from "@/components/Button.tsx";
+import { useTranslations } from "@/i18n/utils.ts";
+import { getLangFromUrl } from "../i18n/utils";
+
+const { profileUrl, profileSmallUrl } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="home" class="w-[100dvw] h-[100lvh] relative bg-black">
+  <div class="relative flex justify-start gap-12 px-8 h-screen pt-[20lvh] lg:pt-[35lvh] mx-auto z-10 overflow-hidden">
+    <div class="absolute inset-0 hidden lg:block">
+      <div
+        class="absolute m-auto bottom-0 right-[-60%] left-0 top-[10%] pointer-events-none"
+        style={`background-image: url(${profileUrl}); background-position: bottom center; background-size: auto 90%; background-repeat: no-repeat;`}
+      />
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90% z-10" />
+    <div class="top-[5vh] left-[-60vh] blurry-circle" />
+    <div class="bottom-[5vh] right-[-60vh] blurry-circle" />
+
+    <div class="flex flex-col gap-12 items-center lg:items-end w-full lg:w-1/2 overflow-hidden">
+      <div class="flex flex-col items-center lg:items-end">
+        <h1 class="text-center lg:text-right text-7xl! lg:text-[9vw]! relative z-10 leading-[.9]">
+          Andreas
+          <br />
+          <div class="text-gradiant">Wyrobek</div>
+        </h1>
+      </div>
+
+      <div class="flex gap-4">
+        <a href="#journey">
+          <Button
+            severity="secondary"
+            text={t("journey")}
+            icon="chevron-right"
+            client:only="react"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/andreas-wyrobek/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button
+            severity="primary"
+            text={t("contact")}
+            icon="chevron-right"
+            client:only="react"
+          />
+        </a>
+      </div>
+      <div
+        class="block lg:hidden w-full z-0 pointer-events-none"
+        style={`background-image: url(${profileSmallUrl}); background-position: bottom center; background-size: auto 100%; background-repeat: no-repeat; height: 100%;`}
+      />
+    </div>
+  </div>
+</section>
