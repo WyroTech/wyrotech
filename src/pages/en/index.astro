@@ -15,6 +15,7 @@ import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import { Navigation } from "../../components/Navigation";
+import DeferWrapper from "../../layouts/DeferWrapper.astro";
 import Footer from "../../layouts/Footer.astro";
 import LandingHeader from "../../layouts/LandingHeader.astro";
 import ProgrammingLanguages from "../../layouts/ProgrammingLanguages.astro";
@@ -82,9 +83,11 @@ const obj: LandingPageObject = {
 
     <Navigation client:only="reacts" logo={obj.logoSmall} />
     <LandingHeader profileUrl={obj.profileUrl} profileSmallUrl={obj.profileSmallUrl} />
-    <ProgrammingLanguages server:defer/>
-    <SpeakingLanguages server:defer/>
-    <Projects projects={obj.projects} />
-    <IndexPage client:only="react" obj={obj}/>
-    <Footer server:defer/>
+    <DeferWrapper server:defer>
+        <ProgrammingLanguages/>
+        <SpeakingLanguages/>
+        <Projects projects={obj.projects} />
+        <IndexPage client:only="react" obj={obj}/>
+        <Footer/>
+    </DeferWrapper>
 </Main>
