@@ -27,34 +27,11 @@ Astro.response.headers.set("Vercel-CDN-Cache-Control", "max-age=3600");
 Astro.response.headers.set("CDN-Cache-Control", "max-age=60");
 export const prerender = true;
 
-const [
-	logo,
-	logoSmall,
-	profileUrl,
-	profileSmallUrl,
-	firstcontact,
-	dab,
-	coursera,
-	connecta,
-	edvschule,
-	acp,
-	wyrotech,
-	car,
-	loom,
-] = await Promise.all([
+const [logo, logoSmall, profileUrl, profileSmallUrl] = await Promise.all([
 	getLogo(),
 	getLogo(42),
 	processImage(profileImg, 700),
 	processImage(profileSmallImg, 400),
-	processImage(firstcontactImg, 200),
-	processImage(dabImg, 200),
-	processImage(courseraImg, 200),
-	processImage(connectaImg, 200),
-	processImage(edvschuleImg, 200),
-	processImage(acpImg, 200),
-	processImage(WyroTechImage, 400),
-	processImage(CarImage, 400),
-	processImage(LoomImage, 400),
 ]);
 
 const obj: LandingPageObject = {
@@ -63,12 +40,12 @@ const obj: LandingPageObject = {
 	profileUrl,
 	profileSmallUrl,
 	timelineImages: {
-		firstcontact,
-		dab,
-		coursera,
-		connecta,
-		edvschule,
-		acp,
+		firstcontact: firstcontactImg.src,
+		dab: dabImg.src,
+		coursera: courseraImg.src,
+		connecta: connectaImg.src,
+		edvschule: edvschuleImg.src,
+		acp: acpImg.src,
 	},
 	projects: [
 		{
@@ -76,7 +53,7 @@ const obj: LandingPageObject = {
 			description:
 				"A personal portfolio website built with modern web technologies to showcase projects, skills, and professional experience.",
 			tag: "Website",
-			image: wyrotech,
+			image: WyroTechImage.src,
 			link: "https://github.com/WyroTech/wyrotech",
 			tech: ["react", "astro", "tailwindcss", "vercel"],
 		} as Project,
@@ -87,7 +64,7 @@ const obj: LandingPageObject = {
 			tag: "Robotic",
 			link: "https://github.com/WyroTech/RoboCar",
 			tech: ["cplusplus", "python", "javascript"],
-			image: car,
+			image: CarImage.src,
 		},
 		{
 			title: "dab Nexus Loom",
@@ -95,7 +72,7 @@ const obj: LandingPageObject = {
 				"The ultimate SAP data analytics solution using Microsoft Fabric for seamless integration and advanced insights.",
 			tag: "Business-Analytic Platform",
 			link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
-			image: loom,
+			image: LoomImage.src,
 			tech: ["angular", "docker", "dotnet"],
 		},
 	].reverse(),
