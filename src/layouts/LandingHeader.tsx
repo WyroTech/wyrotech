@@ -53,7 +53,7 @@ export function LandingHeader({
 						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 leading-1">
 							Andreas
 						</h1>
-						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 text-gradiant">
+						<h1 className="text-7xl! lg:text-[9vw]! relative z-10 pt-12 text-gradiant leading-1 lg:leading-none">
 							Wyrobek
 						</h1>
 					</div>
