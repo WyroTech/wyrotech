@@ -1,19 +1,21 @@
 ---
 import { getLogo } from "../lib/helper";
 
-const optimizedImage = await getLogo(56);
+const { size, styleClasses } = Astro.props;
+
+const optimizedImage = await getLogo(size ?? 56);
 ---
-<div class="flex justify-center items-center">
+<div class="flex items-center">
     <div class="flex items-center gap-px">
         <img
                 src={optimizedImage}
                 alt="logo"
-                width={56}
-                height={56}
+                width={size ?? 56}
+                height={size ?? 56}
                 class="mr-1"
                 loading="lazy"
         />
-        <span class="font-extrabold! text-6xl! text-white!">Wyro</span>
-        <span class="font-thin! text-6xl! text-white!">Tech</span>
+        <span class={(styleClasses ?? "text-6xl!") + " font-extrabold! text-white!"}>Wyro</span>
+        <span class={(styleClasses ?? "text-6xl!") + " font-thin! text-white!"}>Tech</span>
     </div>
 </div>

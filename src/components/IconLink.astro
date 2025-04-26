@@ -1,9 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { iconName, href, description } = Astro.props;
+const { description, iconName, href } = Astro.props;
 ---
 
-<a href={href} aria-label={description} title={description} class="w-min text-white transition-all transform opacity-75 hover:opacity-100 hover:scale-110 duration-300" target="_blank">
-    <Icon name={iconName} size="20" />
+<a
+        href={href}
+        aria-label={description}
+        class="w-9 h-9 flex justify-center items-center text-white transition-all transform opacity-75 hover:opacity-100 hover:scale-120 duration-300 hover:bg-gray-700 rounded-sm"
+        target="_blank"
+        rel="noopener noreferrer"
+>
+    <Icon
+            width={20}
+            height={20}
+            name={iconName}
+    />
 </a>
