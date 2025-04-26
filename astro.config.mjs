@@ -1,13 +1,15 @@
 import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import vercel from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
 import compress from "astro-compress";
 import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
+
 // @astrojs/image has been replaced with @astrojs/image-integration
 import {defineConfig} from "astro/config";
+
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,20 +34,7 @@ export default defineConfig({
 		inlineStylesheets: "auto", // Inline small stylesheets for performance
 	},
 	compressHTML: true, // Minify HTML output
-	adapter: vercel({
-		edgeMiddleware: true,
-		webAnalytics: {
-			enabled: true,
-		},
-		isr: {
-			// Add expiration times for ISR
-			expiration: 60 * 60, // Cache pages for 1 hour
-		},
-		// Add caching headers for static assets
-		assets: {
-			maxAge: 60 * 60 * 24 * 30, // Cache assets for 30 days
-		},
-	}),
+	adapter: netlify(),
 	integrations: [
 		react(),
 		icon(),
