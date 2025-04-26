@@ -10,14 +10,14 @@ export function LandingHeader({
 }: { profileUrl: string; profileSmallUrl: string }) {
 	return (
 		<section id="home" className="w-[100dvw] h-[100lvh] relative bg-black">
-			<div className="relative flex justify-start gap-12 px-8 h-screen pt-[20lvh] lg:pt-[35lvh] mx-auto z-10">
+			<div className="relative flex justify-start gap-12 px-8 h-screen pt-[20lvh] lg:pt-[35lvh] mx-auto z-10 overflow-hidden">
 				<div className="absolute inset-0 hidden lg:block">
 					<div
-						className="absolute m-auto bottom-0 right-[0%] left-[50%] top-[10%] pointer-events-none"
+						className="absolute m-auto bottom-0 right-[-60%] left-0 top-[10%] pointer-events-none"
 						style={{
 							backgroundImage: `url(${profileUrl})`,
-							backgroundPosition: "bottom left",
-							backgroundSize: "auto 75vh",
+							backgroundPosition: "bottom center",
+							backgroundSize: "auto 90%",
 							backgroundRepeat: "no-repeat",
 						}}
 					/>
@@ -60,9 +60,9 @@ export function LandingHeader({
 						style={{
 							backgroundImage: `url(${profileSmallUrl})`,
 							backgroundPosition: "bottom center",
-							backgroundSize: "auto 50vh",
+							backgroundSize: "auto 100%",
 							backgroundRepeat: "no-repeat",
-							height: "50vh",
+							height: "100%",
 						}}
 					/>
 				</div>
