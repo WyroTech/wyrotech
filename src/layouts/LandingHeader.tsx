@@ -13,16 +13,16 @@ export function LandingHeader({
 			<div className="relative flex justify-start gap-12 px-8 h-screen pt-[20lvh] lg:pt-[35lvh] mx-auto z-10">
 				<div className="absolute inset-0 hidden lg:block">
 					<div
-						className="absolute m-auto bottom-0 right-[0%] left-[50%] top-[10%]"
+						className="absolute m-auto bottom-0 right-[0%] left-[50%] top-[10%] pointer-events-none"
 						style={{
 							backgroundImage: `url(${profileUrl})`,
 							backgroundPosition: "bottom left",
-							backgroundSize: "contain",
+							backgroundSize: "auto 75vh",
 							backgroundRepeat: "no-repeat",
 						}}
 					/>
 				</div>
-				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90%" />
+				<div className="absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90% z-10" />
 				<div className="top-[5vh] left-[-60vh] blurry-circle" />
 				<div className="bottom-[5vh] right-[-60vh] blurry-circle" />
 
@@ -55,11 +55,15 @@ export function LandingHeader({
 							/>
 						</a>
 					</div>
-					<img
-						className="block lg:hidden max-h-[50vh] z-0 brightness-90 profile grayscale-10 pointer-events-none object-bottom"
-						src={profileSmallUrl}
-						alt="ProfilePicture"
-						loading="eager"
+					<div
+						className="block lg:hidden w-full z-0 brightness-90 profile grayscale-10 pointer-events-none"
+						style={{
+							backgroundImage: `url(${profileSmallUrl})`,
+							backgroundPosition: "bottom center",
+							backgroundSize: "auto 50vh",
+							backgroundRepeat: "no-repeat",
+							height: "50vh",
+						}}
 					/>
 				</div>
 			</div>
