@@ -56,7 +56,7 @@ export function LandingHeader({
 						</a>
 					</div>
 					<div
-						className="block lg:hidden w-full z-0 brightness-90 profile grayscale-10 pointer-events-none"
+						className="block lg:hidden w-full z-0 pointer-events-none"
 						style={{
 							backgroundImage: `url(${profileSmallUrl})`,
 							backgroundPosition: "bottom center",
