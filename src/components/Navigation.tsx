@@ -3,7 +3,6 @@ import ButtonContainer from "@/components/Button.tsx";
 import {Logo} from "@/components/Logo";
 import {Popover, PopoverContent, PopoverTrigger,} from "@/components/ui/popover";
 import {Icon} from "@iconify/react";
-import {ChevronDownIcon, LucideMenu, LucideX} from "lucide-react";
 import {AnimatePresence, motion} from "motion/react";
 import {useState} from "react";
 import {getLangFromWindow, useTranslations} from "../i18n/utils";
@@ -20,7 +19,7 @@ export function LanguageSwitcher() {
 				<div className="flex gap-2 items-center rounded-full cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors px-4 py-2">
 					<Icon icon={lang === "de" ? "flag:de-4x3" : "flag:gb-4x3"} />
 					<span className="text-sm!">{lang.toUpperCase()}</span>
-					<ChevronDownIcon size={12} />
+					<Icon icon="lucide:chevron-down" width={12} height={12} />
 				</div>
 			</PopoverTrigger>
 			<PopoverContent>
@@ -111,12 +110,16 @@ export function Navigation(props: { logo: string }) {
 					onClick={() => setIsOpen(!isOpen)}
 				>
 					<div className="overflow-hidden w-6 h-6">
-						<LucideX
-							size="24"
+						<Icon
+							icon="lucide:x"
+							width="24"
+							height="24"
 							className={`cube duration-100 ${!isOpen ? "-translate-y-full" : "translate-0"}`}
 						/>
-						<LucideMenu
-							size="24"
+						<Icon
+							icon="lucide:menu"
+							width="24"
+							height="24"
 							className={`cube duration-100 ${isOpen ? "translate-0" : "-translate-y-full"}`}
 						/>
 					</div>

@@ -1,4 +1,4 @@
-import {DynamicIcon} from "lucide-react/dynamic";
+import {Icon} from "@iconify/react";
 import {animate, motion, useMotionValue, useTransform} from "motion/react";
 
 interface ButtonContainerProps {
@@ -83,7 +83,7 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 						</span>
 					</div>
 					{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
-					{icon ? <DynamicIcon name={icon as any} size={16} /> : null}
+					{icon ? <Icon icon={icon as any} width={16} height={16} /> : null}
 				</motion.button>
 			</div>
 		</motion.div>

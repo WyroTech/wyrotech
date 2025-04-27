@@ -1,6 +1,6 @@
 import {GlowingEffect} from "@/components/ui/glowing-effect";
 import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
-import {CodeXml, FileHeart, Hammer, LayoutDashboard, UsersRound,} from "lucide-react";
+import {Icon} from "@iconify/react";
 import type React from "react";
 
 const lang = getLangFromWindow();
@@ -11,35 +11,70 @@ export function GlowingEffectDemoSecond() {
 		<ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
 			<GridItem
 				area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-				icon={<CodeXml className="h-4 w-4 text-neutral-400" />}
+				icon={
+					<Icon
+						icon="lucide:code"
+						height="16"
+						width="16"
+						className="text-neutral-400"
+					/>
+				}
 				title={t("stats.fullstack.title")}
 				description={t("stats.fullstack.description")}
 			/>
 
 			<GridItem
 				area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-				icon={<FileHeart className="h-4 w-4 text-neutral-400" />}
+				icon={
+					<Icon
+						icon="lucide:file-heart"
+						height="16"
+						width="16"
+						className="text-neutral-400"
+					/>
+				}
 				title={t("stats.uxdesign.title")}
 				description={t("stats.uxdesign.description")}
 			/>
 
 			<GridItem
 				area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-				icon={<UsersRound className="h-4 w-4 text-neutral-400" />}
+				icon={
+					<Icon
+						icon="lucide:user-round"
+						height="16"
+						width="16"
+						className="text-neutral-400"
+					/>
+				}
 				title={t("stats.supervisor.title")}
 				description={t("stats.supervisor.description")}
 			/>
 
 			<GridItem
 				area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-				icon={<LayoutDashboard className="h-4 w-4 text-neutral-400" />}
+				icon={
+					<Icon
+						icon="lucide:layout-dashboard"
+						height="16"
+						width="16"
+						className="text-neutral-400"
+					/>
+				}
 				title={t("stats.scrumban.title")}
 				description={t("stats.scrumban.description")}
 			/>
 
 			<GridItem
 				area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
-				icon={<Hammer className="h-4 w-4 text-neutral-400" />}
+				icon={
+					<Icon
+						icon="lucide:hammer"
+						height="16"
+						width="16"
+						className="text-neutral-400"
+					/>
+				}
 				title={t("stats.designer.title")}
 				description={t("stats.designer.description")}
 			/>

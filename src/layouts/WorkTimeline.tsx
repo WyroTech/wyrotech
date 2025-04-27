@@ -1,7 +1,7 @@
 import {LinkPreview} from "@/components/ui/link-preview.tsx";
 import {Timeline} from "@/components/ui/timeline";
 import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
-import {ExternalLink} from "lucide-react";
+import {Icon} from "@iconify/react";
 import type React from "react";
 
 const lang = getLangFromWindow();
@@ -35,7 +35,7 @@ function BlueLink({
 				<div className="inline-flex text-blue-500!">
 					{name}
 					<div className="inline-flex px-1 pt-1">
-						<ExternalLink size={14} />
+						<Icon icon="lucide:external-link" width={14} height={14} />
 					</div>
 				</div>
 			</LinkPreview>
