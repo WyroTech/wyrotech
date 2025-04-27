@@ -4,7 +4,6 @@ import Main from "@/layouts/main.astro";
 import logoImg from "public/logo.webp";
 import logoSmallImg from "public/logo_small.webp";
 import profileImg from "public/profile.webp";
-import profileSmallImg from "public/profileSmall.webp";
 import CarImage from "public/projects/car.png";
 import LoomImage from "public/projects/loom.webp";
 import WyroTechImage from "public/projects/wyrotech.png";
@@ -15,6 +14,7 @@ import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import { Navigation } from "../../components/Navigation";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import DeferWrapper from "../../layouts/DeferWrapper.astro";
 import Footer from "../../layouts/Footer.astro";
 import LandingHeader from "../../layouts/LandingHeader.astro";
@@ -22,6 +22,9 @@ import ProgrammingLanguages from "../../layouts/ProgrammingLanguages.astro";
 import Projects from "../../layouts/Projects.astro";
 import SpeakingLanguages from "../../layouts/SpeakingLanguages.astro";
 import type { LandingPageObject, Project } from "../../lib/models";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 Astro.response.headers.set(
 	"Cache-Control",
@@ -47,8 +50,7 @@ const obj: LandingPageObject = {
 	projects: [
 		{
 			title: "WyroTech",
-			description:
-				"A personal portfolio website built with modern web technologies to showcase projects, skills, and professional experience.",
+			description: t("project.wyrotech.description"),
 			tag: "Website",
 			image: WyroTechImage.src,
 			link: "https://github.com/WyroTech/wyrotech",
@@ -56,8 +58,7 @@ const obj: LandingPageObject = {
 		} as Project,
 		{
 			title: "RoboCar 4.0",
-			description:
-				"Control a smart robot car via ESP32 and Python backend using WebSockets and JSON communication between ESP32 and Arduino.",
+			description: t("project.robocar.description"),
 			tag: "Robotic",
 			link: "https://github.com/WyroTech/RoboCar",
 			tech: ["cplusplus", "python", "javascript"],
@@ -65,8 +66,7 @@ const obj: LandingPageObject = {
 		},
 		{
 			title: "dab Nexus Loom",
-			description:
-				"The ultimate SAP data analytics solution using Microsoft Fabric for seamless integration and advanced insights.",
+			description: t("project.loom.description"),
 			tag: "Business-Analytic Platform",
 			link: "https://www.dab-europe.com/en/products/dab-nexus-loom/",
 			image: LoomImage.src,

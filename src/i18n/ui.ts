@@ -136,6 +136,12 @@ export const ui = {
 			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead | WyroTech",
 		"meta.twitterDescription":
 			"Andreas Wyrobek: Principal Software Engineer at WyroTech, specializing in Angular development and UX/UI design. Based in Bavaria.",
+		"project.wyrotech.description":
+			"A personal portfolio website built with modern web technologies to showcase projects, skills, and professional experience.",
+		"project.robocar.description":
+			"Control a smart robot car via ESP32 and Python backend using WebSockets and JSON communication between ESP32 and Arduino.",
+		"project.loom.description":
+			"The ultimate SAP data analytics solution using Microsoft Fabric for seamless integration and advanced insights.",
 	},
 	de: {
 		home: "Startseite",
