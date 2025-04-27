@@ -2,9 +2,11 @@
 import AnimatedLink from "../components/AnimatedLink.astro";
 import IconLink from "../components/IconLink.astro";
 import Logo from "../components/logo.astro";
+import { getBrowserLocale } from "../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const lang = getLangFromUrl(Astro.url);
+const browserLanguage = getBrowserLocale(Astro.request.headers);
+const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
 ---
 

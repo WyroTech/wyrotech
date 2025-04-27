@@ -3,10 +3,12 @@ import { AnimatedLink } from "@/components/AnimatedLink";
 import logoSmallImg from "public/logo_small.webp";
 import Logo from "../components/logo.astro";
 import QRCode from "../components/qrcode.astro";
+import { getBrowserLocale } from "../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Main from "../layouts/main.astro";
 
-const lang = getLangFromUrl(Astro.url);
+const browserLanguage = getBrowserLocale(Astro.request.headers);
+const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
 ---
 

@@ -1,14 +1,17 @@
 import {defaultLang, ui} from "./ui";
 
-export function getLangFromUrl(url: URL) {
+export function getLangFromUrl(url: URL, language: string | null) {
 	const [, lang] = url.pathname.split("/");
 	if (lang in ui) return lang as keyof typeof ui;
+	if (typeof language === "string" && language.includes("de")) return "de";
 	return defaultLang;
 }
 
 export function getLangFromWindow() {
 	const [, lang] = window.location.pathname.split("/");
 	if (lang in ui) return lang as keyof typeof ui;
+	const language = navigator.language || (navigator as any).userLanguage;
+	if (typeof language === "string" && language.includes("de")) return "de";
 	return defaultLang;
 }
 

@@ -14,6 +14,7 @@ import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
 import { Navigation } from "../../components/Navigation";
+import { getBrowserLocale } from "../../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import DeferWrapper from "../../layouts/DeferWrapper.astro";
 import Footer from "../../layouts/Footer.astro";
@@ -23,7 +24,8 @@ import Projects from "../../layouts/Projects.astro";
 import SpeakingLanguages from "../../layouts/SpeakingLanguages.astro";
 import type { LandingPageObject, Project } from "../../lib/models";
 
-const lang = getLangFromUrl(Astro.url);
+const browserLanguage = getBrowserLocale(Astro.request.headers);
+const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
 
 Astro.response.headers.set(

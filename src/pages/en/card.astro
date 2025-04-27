@@ -3,6 +3,7 @@ import { AnimatedLink } from "@/components/AnimatedLink";
 import logoImg from "public/logo.webp";
 import Logo from "../../components/logo.astro";
 import QRCode from "../../components/qrcode.astro";
+import { getBrowserLocale } from "../../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Main from "../../layouts/main.astro";
 import _cardDeTxt from "./../de/card.txt?raw";
@@ -10,7 +11,8 @@ import _cardTxt from "./card.txt?raw";
 
 export const prerender = true;
 
-const lang = getLangFromUrl(Astro.url);
+const browserLanguage = getBrowserLocale(Astro.request.headers);
+const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
 ---
 <Main>

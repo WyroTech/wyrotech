@@ -1,9 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
+import { getBrowserLocale } from "../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 // Example prop: pass translation in layout/page or define here
-const lang = getLangFromUrl(Astro.url);
+const browserLanguage = getBrowserLocale(Astro.request.headers);
+const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
 
 // Helper for icons
