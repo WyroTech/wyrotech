@@ -253,5 +253,5 @@ a:hover > span:last-child {
 }
 
 .blurry-circle {
-	@apply w-[75vh] h-[75vh] absolute  blur-[500px] rounded-full opacity-40 bg-[#327AF3];
+	@apply w-[50vw] h-[50vw] absolute blur-[60px] lg:blur-[60vw] rounded-full opacity-40 bg-[#327AF3];
 }
