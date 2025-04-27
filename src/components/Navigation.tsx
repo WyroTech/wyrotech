@@ -3,8 +3,8 @@ import ButtonContainer from "@/components/Button.tsx";
 import {Logo} from "@/components/Logo";
 import {Popover, PopoverContent, PopoverTrigger,} from "@/components/ui/popover";
 import {Icon} from "@iconify/react";
-import {AnimatePresence, motion} from "framer-motion";
 import {ChevronDownIcon, LucideMenu, LucideX} from "lucide-react";
+import {AnimatePresence, motion} from "motion/react";
 import {useState} from "react";
 import {getLangFromWindow, useTranslations} from "../i18n/utils";
 
@@ -86,7 +86,7 @@ export function Navigation(props: { logo: string }) {
 		},
 	};
 
-	const bg = (deg) =>
+	const bg = (deg: number) =>
 		`linear-gradient(${deg}deg,rgb(179, 146, 239) 0%, rgb(52, 52, 81) 10.6203%, rgb(52, 52, 81) 40.9807%, rgb(37, 37, 41) 79.5%, rgb(179, 146, 239) 100% )`;
 
 	return (

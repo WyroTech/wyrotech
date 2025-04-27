@@ -1,5 +1,5 @@
-import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {DynamicIcon} from "lucide-react/dynamic";
+import {animate, motion, useMotionValue, useTransform} from "motion/react";
 
 interface ButtonContainerProps {
 	severity: string;
