@@ -89,9 +89,15 @@ export function Navigation(props: { logo: string }) {
 	return (
 		<nav className="fixed top-0 left-0 right-0 bg-linear-to-b from-black to-transparent z-40">
 			<div className="flex justify-between items-center py-8 px-8">
-				<a href="/" className="z-20">
+				<motion.a
+					initial={{ opacity: 0, translateY: -5 }}
+					animate={{ opacity: 1, translateY: 0 }}
+					transition={{ duration: 0.35, ease: "easeInOut" }}
+					href="/"
+					className="z-20"
+				>
 					<Logo logoUrl={props.logo} />
-				</a>
+				</motion.a>
 				{/* biome-ignore lint/a11y/useFocusableInteractive: <explanation> */}
 				{/* biome-ignore lint/a11y/useSemanticElements: <explanation> */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
@@ -166,7 +172,12 @@ export function Navigation(props: { logo: string }) {
 						</motion.div>
 					)}
 				</AnimatePresence>
-				<div className="w-min rounded-full hidden lg:flex">
+				<motion.div
+					initial={{ opacity: 0, translateY: -5 }}
+					animate={{ opacity: 1, translateY: 0 }}
+					transition={{ duration: 0.35, ease: "easeInOut" }}
+					className="w-min rounded-full hidden lg:flex"
+				>
 					<div className="relative p-px rounded-full overflow-hidden h-full">
 						<div className="absolute -inset-0.5 bg-white z-0 nav-gradiant" />
 						<div className="relative flex items-center gap-12 pl-8 pr-6 py-4 rounded-full bg-black z-10 w-full h-full">
@@ -177,7 +188,7 @@ export function Navigation(props: { logo: string }) {
 							<LanguageSwitcher />
 						</div>
 					</div>
-				</div>
+				</motion.div>
 				<a
 					href="https://www.linkedin.com/in/andreas-wyrobek/"
 					target="_blank"

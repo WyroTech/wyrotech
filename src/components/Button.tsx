@@ -39,6 +39,9 @@ const ButtonContainer = ({ severity, text, icon }: ButtonContainerProps) => {
 		<motion.div
 			className={`${severity} button-container`}
 			style={{ boxShadow }}
+			initial={{ opacity: 0, translateY: -5 }}
+			transition={{ duration: 0.35, ease: "easeInOut" }}
+			animate={{ opacity: 1, translateY: 0 }}
 			onHoverStart={() => {
 				animate(rotate, 25, { duration: 0.35, ease: "easeInOut" });
 				animate(shadowSize, 20, { duration: 0.35, ease: "easeInOut" });
