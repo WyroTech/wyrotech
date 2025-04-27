@@ -11,7 +11,8 @@ export function getLangFromWindow() {
 	const [, lang] = window.location.pathname.split("/");
 	if (lang in ui) return lang as keyof typeof ui;
 	const language = document.documentElement.lang;
-	if (typeof language === "string" && language.includes("de")) return "de";
+	if (typeof language === "string" && language.toLowerCase() === "de")
+		return "de";
 	return defaultLang;
 }
 
