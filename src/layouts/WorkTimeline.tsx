@@ -46,7 +46,7 @@ function BlueLink({
 function BulletPoint({ children: child }: { children: React.ReactNode }) {
 	return (
 		<div className="flex gap-2">
-			<div>✅</div>
+			<div>🔵</div>
 			{child}
 		</div>
 	);
