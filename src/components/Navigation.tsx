@@ -86,6 +86,9 @@ export function Navigation(props: { logo: string }) {
 		},
 	};
 
+	const bg = (deg) =>
+		`linear-gradient(${deg}deg,rgb(179, 146, 239) 0%, rgb(52, 52, 81) 10.6203%, rgb(52, 52, 81) 40.9807%, rgb(37, 37, 41) 79.5%, rgb(179, 146, 239) 100% )`;
+
 	return (
 		<nav className="fixed top-0 left-0 right-0 bg-linear-to-b from-black to-transparent z-40">
 			<div className="flex justify-between items-center py-8 px-8">
@@ -179,7 +182,18 @@ export function Navigation(props: { logo: string }) {
 					className="w-min rounded-full hidden lg:flex"
 				>
 					<div className="relative p-px rounded-full overflow-hidden h-full">
-						<div className="absolute -inset-0.5 bg-white z-0 nav-gradiant" />
+						<motion.div
+							animate={{
+								background: [bg(140), bg(30), bg(140)],
+							}}
+							transition={{
+								repeat: Number.POSITIVE_INFINITY,
+								duration: 7,
+								ease: "easeInOut",
+								repeatDelay: 2,
+							}}
+							className="absolute -inset-0.5 z-0"
+						/>
 						<div className="relative flex items-center gap-12 pl-8 pr-6 py-4 rounded-full bg-black z-10 w-full h-full">
 							<AnimatedLink text={t("home")} href="#home" />
 							<AnimatedLink text={t("skills")} href="#skills" />
