@@ -81,7 +81,6 @@ const obj: LandingPageObject = {
 <Main>
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.logo} />
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
-    <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileSmallUrl} />
 
     <Navigation client:only="preact" logo={obj.logoSmall} />
     <LandingHeader profileUrl={obj.profileUrl} profileSmallUrl={obj.profileSmallUrl} />
