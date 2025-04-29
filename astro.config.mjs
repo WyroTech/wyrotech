@@ -12,7 +12,7 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://wyro.tech",
+	site: "https://www.wyro.tech",
 	vite: {
 		plugins: [tailwindcss()],
 		build: {

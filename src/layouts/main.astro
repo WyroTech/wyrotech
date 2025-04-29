@@ -25,8 +25,8 @@ const test = Astro.request.headers.get("accept-language");
     <meta property="og:type" content="website"/>
     <link rel="manifest" href="/site.webmanifest">
 
-    <link rel="alternate" href="https://wyro.tech/en" hreflang="en" />
-    <link rel="alternate" href="https://wyro.tech/de" hreflang="de" />
+    <link rel="alternate" href="https://www.wyro.tech/en" hreflang="en" />
+    <link rel="alternate" href="https://www.wyro.tech/de" hreflang="de" />
 
     <link rel="preload" href={LogoSmallImg.src} as="image"/>
 
@@ -42,9 +42,9 @@ const test = Astro.request.headers.get("accept-language");
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={t('meta.twitterTitle')}>
     <meta name="twitter:description" content={t('meta.twitterDescription')}/>
-    <meta name="twitter:image" content="https://wyro.tech/logo_small.png">
+    <meta name="twitter:image" content="https://www.wyro.tech/logo_small.png">
 
-    <link rel="canonical" href={"https://wyro.tech/" + Astro.url.pathname}>
+    <link rel="canonical" href={"https://www.wyro.tech/" + Astro.url.pathname}>
 
     <meta name="author" content="Andreas Wyrobek">
     <meta name="robots" content="index, follow">
@@ -53,7 +53,7 @@ const test = Astro.request.headers.get("accept-language");
     <meta property="og:image" content={LogoSmallImg.src}>
     <meta property="og:image:width" content="56">
     <meta property="og:image:height" content="56">
-    <meta property="og:url" content="https://wyro.tech">
+    <meta property="og:url" content="https://www.wyro.tech">
     <meta property="og:locale" content={lang === "de" ? "de_DE" : "en_US"}>
 
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -68,8 +68,8 @@ const test = Astro.request.headers.get("accept-language");
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Andreas Wyrobek",
-        "logo": "https://wyro.tech/logo.webp",
-        "url": "https://wyro.tech",
+        "logo": "https://www.wyro.tech/logo.webp",
+        "url": "https://www.wyro.tech",
         "jobTitle": "Principal Software Engineer & UX/UI Lead",
         "nationality": "German",
         "worksFor": {
