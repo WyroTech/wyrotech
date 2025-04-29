@@ -7,8 +7,6 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const browserLanguage = getBrowserLocale(Astro.request.headers);
 const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
-
-const test = Astro.request.headers.get("accept-language");
 ---
 <html lang={lang}>
 <head>
