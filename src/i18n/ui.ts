@@ -127,7 +127,7 @@ export const ui = {
 		"meta.description":
 			"Andreas Wyrobek: Principal Software Engineer specializing in Angular development and UX/UI design. Based in Bavaria, offering expert full-stack development services.",
 		"meta.keywords":
-			"andreas, andreas wyrobek, wyrobek, full-stack developer, angular specialist, ux design, bavaria, AI solutions, machine learning, software engineering, web development, websites, design, webdesign",
+			"Andreas Wyrobek, Andreas Wyrobek full-stack developer, Wyrobek software engineer, Bavarian software engineer, Full-stack web development, Custom web development, Software engineering services, Web design & development, Angular specialist, Angular developer Bavaria, Hire Angular developer, TypeScript developer, UX design consultant, User experience design, Wireframing and prototyping, Interaction design expert, AI solutions for businesses, Machine learning consulting, NLP integration services, Computer vision developer, Full-stack developer in Bavaria, Web development Munich, UX design near me, AI consulting Bavaria, Bavaria full-stack developer for hire, Angular 15 projects in Munich, UX design for SaaS applications, Custom AI solutions for startups",
 		"meta.ogTitle":
 			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead at WyroTech",
 		"meta.ogDescription":
@@ -265,7 +265,7 @@ export const ui = {
 		"meta.description":
 			"Andreas Wyrobek: Principal Software Engineer spezialisiert auf Angular-Entwicklung und UX/UI-Design. Ansässig in Bayern, bietet professionelle Full-Stack-Entwicklungsdienste an.",
 		"meta.keywords":
-			"andreas, andreas wyrobek, wyrobek, full-stack entwickler, angular spezialist, ux design, bayern, KI-Lösungen, maschinelles lernen, softwareentwicklung, webentwicklung, websiten, designen, webdesign",
+			"Andreas Wyrobek, Andreas Wyrobek Full-Stack-Entwickler, Wyrobek Software-Ingenieur, Bayerischer Software-Ingenieur, Full-Stack-Webentwicklung, Maßgeschneiderte Webentwicklung, Software-Engineering-Dienstleistungen, Webdesign & Entwicklung, Angular-Spezialist, Angular-Entwickler Bayern, Angular-Entwickler mieten, TypeScript-Entwickler, UX-Design-Berater, User-Experience-Design, Wireframing und Prototyping, Interaktionsdesign-Experte, KI-Lösungen für Unternehmen, Machine-Learning-Beratung, NLP-Integrationsdienste, Computer-Vision-Entwickler, Full-Stack-Entwickler in Bayern, Webentwicklung München, UX-Design in der Nähe, KI-Beratung Bayern, Full-Stack-Entwickler in Bayern zu mieten, Angular-15-Projekte in München, UX-Design für SaaS-Anwendungen, Maßgeschneiderte KI-Lösungen für Startups",
 		"meta.ogTitle":
 			"Andreas Wyrobek - Principal Software Engineer & UX/UI Lead bei WyroTech",
 		"meta.ogDescription":
