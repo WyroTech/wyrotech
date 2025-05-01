@@ -169,7 +169,7 @@ export const ui = {
 		"stats.designer.description":
 			"Von Figma-Mockups zur funktionalen Code-Implementierung.",
 		"title.language": "Fähigkeiten & Sprachen",
-		"title.languagesIspeak": "Sprachen, die ich spreche",
+		"title.languagesIspeak": "Sprachen",
 		"timeline.firstcontact2025.title":
 			"Repräsentat auf der FirstContact 2025 in Deggendorf",
 		"timeline.firstcontact2025.name": "FirstContact Deggendorf",
