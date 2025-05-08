@@ -20,7 +20,6 @@ export interface LandingPageObject {
 	logo: string;
 	logoSmall: string;
 	profileUrl: string;
-	profileSmallUrl: string;
 	projects: Project[];
 	timelineImages: TimelineImages;
 }

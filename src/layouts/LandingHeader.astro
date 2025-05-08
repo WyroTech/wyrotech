@@ -5,7 +5,7 @@ import { useTranslations } from "@/i18n/utils.ts";
 import { getBrowserLocale } from "../i18n/browser";
 import { getLangFromUrl } from "../i18n/utils";
 
-const { profileUrl, profileSmallUrl } = Astro.props;
+const { profileUrl } = Astro.props;
 const browserLanguage = getBrowserLocale(Astro.request.headers);
 const lang = getLangFromUrl(Astro.url, browserLanguage);
 const t = useTranslations(lang);
@@ -59,7 +59,7 @@ const t = useTranslations(lang);
       <div class="block lg:hidden absolute bottom-0 left-0 right-0 h-[30lvh] bg-gradient-to-b from-transparent to-[#0c0a09] to-90% z-[1]" />
       <div
         class="block lg:hidden z-0 pointer-events-none"
-        style={`background-image: url(${profileSmallUrl}); background-position: bottom center; background-size: auto 100%; background-repeat: no-repeat; height: 100%; width:100%;`}
+        style={`background-image: url(${profileUrl}); background-position: bottom center; background-size: auto 100%; background-repeat: no-repeat; height: 100%; width:100%;`}
       />
     </div>
   </div>

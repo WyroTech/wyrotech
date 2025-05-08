@@ -1,9 +1,11 @@
 ---
+import { getImage } from "astro:assets";
 import { IndexPage } from "@/layouts/IndexPage";
 import Main from "@/layouts/main.astro";
 import logoImg from "public/logo.webp";
 import logoSmallImg from "public/logo_small.webp";
 import profileImg from "public/profile.webp";
+import ProfileUp from "public/profile_files/profile_up.png";
 import CarImage from "public/projects/car.png";
 import LoomImage from "public/projects/loom.webp";
 import WyroTechImage from "public/projects/wyrotech.png";
@@ -40,7 +42,6 @@ const obj: LandingPageObject = {
 	logo: logoImg.src,
 	logoSmall: logoSmallImg.src,
 	profileUrl: profileImg.src,
-	profileSmallUrl: profileImg.src,
 	timelineImages: {
 		firstcontact: firstcontactImg.src,
 		dab: dabImg.src,
@@ -83,7 +84,7 @@ const obj: LandingPageObject = {
     <link slot="head" rel="prefetch" fetchpriority="high" as="image" type="image/webp" href={obj.profileUrl} />
 
     <Navigation client:only="preact" logo={obj.logoSmall} />
-    <LandingHeader profileUrl={obj.profileUrl} profileSmallUrl={obj.profileSmallUrl} />
+    <LandingHeader profileUrl={obj.profileUrl} />
     <DeferWrapper server:defer>
         <ProgrammingLanguages/>
         <SpeakingLanguages/>
