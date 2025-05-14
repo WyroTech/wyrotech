@@ -1,0 +1,77 @@
+---
+import { Icon } from "astro-icon/components";
+import { getBrowserLocale } from "../i18n/browser";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const browserLanguage = getBrowserLocale(Astro.request.headers);
+const lang = getLangFromUrl(Astro.url, browserLanguage);
+const t = useTranslations(lang);
+
+const services = [
+	{
+		key: "devExperience",
+		icon: "hugeicons:source-code-square",
+	},
+	{
+		key: "fullStack",
+		icon: "hugeicons:browser",
+	},
+	{
+		key: "cloudNative",
+		icon: "hugeicons:cloud",
+	},
+	{
+		key: "cicd",
+		icon: "hugeicons:git-merge",
+	},
+	{
+		key: "agile",
+		icon: "hugeicons:dashboard-square-02",
+	},
+	{
+		key: "systemDesign",
+		icon: "hugeicons:system-update-01",
+	},
+	{
+		key: "testing",
+		icon: "hugeicons:test-tube-01",
+	},
+	{
+		key: "uiux",
+		icon: "hugeicons:paint-board",
+	},
+	{
+		key: "dataAnalytics",
+		icon: "hugeicons:analytics-up",
+	},
+	{
+		key: "ai",
+		icon: "hugeicons:ai-brain-03",
+	},
+	{
+		key: "mobile",
+		icon: "hugeicons:mobile-protection",
+	},
+	{
+		key: "security",
+		icon: "hugeicons:shield-01",
+	},
+];
+---
+
+<section id="services" class="py-24 md:py-48 ">
+    <div class="grid grid-cols-4 grid-rows-2 max-w-4xl mx-auto">
+        {services.map((s, index) =>
+                <div class={`flex flex-col items-center justify-center p-8 gap-2 relative
+                ${index % 4 !== 3 ? "after:absolute after:right-0 after:top-0 after:h-full after:w-px after:bg-stone-800" : ""}
+                ${index < 8 ? "before:absolute before:bottom-0 before:left-0 before:w-full before:h-px before:bg-stone-800" : ""}`
+                }>
+                    <Icon name={s.icon} size={48} class="text-gradiant"/>
+                    <div class="flex flex-col items-center">
+                        <h4 class="text-center">{t(`services.${s.key}.name`)}</h4>
+                        <p class="p-0">{t(`services.${s.key}.description`)}</p>
+                    </div>
+                </div>
+        )}
+    </div>
+</section>
