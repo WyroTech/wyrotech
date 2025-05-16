@@ -5,7 +5,6 @@ import Main from "@/layouts/main.astro";
 import logoImg from "public/logo.webp";
 import logoSmallImg from "public/logo_small.webp";
 import profileImg from "public/profile.webp";
-import ProfileUp from "public/profile_files/profile_up.png";
 import CarImage from "public/projects/car.png";
 import LoomImage from "public/projects/loom.webp";
 import WyroTechImage from "public/projects/wyrotech.png";
@@ -15,6 +14,7 @@ import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
+import GartnerImg from "public/screenshots/gartner.webp";
 import { Navigation } from "../../components/Navigation";
 import { getBrowserLocale } from "../../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
@@ -45,6 +45,7 @@ const obj: LandingPageObject = {
 	profileUrl: profileImg.src,
 	timelineImages: {
 		firstcontact: firstcontactImg.src,
+		gartner: GartnerImg.src,
 		dab: dabImg.src,
 		coursera: courseraImg.src,
 		connecta: connectaImg.src,

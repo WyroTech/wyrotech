@@ -35,6 +35,10 @@ export const ui = {
 			"Representative on the FirstContact 2025 in Deggendorf",
 		"timeline.firstcontact2025.name": "FirstContact Deggendorf",
 
+		"timeline.gartner2025.title":
+			"Representative on the Gartner AI Summit 2025 in London",
+		"timeline.gartner2025.name": "Excel, London UK",
+
 		"timeline.principalEngineer.date": "11.2024 - now",
 		"timeline.principalEngineer.title":
 			"Principal Software Engineer & UX/UI Lead",
@@ -330,5 +334,9 @@ export const ui = {
 		"services.mobile.description": "Entwicklung",
 		"services.security.name": "Sicherheit",
 		"services.security.description": "Cybersicherheit",
+
+		"timeline.gartner2025.title":
+			"Repräsentant auf dem Gartner AI Summit 2025 in London",
+		"timeline.gartner2025.name": "Excel, London UK",
 	},
 };

@@ -1,6 +1,7 @@
 import {LinkPreview} from "@/components/ui/link-preview.tsx";
 import {Timeline} from "@/components/ui/timeline";
 import {getLangFromWindow, useTranslations} from "@/i18n/utils.ts";
+import type {TimelineImages} from "@/lib/models.ts";
 import {Icon} from "@iconify/react";
 import type React from "react";
 
@@ -8,14 +9,7 @@ const lang = getLangFromWindow();
 const t = useTranslations(lang);
 
 interface WorkTimelineProps {
-	images: {
-		firstcontact: string;
-		dab: string;
-		coursera: string;
-		connecta: string;
-		edvschule: string;
-		acp: string;
-	};
+	images: TimelineImages;
 }
 
 function BlueLink({
@@ -54,6 +48,21 @@ function BulletPoint({ children: child }: { children: React.ReactNode }) {
 
 export function WorkTimeline({ images }: WorkTimelineProps) {
 	const data = [
+		{
+			title: "05.2025",
+			content: (
+				<div className="flex flex-col gap-2">
+					<h1 className="text-gradiant">{t("timeline.gartner2025.title")}</h1>
+					<BlueLink
+						link={
+							"https://www.gartner.com/en/conferences/emea/data-analytics-uk"
+						}
+						name={t("timeline.gartner2025.name")}
+						imageUrl={images.gartner}
+					/>
+				</div>
+			),
+		},
 		{
 			title: "03.2025",
 			content: (

@@ -7,9 +7,10 @@ export interface Project {
 	tech: string[];
 }
 
-interface TimelineImages {
+export interface TimelineImages {
 	firstcontact: string;
 	dab: string;
+	gartner: string;
 	coursera: string;
 	connecta: string;
 	edvschule: string;
