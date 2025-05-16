@@ -129,7 +129,7 @@ export const ui = {
 		project: "Projects",
 		"meta.title": "WyroTech 🌍 by Andreas Wyrobek",
 		"meta.description":
-			"Andreas Wyrobek: Principal Software Engineer specializing in Angular development and UX/UI design. Based in Bavaria, offering expert full-stack development services.",
+			"Andreas Wyrobek – Principal Software Engineer in Bavaria, specializing in Angular, UX/UI design, and full-stack development.",
 		"meta.keywords":
 			"Andreas Wyrobek, Andreas Wyrobek full-stack developer, Wyrobek software engineer, Bavarian software engineer, Full-stack web development, Custom web development, Software engineering services, Web design & development, Angular specialist, Angular developer Bavaria, Hire Angular developer, TypeScript developer, UX design consultant, User experience design, Wireframing and prototyping, Interaction design expert, AI solutions for businesses, Machine learning consulting, NLP integration services, Computer vision developer, Full-stack developer in Bavaria, Web development Munich, UX design near me, AI consulting Bavaria, Bavaria full-stack developer for hire, Angular 15 projects in Munich, UX design for SaaS applications, Custom AI solutions for startups",
 		"meta.ogTitle":
@@ -292,7 +292,7 @@ export const ui = {
 		project: "Projekte",
 		"meta.title": "WyroTech 🌍 von Andreas Wyrobek",
 		"meta.description":
-			"Andreas Wyrobek: Principal Software Engineer, spezialisiert auf Angular-Entwicklung und UX/UI-Design. Ansässig in Bayern, bietet Experte Full-Stack-Entwicklungsdienstleistungen.",
+			"Andreas Wyrobek – Principal Software Engineer in Bayern, spezialisiert auf Angular, UX/UI-Design und Full-Stack-Entwicklung.",
 		"meta.keywords":
 			"Andreas Wyrobek, Andreas Wyrobek Full-Stack-Entwickler, Wyrobek Softwareentwickler, Bayerischer Softwareentwickler, Full-Stack-Webentwicklung, Individuelle Webentwicklung, Softwareentwicklungsdienste, Webdesign & -entwicklung, Angular-Spezialist, Angular-Entwickler Bayern, Angular-Entwickler einstellen, TypeScript-Entwickler, UX-Design-Berater, User Experience Design, Wireframing und Prototyping, Interaktionsdesign-Experte, KI-Lösungen für Unternehmen, Machine-Learning-Beratung, NLP-Integrationsdienste, Computer-Vision-Entwickler, Full-Stack-Entwickler in Bayern, Webentwicklung München, UX-Design in meiner Nähe, KI-Beratung Bayern, Bayerischer Full-Stack-Entwickler zu mieten, Angular 15 Projekte in München, UX-Design für SaaS-Anwendungen, Individuelle KI-Lösungen für Startups",
 		"meta.ogTitle":
