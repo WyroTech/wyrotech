@@ -60,6 +60,12 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 						name={t("timeline.gartner2025.name")}
 						imageUrl={images.gartner}
 					/>
+
+					<img
+						src={images.face.gartner}
+						alt="Gartner"
+						className="rounded-lg w-[400px]"
+					/>
 				</div>
 			),
 		},
@@ -74,6 +80,12 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 						link={"https://www.firstcontact-deggendorf.de/startseite.html"}
 						name={t("timeline.firstcontact2025.name")}
 						imageUrl={images.firstcontact}
+					/>
+
+					<img
+						src={images.face.firstContact}
+						alt="Gartner"
+						className="rounded-lg w-[400px]"
 					/>
 				</div>
 			),
@@ -137,6 +149,11 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 						link={"https://connecta-regensburg.de/"}
 						name={t("timeline.connecta2024.name")}
 						imageUrl={images.connecta}
+					/>
+					<img
+						src={images.face.connecta}
+						alt="Gartner"
+						className="rounded-lg w-[400px]"
 					/>
 				</div>
 			),

@@ -15,6 +15,12 @@ export interface TimelineImages {
 	connecta: string;
 	edvschule: string;
 	acp: string;
+
+	face: {
+		gartner: string;
+		firstContact: string;
+		connecta: string;
+	};
 }
 
 export interface LandingPageObject {

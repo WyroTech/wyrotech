@@ -9,11 +9,14 @@ import LoomImage from "public/projects/loom.webp";
 import WyroTechImage from "public/projects/wyrotech.png";
 import acpImg from "public/screenshots/acp.png";
 import connectaImg from "public/screenshots/connacta-regensburg.png";
+import ConnectaFaceImg from "public/screenshots/connecta_face.webp";
 import courseraImg from "public/screenshots/coursera.png";
 import dabImg from "public/screenshots/dab.png";
 import edvschuleImg from "public/screenshots/edvschule.png";
 import firstcontactImg from "public/screenshots/firstcontact-deggendorf.png";
+import FirstContactFaceImg from "public/screenshots/firstcontact_face.webp";
 import GartnerImg from "public/screenshots/gartner.webp";
+import GartnerFaceImg from "public/screenshots/gartner_face.webp";
 import { Navigation } from "../../components/Navigation";
 import { getBrowserLocale } from "../../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
@@ -24,6 +27,7 @@ import ProgrammingLanguages from "../../layouts/ProgrammingLanguages.astro";
 import Projects from "../../layouts/Projects.astro";
 import Services from "../../layouts/Services.astro";
 import SpeakingLanguages from "../../layouts/SpeakingLanguages.astro";
+import { processImage } from "../../lib/helper";
 import type { LandingPageObject, Project } from "../../lib/models";
 
 const browserLanguage = getBrowserLocale(Astro.request.headers);
@@ -50,6 +54,11 @@ const obj: LandingPageObject = {
 		connecta: connectaImg.src,
 		edvschule: edvschuleImg.src,
 		acp: acpImg.src,
+		face: {
+			gartner: GartnerFaceImg.src,
+			connecta: ConnectaFaceImg.src,
+			firstContact: FirstContactFaceImg.src,
+		},
 	},
 	projects: [
 		{
