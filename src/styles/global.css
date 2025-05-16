@@ -147,6 +147,14 @@ p {
 	);
 }
 
+.gradiant-radial {
+	background-image: radial-gradient(
+		rgba(213, 142, 237, 0.2) 0%,
+		rgba(37, 35, 204, 0.2) 234%,
+		rgba(179, 146, 239, 0.2) 244%
+	);
+}
+
 .cube {
 	transition-timing-function: cubic-bezier(0.85, 0.09, 0.15, 0.91);
 	transition-duration: 400ms;
