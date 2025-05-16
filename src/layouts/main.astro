@@ -3,6 +3,7 @@ import "../styles/global.css";
 import LogoSmallImg from "public/logo_small.webp";
 import { getBrowserLocale } from "../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import DeferWrapper from "./DeferWrapper.astro";
 
 const browserLanguage = getBrowserLocale(Astro.request.headers);
 const lang = getLangFromUrl(Astro.url, browserLanguage);
@@ -67,6 +68,16 @@ const t = useTranslations(lang);
 </head>
 <body>
 <slot/>
+
+<DeferWrapper>
+    <script>
+        import Lenis from 'lenis';
+
+        new Lenis({
+            autoRaf: true,
+        });
+    </script>
+</DeferWrapper>
 
 <script type="application/ld+json">
     {
