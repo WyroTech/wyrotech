@@ -18,6 +18,7 @@ import FirstContactFaceImg from "public/screenshots/firstcontact_face.webp";
 import GartnerImg from "public/screenshots/gartner.webp";
 import GartnerFaceImg from "public/screenshots/gartner_face.webp";
 import { Navigation } from "../../components/Navigation";
+import { SplashCursor } from "../../components/ui/splash-cursor";
 import { getBrowserLocale } from "../../i18n/browser";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import DeferWrapper from "../../layouts/DeferWrapper.astro";
@@ -102,5 +103,6 @@ const obj: LandingPageObject = {
         <Projects projects={obj.projects} />
         <IndexPage client:only="preact" obj={obj}/>
         <Footer/>
+        <SplashCursor client:only="preact"/>
     </DeferWrapper>
 </Main>
