@@ -64,6 +64,9 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 					<img
 						src={images.face.gartner}
 						alt="Gartner"
+						width="400"
+						height="533"
+						loading="lazy"
 						className="rounded-lg w-[400px]"
 					/>
 				</div>
@@ -84,7 +87,10 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 
 					<img
 						src={images.face.firstContact}
-						alt="Gartner"
+						alt="FirstContactProfile"
+						width="400"
+						height="300"
+						loading="lazy"
 						className="rounded-lg w-[400px]"
 					/>
 				</div>
@@ -152,7 +158,10 @@ export function WorkTimeline({ images }: WorkTimelineProps) {
 					/>
 					<img
 						src={images.face.connecta}
-						alt="Gartner"
+						alt="ConnectaProfile"
+						width="400"
+						height="400"
+						loading="lazy"
 						className="rounded-lg w-[400px]"
 					/>
 				</div>
